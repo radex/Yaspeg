@@ -51,6 +51,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void)windowWillClose:(NSNotification *)aNotification
 {
+   NSTimeInterval outroTime = [currentState outro];
+   
+   [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(terminate) userInfo:nil repeats:NO];
+}
+
+- (void)terminate
+{
    [NSApp performSelectorOnMainThread:@selector(terminate:) withObject:self waitUntilDone:NO];
 }
 

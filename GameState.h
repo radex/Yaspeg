@@ -49,12 +49,16 @@ typedef enum EventType_t EventType;
    NSString *eventCharachters;
    bool      eventIsRepeat;
    NSPoint   eventMousePoint;
+   bool      inited;
 }
 
 - (void) stateInit;
 - (void) events;
 - (void) logic;
 - (void) render;
+
+- (NSTimeInterval) outro;
+- (void) cleanUp;
 - (void) finalize;
 
 @property (assign, readwrite) YaspegController *yaspeg;

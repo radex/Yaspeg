@@ -28,6 +28,4 @@
    int changedMenuItem;
 }
 
-- (void) finalize;
-
 @end

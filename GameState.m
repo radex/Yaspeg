@@ -18,6 +18,7 @@
    if(self = [super init])
    {
       eventType = None_ET;
+      inited    = NO;
    }
    
    return self;
@@ -27,8 +28,16 @@
 - (void) events{eventType = None_ET;}
 - (void) logic{}
 - (void) render{}
+- (NSTimeInterval) outro
+{
+   [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
+   
+   return 0;
+}
+- (void) cleanUp{}
 - (void) finalize
 {
+   [self cleanUp];
    [super finalize];
 }
 
