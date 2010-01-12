@@ -44,8 +44,6 @@
 		6E695DF110F9340800728B14 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E695DF010F9340800728B14 /* MainMenuState.m */; };
 		6E69623B10FA0F8100728B14 /* header-yaspeg-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E69623A10FA0F8100728B14 /* header-yaspeg-small.png */; };
 		6E70973410FD2FD100E04723 /* AuthorsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E70973310FD2FD100E04723 /* AuthorsState.m */; };
-		6E8749BF10FD2B74004745EF /* class.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8749BD10FD2B74004745EF /* class.m */; };
-		6E8749C010FD2B74004745EF /* TemplateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E8749BE10FD2B74004745EF /* TemplateInfo.plist */; };
 		6E91680910EE8573002F70CC /* YaspegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91680410EE8573002F70CC /* YaspegController.m */; };
 		6E91680B10EE8573002F70CC /* ImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91680810EE8573002F70CC /* ImageLayer.m */; };
 		6E91681210EE85A0002F70CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E91681110EE85A0002F70CC /* QuartzCore.framework */; };
@@ -385,7 +383,6 @@
 				6E4A844410FBD5790084C89F /* pobierz-poziomy-item.png in Resources */,
 				6E4A844510FBD5790084C89F /* ustawienia-item-glow.png in Resources */,
 				6E4A844610FBD5790084C89F /* ustawienia-item.png in Resources */,
-				6E8749C010FD2B74004745EF /* TemplateInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +399,6 @@
 				6E61CB8210F0A12C0027DACF /* GameState.m in Sources */,
 				6E099B3110F8DD3100B8666E /* KeyHandlingView.m in Sources */,
 				6E695DF110F9340800728B14 /* MainMenuState.m in Sources */,
-				6E8749BF10FD2B74004745EF /* class.m in Sources */,
 				6E70973410FD2FD100E04723 /* AuthorsState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
