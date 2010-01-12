@@ -1,0 +1,100 @@
+//
+//  MainMenuState.m
+//  Yaspeg2
+//
+//  Created by Radex on 10-01-01.
+//  Copyright 2010 Radex. All rights reserved.
+//
+
+#import "YaspegController.h"
+#import "SynthesizeSingleton.h"
+
+@implementation YaspegController
+
+@synthesize rootLayer, currentState;
+
+SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
+
+/*
+ * awakeFromNib
+ *
+ * makes root layer and sets initial state
+ */
+
+- (void)awakeFromNib
+{
+	contentView.layer.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1);
+	CGColorRelease(contentView.layer.backgroundColor);
+   
+   rootLayer = [CALayer layer];
+   rootLayer.frame = CGRectMake(0, 0, 800, 600);
+   rootLayer.masksToBounds = YES;
+   
+   [contentView.layer insertSublayer:rootLayer atIndex:0];
+   
+   [self setNextState:MainMenu_GS];
+   
+   timer =
+   [NSTimer
+    scheduledTimerWithTimeInterval:0.03
+    target:self
+    selector:@selector(updateState:)
+    userInfo:nil
+    repeats:YES];
+}
+
+/*
+ * windowWillClose
+ *
+ * terminates Yaspeg if window closed
+ */
+
+- (void)windowWillClose:(NSNotification *)aNotification
+{
+   [NSApp performSelectorOnMainThread:@selector(terminate:) withObject:self waitUntilDone:NO];
+}
+
+#pragma mark -
+#pragma mark state machine
+
+/*
+ * updateState
+ *
+ * updates state. launched every frame by timer initialized in awakeFromNib
+ */
+
+- (void)updateState:(NSTimer *)aTimer
+{
+   [currentState events];
+   [currentState logic];
+   [currentState render];
+}
+
+/*
+ * setNextState
+ *
+ * closes current state, and launches new one
+ */
+
+- (void) setNextState: (GameStateType) state
+{
+   [currentState finalize];
+   
+   switch (state)
+   {
+      case Quit_GS:
+         [NSApp terminate];
+         break;
+      case MainMenu_GS:
+         
+         currentState = [[MainMenuState alloc] init];
+         currentState.yaspeg = self;
+         [currentState stateInit];
+         
+         break;
+      default:
+         break;
+   }
+}
+
+@end
