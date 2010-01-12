@@ -17,8 +17,6 @@
    CALayer *rootLayer;
 	IBOutlet NSView *contentView;
    
-	NSTimer *timer;
-   
    GameState *currentState;
 }
 

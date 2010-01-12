@@ -34,13 +34,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    
    [self setNextState:MainMenu_GS];
    
-   timer =
-   [NSTimer
-    scheduledTimerWithTimeInterval:0.03
-    target:self
-    selector:@selector(updateState:)
-    userInfo:nil
-    repeats:YES];
+   [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateState) userInfo:nil repeats:YES];
 }
 
 /*
@@ -70,7 +64,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
  * updates state. launched every frame by timer initialized in awakeFromNib
  */
 
-- (void)updateState:(NSTimer *)aTimer
+- (void)updateState
 {
    [currentState events];
    [currentState logic];
@@ -85,23 +79,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void) setNextState: (GameStateType) state
 {
-   [currentState finalize];
+   [currentState outro];
    
    switch (state)
    {
-      case Quit_GS:
-         [NSApp terminate];
-         break;
-      case MainMenu_GS:
-         
-         currentState = [[MainMenuState alloc] init];
-         currentState.yaspeg = self;
-         [currentState stateInit];
-         
-         break;
-      default:
-         break;
+      case MainMenu_GS: currentState = [[MainMenuState alloc] init]; break;
+      default: break;
    }
+   
+   currentState.yaspeg = self;
+   [currentState stateInit];
 }
 
 @end

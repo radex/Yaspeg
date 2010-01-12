@@ -17,8 +17,7 @@ enum GameStateType_t
 {
    MainMenu_GS,
    
-   None_GS,
-   Quit_GS
+   None_GS
 };
 
 typedef enum GameStateType_t GameStateType;
