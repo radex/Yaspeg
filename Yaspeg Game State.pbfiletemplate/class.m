@@ -21,6 +21,9 @@
    
 }
 
+#pragma mark -
+#pragma mark ELR
+
 /*
  * events
  *
@@ -61,7 +64,7 @@
    if(!inited)
    {
       [CATransaction begin];
-      [CATransaction setAnimationDuration_c:1.0];
+      [CATransaction setAnimationDuration_c:5.0];
       
       
       
@@ -72,6 +75,9 @@
    
    
 }
+
+#pragma mark -
+#pragma mark cleaning
 
 /*
  * outro

@@ -84,7 +84,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void) setNextState: (GameStateType) state
 {
-   NSLog(@"nextstate");
    if(nextState != None_GS)
    {
       state = nextState;
@@ -117,12 +116,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void) scheduledNextState: (GameStateType) state
 {
-   NSLog(@"schedulednextstate");
    shouldUpdate = NO;
    nextState = state;
-   float multiplier = (state == MainMenu_GS ? 1 : 0.3);
-   NSTimeInterval outroTime = [currentState outro];
-   [NSTimer scheduledTimerWithTimeInterval:(multiplier*outroTime) target:self selector:@selector(setNextState:) userInfo:nil repeats:NO];
+   
+   NSTimeInterval outroTime = 0.3 * [currentState outro];
+   
+   [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(setNextState:) userInfo:nil repeats:NO];
 }
 
 @end

@@ -26,6 +26,9 @@
    [yaspeg.rootLayer addSublayer:bgLayer];
 }
 
+#pragma mark -
+#pragma mark ELR
+
 /*
  * events
  *
@@ -84,6 +87,9 @@
    
 }
 
+#pragma mark -
+#pragma mark cleaning
+
 /*
  * outro
  *
@@ -92,7 +98,6 @@
 
 - (NSTimeInterval) outro
 {
-   NSLog(@"outro");
    NSTimeInterval animationDuration = 0.5;
    
    [CATransaction begin];
@@ -115,7 +120,6 @@
 
 - (void) cleanUp
 {
-   NSLog(@"cleanUp");
    [bgLayer removeFromSuperlayer];
 }
 

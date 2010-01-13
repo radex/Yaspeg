@@ -8,6 +8,12 @@
 
 #import "MainMenuState.h"
 
+@interface MainMenuState (private)
+
+- (int) itemSelected:(int)item;
+
+@end
+
 @implementation MainMenuState
 
 /*
@@ -98,9 +104,12 @@
    
    /***/
    
-   currentMenuItem = 6;
+   currentMenuItem = [self itemSelected:-1];
    changedMenuItem = -1;
 }
+
+#pragma mark -
+#pragma mark ELR
 
 /*
  * events
@@ -198,10 +207,12 @@
 {
    // rendering for first time
    
+   static bool menuForFirstTime = YES;
+   
    if(!inited)
    {
       [CATransaction begin];
-      [CATransaction setAnimationDuration_c:1.0];
+      [CATransaction setAnimationDuration_c:(menuForFirstTime ? 1.0 : 0.5)]; // longer animation if yaspeg just launched, shorter if when comming back from other state
       
       bgLayer.opacity = 1.0;
       headerLayer.y = 590 - headerLayer.h;
@@ -222,6 +233,7 @@
       [[menuItems_g objectAtIndex:currentMenuItem] addAnimation:pulseAnimation forKey:@"animateOpacity"];
       
       inited = YES;
+      menuForFirstTime = NO;
    }
    
    // if current menu item changed
@@ -237,6 +249,9 @@
    }
 }
 
+#pragma mark -
+#pragma mark cleaning
+
 /*
  * outro
  *
@@ -245,7 +260,6 @@
 
 - (NSTimeInterval) outro
 {
-   NSLog(@"outro");
    NSTimeInterval animationDuration = 0.5;
    
    [CATransaction begin];
@@ -270,7 +284,6 @@
 
 - (void) cleanUp
 {
-   NSLog(@"cleanUp");
    [bgLayer removeFromSuperlayer];
    [headerLayer removeFromSuperlayer];
    [footerLayer removeFromSuperlayer];
@@ -285,6 +298,23 @@
       [layer removeAllAnimations];
       [layer removeFromSuperlayer];
    }
+   
+   [self itemSelected:currentMenuItem];
+}
+
+#pragma mark -
+#pragma mark state-specific methods
+
+- (int) itemSelected: (int)item
+{
+   static int selectedItem = 0;
+   
+   if(item != -1)
+   {
+      selectedItem = item;
+   }
+
+   return selectedItem;
 }
 
 @end
