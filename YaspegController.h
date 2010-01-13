@@ -11,6 +11,7 @@
 
 #import "GameState.h"
 #import "GameStates/MainMenuState.h"
+#import "GameStates/AuthorsState.h"
 
 @interface YaspegController : NSObject
 {
@@ -18,6 +19,8 @@
 	IBOutlet NSView *contentView;
    
    GameState *currentState;
+   GameStateType nextState;
+   bool          shouldUpdate;
 }
 
 @property (readonly) CALayer *rootLayer;
@@ -26,5 +29,6 @@
 + (YaspegController *)sharedYaspegController;
 
 - (void) setNextState:(GameStateType) state;
+- (void) scheduledNextState:(GameStateType) state;
 
 @end

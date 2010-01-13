@@ -16,6 +16,7 @@
 enum GameStateType_t
 {
    MainMenu_GS,
+   Authors_GS,
    
    None_GS
 };
@@ -34,6 +35,10 @@ enum EventType_t
    MouseUp_ET,
    None_ET
 };
+
+#define YK_ESC 27
+#define YK_RETURN NSCarriageReturnCharacter
+#define YK_ENTER NSEnterCharacter
 
 typedef enum EventType_t EventType;
 
@@ -58,7 +63,6 @@ typedef enum EventType_t EventType;
 
 - (NSTimeInterval) outro;
 - (void) cleanUp;
-- (void) finalize;
 
 @property (assign, readwrite) YaspegController *yaspeg;
 

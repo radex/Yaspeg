@@ -18,7 +18,12 @@
 
 - (void) stateInit
 {
+   // background
    
+   bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
+   bgLayer.opacity = 0.0;
+   
+   [yaspeg.rootLayer addSublayer:bgLayer];
 }
 
 /*
@@ -29,9 +34,15 @@
 
 - (void) events
 {
-   if(eventType == None_ET)
+   if(eventType == KeyDown_ET)
    {
+      unichar character = [eventCharachters characterAtIndex:0];
       
+      if(character == YK_ESC)
+      {
+         [yaspeg scheduledNextState:MainMenu_GS];
+         return;
+      }
    }
    
    eventType = None_ET;
@@ -60,7 +71,12 @@
    
    if(!inited)
    {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:0.5];
       
+      bgLayer.opacity = 1.0;
+      
+      [CATransaction commit];
       
       inited = YES;
    }
@@ -76,9 +92,15 @@
 
 - (NSTimeInterval) outro
 {
-   NSTimeInterval animationDuration = 1.0;
+   NSLog(@"outro");
+   NSTimeInterval animationDuration = 0.5;
    
+   [CATransaction begin];
+   [CATransaction setAnimationDuration_c:animationDuration];
    
+   bgLayer.opacity = 0;
+   
+   [CATransaction commit];
    
    [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
    
@@ -93,22 +115,9 @@
 
 - (void) cleanUp
 {
-   
-}
-
-/*
- * finalize
- *
- *
- */
-
-- (void) finalize
-{
-   [self cleanUp];
-   [super finalize];
+   NSLog(@"cleanUp");
+   [bgLayer removeFromSuperlayer];
 }
 
 @end
 
-
-@end

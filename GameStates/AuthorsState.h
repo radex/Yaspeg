@@ -11,7 +11,7 @@
 
 @interface AuthorsState : GameState
 {
-
+   ImageLayer *bgLayer;
 }
 
 @end

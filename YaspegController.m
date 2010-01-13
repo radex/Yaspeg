@@ -34,6 +34,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    
    [self setNextState:MainMenu_GS];
    
+   shouldUpdate = YES;
+   
    [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateState) userInfo:nil repeats:YES];
 }
 
@@ -45,6 +47,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void)windowWillClose:(NSNotification *)aNotification
 {
+   shouldUpdate = NO;
    NSTimeInterval outroTime = [currentState outro];
    
    [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(terminate) userInfo:nil repeats:NO];
@@ -66,6 +69,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void)updateState
 {
+   if(!shouldUpdate) return;
+   
    [currentState events];
    [currentState logic];
    [currentState render];
@@ -79,16 +84,45 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void) setNextState: (GameStateType) state
 {
-   [currentState outro];
+   NSLog(@"nextstate");
+   if(nextState != None_GS)
+   {
+      state = nextState;
+   }
+   else
+   {
+      [currentState outro];
+   }
+
    
    switch (state)
    {
       case MainMenu_GS: currentState = [[MainMenuState alloc] init]; break;
+      case Authors_GS:  currentState = [[AuthorsState  alloc] init]; break;
       default: break;
    }
    
    currentState.yaspeg = self;
    [currentState stateInit];
+   nextState = None_GS;
+   shouldUpdate = YES;
+}
+
+/*
+ * scheduledNextState
+ *
+ * schedules to launch nextState
+ * (it will launch after outro)
+ */
+
+- (void) scheduledNextState: (GameStateType) state
+{
+   NSLog(@"schedulednextstate");
+   shouldUpdate = NO;
+   nextState = state;
+   float multiplier = (state == MainMenu_GS ? 1 : 0.3);
+   NSTimeInterval outroTime = [currentState outro];
+   [NSTimer scheduledTimerWithTimeInterval:(multiplier*outroTime) target:self selector:@selector(setNextState:) userInfo:nil repeats:NO];
 }
 
 @end

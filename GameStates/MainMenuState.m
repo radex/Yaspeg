@@ -144,12 +144,19 @@
          }
          
       }
-      else if(character == NSCarriageReturnCharacter || character == NSEnterCharacter) // return/enter
+      else if(character == YK_RETURN || character == YK_ENTER)
       {
-         if(currentMenuItem == 6)
+         switch(currentMenuItem)
          {
-            [yaspeg windowWillClose:nil];
-            return;
+            case 4:
+               [yaspeg scheduledNextState:Authors_GS];
+               return;
+               break;
+            case 6:
+               [yaspeg windowWillClose:nil];
+               return;
+            default:
+               break;
          }
       }
       /*
@@ -238,7 +245,8 @@
 
 - (NSTimeInterval) outro
 {
-   NSTimeInterval animationDuration = 1.0;
+   NSLog(@"outro");
+   NSTimeInterval animationDuration = 0.5;
    
    [CATransaction begin];
    [CATransaction setAnimationDuration_c:animationDuration];
@@ -262,6 +270,7 @@
 
 - (void) cleanUp
 {
+   NSLog(@"cleanUp");
    [bgLayer removeFromSuperlayer];
    [headerLayer removeFromSuperlayer];
    [footerLayer removeFromSuperlayer];
@@ -276,18 +285,6 @@
       [layer removeAllAnimations];
       [layer removeFromSuperlayer];
    }
-}
-
-/*
- * finalize
- *
- *
- */
-
-- (void) finalize
-{
-   [self cleanUp];
-   [super finalize];
 }
 
 @end

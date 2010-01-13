@@ -35,10 +35,5 @@
    return 0;
 }
 - (void) cleanUp{}
-- (void) finalize
-{
-   [self cleanUp];
-   [super finalize];
-}
 
 @end
