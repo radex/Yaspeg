@@ -60,7 +60,12 @@
    
    if(!inited)
    {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:1.0];
       
+      
+      
+      [CATransaction commit];
       
       inited = YES;
    }
@@ -76,9 +81,14 @@
 
 - (NSTimeInterval) outro
 {
-   NSTimeInterval animationDuration = 1.0;
+   NSTimeInterval animationDuration = 0.5;
+   
+   [CATransaction begin];
+   [CATransaction setAnimationDuration_c:animationDuration];
    
    
+   
+   [CATransaction commit];
    
    [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
    
@@ -95,20 +105,5 @@
 {
    
 }
-
-/*
- * finalize
- *
- *
- */
-
-- (void) finalize
-{
-   [self cleanUp];
-   [super finalize];
-}
-
-@end
-
 
 @end
