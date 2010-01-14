@@ -10,6 +10,9 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		6E099B3110F8DD3100B8666E /* KeyHandlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E099B3010F8DD3100B8666E /* KeyHandlingView.m */; };
 		6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */; };
+		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
+		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
+		6E2EDEAF10FF5B8D00EEECD7 /* BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2EDEAE10FF5B8D00EEECD7 /* BackButton.m */; };
 		6E418C6610FE749E00A4F432 /* header-autorzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6210FE749E00A4F432 /* header-autorzy.png */; };
 		6E418C6710FE749E00A4F432 /* radex-medium-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6310FE749E00A4F432 /* radex-medium-glow.png */; };
 		6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6410FE749E00A4F432 /* radex-medium.png */; };
@@ -67,6 +70,10 @@
 		6E099B3010F8DD3100B8666E /* KeyHandlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHandlingView.m; sourceTree = "<group>"; };
 		6E099B4810F8E06800B8666E /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "by-radex-glow.png"; path = "gfx/by-radex-glow.png"; sourceTree = "<group>"; };
+		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
+		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
+		6E2EDEAD10FF5B8D00EEECD7 /* BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackButton.h; sourceTree = "<group>"; };
+		6E2EDEAE10FF5B8D00EEECD7 /* BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackButton.m; sourceTree = "<group>"; };
 		6E418C6210FE749E00A4F432 /* header-autorzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-autorzy.png"; path = "gfx/header-autorzy.png"; sourceTree = "<group>"; };
 		6E418C6310FE749E00A4F432 /* radex-medium-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium-glow.png"; path = "gfx/radex-medium-glow.png"; sourceTree = "<group>"; };
 		6E418C6410FE749E00A4F432 /* radex-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium.png"; path = "gfx/radex-medium.png"; sourceTree = "<group>"; };
@@ -145,6 +152,8 @@
 				6E91680410EE8573002F70CC /* YaspegController.m */,
 				6E4D4FC810F7F4A8003F7C7A /* GameState.h */,
 				6E61CB8110F0A12C0027DACF /* GameState.m */,
+				6E2EDEAD10FF5B8D00EEECD7 /* BackButton.h */,
+				6E2EDEAE10FF5B8D00EEECD7 /* BackButton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -297,6 +306,8 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E2EDE6010FF577200EEECD7 /* back-button-selected.png */,
+				6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */,
 				6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */,
 				6E4A84E710FBDD9C0084C89F /* Level Indicators */,
 				6E4A84E610FBDD700084C89F /* Menu Items */,
@@ -403,6 +414,8 @@
 				6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */,
 				6E418C6910FE749E00A4F432 /* scenariusz-rezyseria.png in Resources */,
 				6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */,
+				6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */,
+				6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +433,7 @@
 				6E099B3110F8DD3100B8666E /* KeyHandlingView.m in Sources */,
 				6E695DF110F9340800728B14 /* MainMenuState.m in Sources */,
 				6E70973410FD2FD100E04723 /* AuthorsState.m in Sources */,
+				6E2EDEAF10FF5B8D00EEECD7 /* BackButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

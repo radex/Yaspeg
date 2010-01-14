@@ -18,6 +18,9 @@
    ImageLayer *radexGlowLayer;
    CATextLayer *thanksHeaderLayer;
    CATextLayer *thanksLayer;
+   
+   ImageLayer *backButton;
+   ImageLayer *backButtonSelected;
 }
 
 @end

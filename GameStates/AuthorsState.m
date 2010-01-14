@@ -33,6 +33,22 @@
    
    [yaspeg.rootLayer addSublayer:headerLayer];
    
+   // back button
+   
+   backButton = [ImageLayer layerWithImageNamed:@"back-button-unselected"];
+   backButtonSelected = [ImageLayer layerWithImageNamed:@"back-button-selected"];
+   
+   backButton.x = -50;
+   backButton.y = 540;
+   backButton.opacity = -2;
+   
+   backButtonSelected.x = -50;
+   backButtonSelected.y = 540;
+   backButtonSelected.opacity = -2;
+   
+   [yaspeg.rootLayer addSublayer:backButton];
+   [yaspeg.rootLayer addSublayer:backButtonSelected];
+   
    // scenario, direction, graphics
    
    scenarioLayer = [ImageLayer layerWithImageNamed:@"scenariusz-rezyseria"];
@@ -57,6 +73,30 @@
    
    [yaspeg.rootLayer addSublayer:radexLayer];
    [yaspeg.rootLayer addSublayer:radexGlowLayer];
+   
+   // "podziękowaia" header
+   
+   thanksHeaderLayer = [CATextLayer layer];
+   thanksHeaderLayer.opacity  = 0;
+   thanksHeaderLayer.string   = @"Podziękowania:";
+   thanksHeaderLayer.font     = @"palatino";
+   thanksHeaderLayer.fontSize = 28;
+   thanksHeaderLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
+   thanksHeaderLayer.frame = NSMakeRect(25, 250, 500, 70);
+   
+   [yaspeg.rootLayer addSublayer:thanksHeaderLayer];
+   
+   // "podziękowania" text
+   
+   thanksLayer = [CATextLayer layer];
+   thanksLayer.opacity  = 0;
+   thanksLayer.string   = @"- dla Matta Gallaghera (cocoawithlove.com) za świetne artykuły,\n  bez których Yaspeg by nie powstał.\n\n- dla użytkowników strony Stack Overflow (stackoverflow.com) za pomoc\n\n- dla MWL-a i wszystkich innych, którzy w jakiś sposób pomogli";
+   thanksLayer.font     = @"palatino";
+   thanksLayer.fontSize = 20;
+   thanksLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
+   thanksLayer.frame = NSMakeRect(15, 0, 800, 275);
+   
+   [yaspeg.rootLayer addSublayer:thanksLayer];
 }
 
 #pragma mark -
@@ -90,13 +130,27 @@
       {
          radexGlowLayer.opacity = 0;
       }
-
+      
+      
+      if([backButton isInBounds:eventMousePoint])
+      {
+         backButtonSelected.opacity = 1.0;
+      }
+      else
+      {
+         backButtonSelected.opacity = 0;
+      }
    }
    else if(eventType == MouseDown_ET)
    {
       if([radexLayer isInBounds:eventMousePoint])
       {
          [yaspeg runYaspegHomepage];
+      }
+      
+      if([backButton isInBounds:eventMousePoint])
+      {
+         [yaspeg scheduledNextState:MainMenu_GS];
       }
    }
 
@@ -133,7 +187,13 @@
       bgLayer.opacity = 1.0;
       scenarioLayer.opacity = 1.0;
       radexLayer.opacity = 1.0;
-      //radexGlowLayer.opacity = 1.0;
+      thanksLayer.opacity = 1.0;
+      thanksHeaderLayer.opacity = 1.0;
+      
+      backButton.x = 10;
+      backButtonSelected.x = 10;
+      backButton.opacity = 1.0;
+      
       headerLayer.y = 600 - 10 - headerLayer.h;
       
       [CATransaction commit];
@@ -164,6 +224,14 @@
    scenarioLayer.opacity = 0;
    radexLayer.opacity = 0;
    radexGlowLayer.opacity = 0;
+   thanksHeaderLayer.opacity = 0;
+   thanksLayer.opacity = 0;
+   
+   backButton.x = -50;
+   backButton.opacity = -2; // faster animation
+   backButtonSelected.x = -50;
+   backButtonSelected.opacity = -2;
+   
    headerLayer.y = 600;
    
    [CATransaction commit];
@@ -186,6 +254,9 @@
    [scenarioLayer removeFromSuperlayer];
    [radexLayer removeFromSuperlayer];
    [radexGlowLayer removeFromSuperlayer];
+   [thanksLayer removeFromSuperlayer];
+   [backButton removeFromSuperlayer];
+   [backButtonSelected removeFromSuperlayer];
 }
 
 @end
