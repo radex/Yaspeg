@@ -14,6 +14,7 @@
    ImageLayer *bgLayer;
    ImageLayer *headerLayer;
    ImageLayer *footerLayer;
+   ImageLayer *footerGlowLayer;
    
    //CALayer    *dupaLayer;
    

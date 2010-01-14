@@ -126,4 +126,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(setNextState:) userInfo:nil repeats:NO];
 }
 
+#pragma mark -
+#pragma mark various stuff
+
+- (void) runYaspegHomepage
+{
+   [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://example.com/"]];
+}
+
 @end

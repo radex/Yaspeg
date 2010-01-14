@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		6E099B3110F8DD3100B8666E /* KeyHandlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E099B3010F8DD3100B8666E /* KeyHandlingView.m */; };
+		6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */; };
 		6E418C6610FE749E00A4F432 /* header-autorzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6210FE749E00A4F432 /* header-autorzy.png */; };
 		6E418C6710FE749E00A4F432 /* radex-medium-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6310FE749E00A4F432 /* radex-medium-glow.png */; };
 		6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6410FE749E00A4F432 /* radex-medium.png */; };
@@ -65,6 +66,7 @@
 		6E099B2F10F8DD3100B8666E /* KeyHandlingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHandlingView.h; sourceTree = "<group>"; };
 		6E099B3010F8DD3100B8666E /* KeyHandlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHandlingView.m; sourceTree = "<group>"; };
 		6E099B4810F8E06800B8666E /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "by-radex-glow.png"; path = "gfx/by-radex-glow.png"; sourceTree = "<group>"; };
 		6E418C6210FE749E00A4F432 /* header-autorzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-autorzy.png"; path = "gfx/header-autorzy.png"; sourceTree = "<group>"; };
 		6E418C6310FE749E00A4F432 /* radex-medium-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium-glow.png"; path = "gfx/radex-medium-glow.png"; sourceTree = "<group>"; };
 		6E418C6410FE749E00A4F432 /* radex-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium.png"; path = "gfx/radex-medium.png"; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */,
 				6E4A84E710FBDD9C0084C89F /* Level Indicators */,
 				6E4A84E610FBDD700084C89F /* Menu Items */,
 				6E418C6210FE749E00A4F432 /* header-autorzy.png */,
@@ -399,6 +402,7 @@
 				6E418C6710FE749E00A4F432 /* radex-medium-glow.png in Resources */,
 				6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */,
 				6E418C6910FE749E00A4F432 /* scenariusz-rezyseria.png in Resources */,
+				6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

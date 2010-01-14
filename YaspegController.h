@@ -31,4 +31,6 @@
 - (void) setNextState:(GameStateType) state;
 - (void) scheduledNextState:(GameStateType) state;
 
+- (void) runYaspegHomepage;
+
 @end

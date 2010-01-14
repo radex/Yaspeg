@@ -92,6 +92,14 @@
       }
 
    }
+   else if(eventType == MouseDown_ET)
+   {
+      if([radexLayer isInBounds:eventMousePoint])
+      {
+         [yaspeg runYaspegHomepage];
+      }
+   }
+
    
    eventType = None_ET;
 }

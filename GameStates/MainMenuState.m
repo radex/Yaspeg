@@ -34,10 +34,17 @@
    // footer
    
    footerLayer = [ImageLayer layerWithImageNamed:@"by-radex"];
-   footerLayer.x = 800 - footerLayer.w - 10;
+   footerLayer.x = 800 - footerLayer.w;
    footerLayer.y = -footerLayer.h;
    
    [yaspeg.rootLayer addSublayer:footerLayer];
+   
+   footerGlowLayer = [ImageLayer layerWithImageNamed:@"by-radex-glow"];
+   footerGlowLayer.x = 800 - footerGlowLayer.w;
+   footerGlowLayer.y = -footerGlowLayer.h;
+   footerGlowLayer.opacity = 0;
+   
+   [yaspeg.rootLayer addSublayer:footerGlowLayer];
    
    // menu items (text)
    
@@ -185,6 +192,16 @@
          
          i++;
       }
+      
+      if([footerLayer isInBounds:eventMousePoint])
+      {
+         footerGlowLayer.opacity = 1.0;
+      }
+      else
+      {
+         footerGlowLayer.opacity = 0;
+      }
+
    }
    else if(eventType == MouseDown_ET)
    {
@@ -199,6 +216,11 @@
          }
          
          i++;
+      }
+      
+      if([footerLayer isInBounds:eventMousePoint])
+      {
+         [yaspeg runYaspegHomepage];
       }
    }
    
@@ -235,7 +257,8 @@
       
       bgLayer.opacity = 1.0;
       headerLayer.y = 590 - headerLayer.h;
-      footerLayer.y = 10;
+      footerLayer.y = 0;
+      footerGlowLayer.y = 0;
       
       [CATransaction commit];
       
