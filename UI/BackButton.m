@@ -19,13 +19,14 @@
 + (id)layerWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame{return nil;}
 + (id)layerWithImageNamed:(NSString *)newImageName{return nil;}
 
-- (id)initWithLeadingState:(GameStateType)stateType sender:(GameState*)sender
+- (id)initWithTargetState:(GameStateType)stateType
 {
    if(self = [super init])
    {
-      state = sender;
-      yaspeg = sender.yaspeg;
-      leadingState = stateType;
+      yaspeg = [YaspegController sharedYaspegController];
+      state = yaspeg.currentState;
+      
+      targetState = stateType;
       
       buttonLayer         = [ImageLayer layerWithImageNamed:@"back-button-unselected" frame:NSMakeRect(-50, 540, 50, 50)];
       selectedButtonLayer = [ImageLayer layerWithImageNamed:@"back-button-selected"   frame:NSMakeRect(-50, 540, 50, 50)];
@@ -43,9 +44,9 @@
    return self;
 }
 
-+ (id)buttonWithLeadingState:(GameStateType)stateType sender:(GameState*)sender
++ (id)buttonWithTargetState:(GameStateType)stateType
 {
-   return [[self alloc] initWithLeadingState:stateType sender:sender];
+   return [[self alloc] initWithTargetState:stateType];
 }
 
 - (void)handleEvents
@@ -73,7 +74,7 @@
    {
       if([buttonLayer isInBounds:state.eventMousePoint])
       {
-         [yaspeg scheduledNextState:leadingState];
+         [yaspeg scheduledNextState:targetState];
       }
    }
    

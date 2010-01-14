@@ -64,7 +64,7 @@
    if(!inited)
    {
       [CATransaction begin];
-      [CATransaction setAnimationDuration_c:5.0];
+      [CATransaction setAnimationDuration_c:0.5];
       
       
       

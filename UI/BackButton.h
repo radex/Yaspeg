@@ -13,16 +13,16 @@
 
 @interface BackButton : CALayer
 {
-   GameState *state;
+   GameState        *state;
    YaspegController *yaspeg;
-   GameStateType leadingState;
+   GameStateType    targetState;
    
    ImageLayer *buttonLayer;
    ImageLayer *selectedButtonLayer;
 }
 
-- (id) initWithLeadingState:(GameStateType)stateType sender:(GameState*)sender;
-+ (id) buttonWithLeadingState:(GameStateType)stateType sender:(GameState*)sender;
+- (id) initWithTargetState:(GameStateType)stateType;
++ (id) buttonWithTargetState:(GameStateType)stateType;
 
 - (void) handleEvents;
 - (void) handleRender;

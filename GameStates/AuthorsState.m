@@ -35,7 +35,7 @@
    
    // back button
    
-   backButton = [BackButton buttonWithLeadingState:MainMenu_GS sender:self];
+   backButton = [BackButton buttonWithTargetState:MainMenu_GS];
    
    // scenario, direction, graphics
    
