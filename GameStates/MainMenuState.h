@@ -28,4 +28,7 @@
    int changedMenuItem;
 }
 
+- (bool) runMenuItem:(int)item;
+- (int) itemSelected:(int)item;
+
 @end

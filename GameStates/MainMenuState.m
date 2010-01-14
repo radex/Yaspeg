@@ -8,12 +8,6 @@
 
 #import "MainMenuState.h"
 
-@interface MainMenuState (private)
-
-- (int) itemSelected:(int)item;
-
-@end
-
 @implementation MainMenuState
 
 /*
@@ -155,17 +149,9 @@
       }
       else if(character == YK_RETURN || character == YK_ENTER)
       {
-         switch(currentMenuItem)
+         if([self runMenuItem:currentMenuItem])
          {
-            case 4:
-               [yaspeg scheduledNextState:Authors_GS];
-               return;
-               break;
-            case 6:
-               [yaspeg windowWillClose:nil];
-               return;
-            default:
-               break;
+            return;
          }
       }
       /*
@@ -181,6 +167,39 @@
          CGImageRelease(myImage);
       }
        */
+   }
+   else if(eventType == MouseMove_ET)
+   {
+      int i = 0;
+      
+      for(ImageLayer *item in menuItems)
+      {
+         if([item isInBounds:eventMousePoint])
+         {
+            if(i != currentMenuItem)
+            {
+               changedMenuItem = i;
+            }
+            break;
+         }
+         
+         i++;
+      }
+   }
+   else if(eventType == MouseDown_ET)
+   {
+      int i = 0;
+      
+      for(ImageLayer *item in menuItems)
+      {
+         if([item isInBounds:eventMousePoint])
+         {
+            [self runMenuItem:i];
+            break;
+         }
+         
+         i++;
+      }
    }
    
    eventType = None_ET;
@@ -315,6 +334,24 @@
    }
 
    return selectedItem;
+}
+
+- (bool) runMenuItem: (int) item
+{
+   switch(item)
+   {
+      case 4:
+         [yaspeg scheduledNextState:Authors_GS];
+         return YES;
+         break;
+      case 6:
+         [yaspeg windowWillClose:nil];
+         return YES;
+      default:
+         break;
+   }
+   
+   return NO;
 }
 
 @end
