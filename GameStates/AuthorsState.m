@@ -35,19 +35,7 @@
    
    // back button
    
-   backButton = [ImageLayer layerWithImageNamed:@"back-button-unselected"];
-   backButtonSelected = [ImageLayer layerWithImageNamed:@"back-button-selected"];
-   
-   backButton.x = -50;
-   backButton.y = 540;
-   backButton.opacity = -2;
-   
-   backButtonSelected.x = -50;
-   backButtonSelected.y = 540;
-   backButtonSelected.opacity = -2;
-   
-   [yaspeg.rootLayer addSublayer:backButton];
-   [yaspeg.rootLayer addSublayer:backButtonSelected];
+   backButton = [BackButton buttonWithLeadingState:MainMenu_GS sender:self];
    
    // scenario, direction, graphics
    
@@ -110,6 +98,8 @@
 
 - (void) events
 {
+   [backButton handleEvents];
+   
    if(eventType == KeyDown_ET)
    {
       unichar character = [eventCharachters characterAtIndex:0];
@@ -130,27 +120,12 @@
       {
          radexGlowLayer.opacity = 0;
       }
-      
-      
-      if([backButton isInBounds:eventMousePoint])
-      {
-         backButtonSelected.opacity = 1.0;
-      }
-      else
-      {
-         backButtonSelected.opacity = 0;
-      }
    }
    else if(eventType == MouseDown_ET)
    {
       if([radexLayer isInBounds:eventMousePoint])
       {
          [yaspeg runYaspegHomepage];
-      }
-      
-      if([backButton isInBounds:eventMousePoint])
-      {
-         [yaspeg scheduledNextState:MainMenu_GS];
       }
    }
 
@@ -184,15 +159,13 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:0.5];
       
+      [backButton handleRender];
+      
       bgLayer.opacity = 1.0;
       scenarioLayer.opacity = 1.0;
       radexLayer.opacity = 1.0;
       thanksLayer.opacity = 1.0;
       thanksHeaderLayer.opacity = 1.0;
-      
-      backButton.x = 10;
-      backButtonSelected.x = 10;
-      backButton.opacity = 1.0;
       
       headerLayer.y = 600 - 10 - headerLayer.h;
       
@@ -220,17 +193,14 @@
    [CATransaction begin];
    [CATransaction setAnimationDuration_c:animationDuration];
    
+   [backButton handleOutro];
+   
    bgLayer.opacity = 0;
    scenarioLayer.opacity = 0;
    radexLayer.opacity = 0;
    radexGlowLayer.opacity = 0;
    thanksHeaderLayer.opacity = 0;
    thanksLayer.opacity = 0;
-   
-   backButton.x = -50;
-   backButton.opacity = -2; // faster animation
-   backButtonSelected.x = -50;
-   backButtonSelected.opacity = -2;
    
    headerLayer.y = 600;
    
@@ -256,7 +226,6 @@
    [radexGlowLayer removeFromSuperlayer];
    [thanksLayer removeFromSuperlayer];
    [backButton removeFromSuperlayer];
-   [backButtonSelected removeFromSuperlayer];
 }
 
 @end

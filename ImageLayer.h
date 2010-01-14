@@ -38,10 +38,7 @@
 @property (assign, readwrite) int h;
 
 + (id)layerWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame;
-- (id)initWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame;
-
 + (id)layerWithImageNamed:(NSString *)newImageName;
-- (id)initWithImageNamed:(NSString *)newImageName;
 
 - (bool)isInBounds:(NSPoint)point;
 @end

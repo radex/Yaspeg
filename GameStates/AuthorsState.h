@@ -8,6 +8,7 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
+#import "BackButton.h"
 
 @interface AuthorsState : GameState
 {
@@ -18,9 +19,7 @@
    ImageLayer *radexGlowLayer;
    CATextLayer *thanksHeaderLayer;
    CATextLayer *thanksLayer;
-   
-   ImageLayer *backButton;
-   ImageLayer *backButtonSelected;
+   BackButton *backButton;
 }
 
 @end
