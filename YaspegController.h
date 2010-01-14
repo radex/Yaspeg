@@ -11,8 +11,11 @@
 
 #import "GameState.h"
 #import "MainMenuState.h"
-#import "SettingsState.h"
+#import "HelpState.h"
+#import "EditorState.h"
+#import "DownloadState.h"
 #import "AuthorsState.h"
+#import "SettingsState.h"
 
 @interface YaspegController : NSObject
 {
@@ -31,6 +34,8 @@
 
 - (void) setNextState:(GameStateType) state;
 - (void) scheduledNextState:(GameStateType) state;
+- (IBAction) runAuthorsState: (id) sender;
+- (IBAction) runHelp: (id) sender;
 
 - (void) runYaspegHomepage;
 

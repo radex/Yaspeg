@@ -16,6 +16,9 @@
 enum GameStateType_t
 {
    MainMenu_GS,
+   Help_GS,
+   Editor_GS,
+   Download_GS,
    Settings_GS,
    Authors_GS,
    

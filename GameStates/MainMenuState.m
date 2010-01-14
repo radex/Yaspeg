@@ -333,9 +333,9 @@
    GameStateType statesArray[6] = 
    {
       None_GS,
-      None_GS,
-      None_GS,
-      None_GS,
+      Help_GS,
+      Editor_GS,
+      Download_GS,
       Authors_GS,
       Settings_GS
    };

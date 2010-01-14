@@ -92,8 +92,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    switch (state)
    {
       case MainMenu_GS: currentState = [[MainMenuState alloc] init]; break;
-      case Settings_GS: currentState = [[SettingsState alloc] init]; break;
+      case Help_GS:     currentState = [[HelpState     alloc] init]; break;
+      case Editor_GS:   currentState = [[EditorState   alloc] init]; break;
+      case Download_GS: currentState = [[DownloadState alloc] init]; break;
       case Authors_GS:  currentState = [[AuthorsState  alloc] init]; break;
+      case Settings_GS: currentState = [[SettingsState alloc] init]; break;
       default: break;
    }
    
@@ -118,6 +121,28 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    NSTimeInterval outroTime = 0.3 * [currentState outro];
    
    [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(setNextState:) userInfo:nil repeats:NO];
+}
+
+/*
+ * runAuthorsState
+ *
+ *
+ */
+
+- (IBAction) runAuthorsState: (id) sender
+{
+   [self scheduledNextState:Authors_GS];
+}
+
+/*
+ * runHelp
+ *
+ *
+ */
+
+- (IBAction) runHelp: (id) sender
+{
+   [self scheduledNextState:Help_GS];
 }
 
 #pragma mark -
