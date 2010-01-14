@@ -42,5 +42,7 @@
 
 + (id)layerWithImageNamed:(NSString *)newImageName;
 - (id)initWithImageNamed:(NSString *)newImageName;
+
+- (bool)isInBounds:(NSPoint)point;
 @end
 

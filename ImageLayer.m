@@ -139,7 +139,7 @@
 }
 
 #pragma mark -
-#pragma mark drawing
+#pragma mark drawing and other stuff
 
 - (void)drawInContext:(CGContextRef)ctx
 {
@@ -156,6 +156,21 @@
 		fraction:1.0];
 	
 	NSGraphicsContext.currentContext = oldContext;
+}
+
+- (bool)isInBounds:(NSPoint)point
+{
+   NSRect frame = NSRectFromCGRect(self.frame);
+   
+   if(point.x > frame.origin.x &&
+      point.x < frame.origin.x + frame.size.width &&
+      point.y > frame.origin.y &&
+      point.y < frame.origin.y + frame.size.height)
+   {
+      return YES;
+   }
+   
+   return NO;
 }
 
 @end

@@ -24,6 +24,9 @@
 
 - (void)keyUp:(NSEvent *)event
 {
+   yaspeg.currentState.eventType = KeyUp_ET;
+   yaspeg.currentState.eventCharachters = event.characters;
+   yaspeg.currentState.eventIsRepeat = event.isARepeat;
 }
 
 - (void)mouseDown:(NSEvent *)event
@@ -41,6 +44,12 @@
 - (void)mouseDragged:(NSEvent *)event
 {
    yaspeg.currentState.eventType = MouseDrag_ET;
+   yaspeg.currentState.eventMousePoint = [self convertPoint:event.locationInWindow fromView:nil];
+}
+
+- (void)mouseMoved:(NSEvent *)event
+{
+   yaspeg.currentState.eventType = MouseMove_ET;
    yaspeg.currentState.eventMousePoint = [self convertPoint:event.locationInWindow fromView:nil];
 }
 

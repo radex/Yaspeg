@@ -24,6 +24,39 @@
    bgLayer.opacity = 0.0;
    
    [yaspeg.rootLayer addSublayer:bgLayer];
+   
+   // header
+   
+   headerLayer = [ImageLayer layerWithImageNamed:@"header-autorzy"];
+   headerLayer.x = (800 - headerLayer.w) / 2;
+   headerLayer.y = 600;
+   
+   [yaspeg.rootLayer addSublayer:headerLayer];
+   
+   // scenario, direction, graphics
+   
+   scenarioLayer = [ImageLayer layerWithImageNamed:@"scenariusz-rezyseria"];
+   scenarioLayer.x = 50;
+   scenarioLayer.y = 350;
+   scenarioLayer.opacity = 0;
+   
+   [yaspeg.rootLayer addSublayer:scenarioLayer];
+   
+   // radex, radex glow
+   
+   radexLayer     = [ImageLayer layerWithImageNamed:@"radex-medium"];
+   radexGlowLayer = [ImageLayer layerWithImageNamed:@"radex-medium-glow"];
+   
+   radexLayer.x = 250;
+   radexLayer.y = 400;
+   radexGlowLayer.x = 250;
+   radexGlowLayer.y = 400;
+   
+   radexLayer.opacity = 0;
+   radexGlowLayer.opacity = 0;
+   
+   [yaspeg.rootLayer addSublayer:radexLayer];
+   [yaspeg.rootLayer addSublayer:radexGlowLayer];
 }
 
 #pragma mark -
@@ -46,6 +79,18 @@
          [yaspeg scheduledNextState:MainMenu_GS];
          return;
       }
+   }
+   else if(eventType == MouseMove_ET)
+   {
+      if([radexLayer isInBounds:eventMousePoint])
+      {
+         radexGlowLayer.opacity = 1.0;
+      }
+      else
+      {
+         radexGlowLayer.opacity = 0;
+      }
+
    }
    
    eventType = None_ET;
@@ -78,6 +123,10 @@
       [CATransaction setAnimationDuration_c:0.5];
       
       bgLayer.opacity = 1.0;
+      scenarioLayer.opacity = 1.0;
+      radexLayer.opacity = 1.0;
+      //radexGlowLayer.opacity = 1.0;
+      headerLayer.y = 600 - 10 - headerLayer.h;
       
       [CATransaction commit];
       
@@ -104,6 +153,10 @@
    [CATransaction setAnimationDuration_c:animationDuration];
    
    bgLayer.opacity = 0;
+   scenarioLayer.opacity = 0;
+   radexLayer.opacity = 0;
+   radexGlowLayer.opacity = 0;
+   headerLayer.y = 600;
    
    [CATransaction commit];
    
@@ -121,6 +174,10 @@
 - (void) cleanUp
 {
    [bgLayer removeFromSuperlayer];
+   [headerLayer removeFromSuperlayer];
+   [scenarioLayer removeFromSuperlayer];
+   [radexLayer removeFromSuperlayer];
+   [radexGlowLayer removeFromSuperlayer];
 }
 
 @end

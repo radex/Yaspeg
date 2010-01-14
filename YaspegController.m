@@ -31,10 +31,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    rootLayer.masksToBounds = YES;
    
    [contentView.layer insertSublayer:rootLayer atIndex:0];
-   
+
    [self setNextState:MainMenu_GS];
    
    shouldUpdate = YES;
+   
+   [[contentView window] setAcceptsMouseMovedEvents:YES];
    
    [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateState) userInfo:nil repeats:YES];
 }

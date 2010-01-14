@@ -12,6 +12,11 @@
 @interface AuthorsState : GameState
 {
    ImageLayer *bgLayer;
+   ImageLayer *headerLayer;
+   ImageLayer *scenarioLayer;
+   ImageLayer *radexLayer;
+   ImageLayer *radexGlowLayer;
+   
 }
 
 @end

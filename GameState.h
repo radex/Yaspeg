@@ -32,6 +32,7 @@ enum EventType_t
    KeyUp_ET,
    MouseDown_ET,
    MouseDrag_ET,
+   MouseMove_ET,
    MouseUp_ET,
    None_ET
 };
