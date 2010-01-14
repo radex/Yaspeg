@@ -7,18 +7,18 @@
 //
 
 #import "ImageLayer.h"
-#import "myBitmapContext.h"
+#import "CATransaction+radex.h"
 
 #import "GameState.h"
-#import "GameStates/MainMenuState.h"
-#import "GameStates/AuthorsState.h"
+#import "MainMenuState.h"
+#import "AuthorsState.h"
 
 @interface YaspegController : NSObject
 {
    CALayer *rootLayer;
 	IBOutlet NSView *contentView;
    
-   GameState *currentState;
+   GameState    *currentState;
    GameStateType nextState;
    bool          shouldUpdate;
 }

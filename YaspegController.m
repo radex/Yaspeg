@@ -23,20 +23,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (void)awakeFromNib
 {
-	contentView.layer.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1);
-	CGColorRelease(contentView.layer.backgroundColor);
-   
-   rootLayer = [CALayer layer];
-   rootLayer.frame = CGRectMake(0, 0, 800, 600);
+   rootLayer = contentView.layer;
    rootLayer.masksToBounds = YES;
-   
-   [contentView.layer insertSublayer:rootLayer atIndex:0];
-
-   [self setNextState:MainMenu_GS];
-   
-   shouldUpdate = YES;
+	rootLayer.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1);
+	CGColorRelease(rootLayer.backgroundColor);
    
    [[contentView window] setAcceptsMouseMovedEvents:YES];
+   
+   [self setNextState:MainMenu_GS];
    
    [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateState) userInfo:nil repeats:YES];
 }
@@ -94,7 +88,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    {
       [currentState outro];
    }
-
    
    switch (state)
    {

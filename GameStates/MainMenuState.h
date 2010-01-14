@@ -16,12 +16,8 @@
    ImageLayer *footerLayer;
    ImageLayer *footerGlowLayer;
    
-   //CALayer    *dupaLayer;
-   
    NSArray *menuItems;   // CALayer[]
    NSArray *menuItems_g; // CALayer[] menu items' glows
-   
-   
    
    CABasicAnimation *pulseAnimation;
    

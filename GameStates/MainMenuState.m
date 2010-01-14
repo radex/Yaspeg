@@ -161,19 +161,6 @@
             return;
          }
       }
-      /*
-      else if(character == 't')
-      {
-         CGContextRef myBitmapContext = MyCreateBitmapContext(800,600);
-         [yaspeg.rootLayer renderInContext:myBitmapContext];
-         CGImageRef myImage = CGBitmapContextCreateImage(myBitmapContext);
-         dupaLayer = [CALayer layer];
-         dupaLayer.frame = NSMakeRect(100, 100, 800, 600);
-         dupaLayer.contents = (id) myImage;
-         [yaspeg.rootLayer addSublayer:dupaLayer];
-         CGImageRelease(myImage);
-      }
-       */
    }
    else if(eventType == MouseMove_ET)
    {

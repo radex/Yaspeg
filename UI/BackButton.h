@@ -9,6 +9,8 @@
 #import "ImageLayer.h"
 #import "GameState.h"
 
+@class YaspegController;
+
 @interface BackButton : CALayer
 {
    GameState *state;

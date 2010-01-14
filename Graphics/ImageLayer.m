@@ -14,16 +14,6 @@
 
 #import "ImageLayer.h"
 
-@implementation CATransaction (Radex)
-
-+ (void)setAnimationDuration_c:(CFTimeInterval)duration
-{
-   [CATransaction setValue:[NSNumber numberWithFloat:duration] forKey:kCATransactionAnimationDuration]; //that's for 10.5 compatibility
-}
-
-@end
-
-
 @implementation ImageLayer
 
 @synthesize imageName, x, y, w, h;

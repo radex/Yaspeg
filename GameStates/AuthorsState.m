@@ -100,17 +100,7 @@
 {
    [backButton handleEvents];
    
-   if(eventType == KeyDown_ET)
-   {
-      unichar character = [eventCharachters characterAtIndex:0];
-      
-      if(character == YK_ESC)
-      {
-         [yaspeg scheduledNextState:MainMenu_GS];
-         return;
-      }
-   }
-   else if(eventType == MouseMove_ET)
+   if(eventType == MouseMove_ET)
    {
       if([radexLayer isInBounds:eventMousePoint])
       {

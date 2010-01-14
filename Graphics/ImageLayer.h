@@ -14,12 +14,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CATransaction (Radex)
-
-+ (void)setAnimationDuration_c:(CFTimeInterval)duration; // 10.5 compatibility
-
-@end
-
 @interface ImageLayer : CALayer
 {
 	NSString *imageName;

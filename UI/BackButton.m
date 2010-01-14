@@ -7,7 +7,7 @@
 //
 
 #import "BackButton.h"
-
+#import "YaspegController.h"
 
 @implementation BackButton
 
@@ -35,9 +35,9 @@
       
       [self addSublayer:buttonLayer];
       [self addSublayer:selectedButtonLayer];
-      
       [self setNeedsDisplay];
-      [[yaspeg rootLayer] addSublayer:self];
+      
+      [yaspeg.rootLayer addSublayer:self];
    }
    
    return self;
@@ -50,7 +50,15 @@
 
 - (void)handleEvents
 {
-   if(state.eventType == MouseMove_ET)
+   if(state.eventType == KeyDown_ET)
+   {
+      if([state.eventCharachters characterAtIndex:0] == YK_ESC)
+      {
+         [yaspeg scheduledNextState:MainMenu_GS];
+         return;
+      }
+   }
+   else if(state.eventType == MouseMove_ET)
    {
       if([buttonLayer isInBounds:state.eventMousePoint])
       {
