@@ -27,16 +27,14 @@
       yaspeg = sender.yaspeg;
       leadingState = stateType;
       
-      buttonImage = [NSImage imageNamed:@"back-button-unselected"];
-      buttonSelectedImage = [NSImage imageNamed:@"back-button-selected"];
+      buttonLayer         = [ImageLayer layerWithImageNamed:@"back-button-unselected" frame:NSMakeRect(-50, 540, 50, 50)];
+      selectedButtonLayer = [ImageLayer layerWithImageNamed:@"back-button-selected"   frame:NSMakeRect(-50, 540, 50, 50)];
       
-		self.x = -50;
-      self.y = 540;
-      self.opacity = -2;
-      self.w = 50;
-      self.h = 50;
+      buttonLayer.opacity = -2;
+      selectedButtonLayer.opacity = -2;
       
-      selected = NO;
+      [self addSublayer:buttonLayer];
+      [self addSublayer:selectedButtonLayer];
       
       [self setNeedsDisplay];
       [[yaspeg rootLayer] addSublayer:self];
@@ -54,20 +52,18 @@
 {
    if(state.eventType == MouseMove_ET)
    {
-      if([self isInBounds:state.eventMousePoint])
+      if([buttonLayer isInBounds:state.eventMousePoint])
       {
-         selected = YES;
-         [self setNeedsDisplay];
+         selectedButtonLayer.opacity = 1;
       }
       else
       {
-         selected = NO;
-         [self setNeedsDisplay];
+         selectedButtonLayer.opacity = 0;
       }
    }
    else if(state.eventType == MouseDown_ET)
    {
-      if([self isInBounds:state.eventMousePoint])
+      if([buttonLayer isInBounds:state.eventMousePoint])
       {
          [yaspeg scheduledNextState:leadingState];
       }
@@ -77,41 +73,19 @@
 
 - (void)handleRender
 {
-   self.x = 10;
-   self.opacity = 1;
+   buttonLayer.x = 10;
+   selectedButtonLayer.x = 10;
+   
+   buttonLayer.opacity = 1;
 }
 
 - (void)handleOutro
 {
-   self.x = -50;
-   self.opacity = -2;
-}
-
-- (void)drawInContext:(CGContextRef)ctx
-{
-	NSGraphicsContext *oldContext = [NSGraphicsContext currentContext];
-	NSGraphicsContext *context    = [NSGraphicsContext graphicsContextWithGraphicsPort:ctx flipped:NO];
+   buttonLayer.x = -50;
+   selectedButtonLayer.x = -50;
    
-	NSGraphicsContext.currentContext = context;
-	
-   if(selected)
-   {
-      [buttonSelectedImage
-       drawInRect:NSRectFromCGRect(self.bounds)
-       fromRect:[buttonImage alignmentRect]
-       operation:NSCompositeSourceOver
-       fraction:1.0];
-   }
-   else
-	{
-      [buttonImage
-       drawInRect:NSRectFromCGRect(self.bounds)
-       fromRect:[buttonImage alignmentRect]
-       operation:NSCompositeSourceOver
-       fraction:1.0];
-	}
-   
-	NSGraphicsContext.currentContext = oldContext;
+   buttonLayer.opacity = -2;
+   selectedButtonLayer.opacity = -2;
 }
 
 @end

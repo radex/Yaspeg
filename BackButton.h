@@ -9,15 +9,14 @@
 #import "ImageLayer.h"
 #import "GameState.h"
 
-@interface BackButton : ImageLayer
+@interface BackButton : CALayer
 {
    GameState *state;
    YaspegController *yaspeg;
    GameStateType leadingState;
    
-   NSImage *buttonImage;
-   NSImage *buttonSelectedImage;
-   bool     selected;
+   ImageLayer *buttonLayer;
+   ImageLayer *selectedButtonLayer;
 }
 
 - (id) initWithLeadingState:(GameStateType)stateType sender:(GameState*)sender;
