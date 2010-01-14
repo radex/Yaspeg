@@ -342,7 +342,7 @@
    
    if(statesArray[item] != None_GS)
    {
-      [yaspeg scheduledNextState:statesArray[item]];
+      [yaspeg scheduleNextState:statesArray[item]];
       return YES;
    }
    

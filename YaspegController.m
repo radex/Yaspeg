@@ -107,13 +107,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 }
 
 /*
- * scheduledNextState
+ * scheduleNextState
  *
  * schedules to launch nextState
  * (it will launch after outro)
  */
 
-- (void) scheduledNextState: (GameStateType) state
+- (void) scheduleNextState: (GameStateType) state
 {
    shouldUpdate = NO;
    nextState = state;
@@ -131,7 +131,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (IBAction) runAuthorsState: (id) sender
 {
-   [self scheduledNextState:Authors_GS];
+   [self scheduleNextState:Authors_GS];
 }
 
 /*
@@ -142,7 +142,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 
 - (IBAction) runHelp: (id) sender
 {
-   [self scheduledNextState:Help_GS];
+   [self scheduleNextState:Help_GS];
 }
 
 #pragma mark -

@@ -55,7 +55,7 @@
    {
       if([state.eventCharachters characterAtIndex:0] == YK_ESC)
       {
-         [yaspeg scheduledNextState:MainMenu_GS];
+         [yaspeg scheduleNextState:MainMenu_GS];
          return;
       }
    }
@@ -74,7 +74,7 @@
    {
       if([buttonLayer isInBounds:state.eventMousePoint])
       {
-         [yaspeg scheduledNextState:targetState];
+         [yaspeg scheduleNextState:targetState];
       }
    }
    

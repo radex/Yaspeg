@@ -33,7 +33,7 @@
 + (YaspegController *)sharedYaspegController;
 
 - (void) setNextState:(GameStateType) state;
-- (void) scheduledNextState:(GameStateType) state;
+- (void) scheduleNextState:(GameStateType) state;
 - (IBAction) runAuthorsState: (id) sender;
 - (IBAction) runHelp: (id) sender;
 

@@ -49,6 +49,8 @@
 
 - (void)mouseMoved:(NSEvent *)event
 {
+   if(yaspeg.currentState.eventType != None_ET) return; // keyDown event have priority
+   
    yaspeg.currentState.eventType = MouseMove_ET;
    yaspeg.currentState.eventMousePoint = [self convertPoint:event.locationInWindow fromView:nil];
 }
