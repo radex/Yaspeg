@@ -104,7 +104,7 @@
    {
       if([radexLayer isInBounds:eventMousePoint])
       {
-         radexGlowLayer.opacity = 1.0;
+         radexGlowLayer.opacity = 1;
       }
       else
       {
@@ -151,11 +151,11 @@
       
       [backButton handleRender];
       
-      bgLayer.opacity = 1.0;
-      scenarioLayer.opacity = 1.0;
-      radexLayer.opacity = 1.0;
-      thanksLayer.opacity = 1.0;
-      thanksHeaderLayer.opacity = 1.0;
+      bgLayer.opacity = 1;
+      scenarioLayer.opacity = 1;
+      radexLayer.opacity = 1;
+      thanksLayer.opacity = 1;
+      thanksHeaderLayer.opacity = 1;
       
       headerLayer.y = 600 - 10 - headerLayer.h;
       
@@ -196,26 +196,9 @@
    
    [CATransaction commit];
    
-   [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
+   [super scheduleCleanUp:animationDuration];
    
    return animationDuration;
-}
-
-/*
- * cleanUp
- *
- *
- */
-
-- (void) cleanUp
-{
-   [bgLayer removeFromSuperlayer];
-   [headerLayer removeFromSuperlayer];
-   [scenarioLayer removeFromSuperlayer];
-   [radexLayer removeFromSuperlayer];
-   [radexGlowLayer removeFromSuperlayer];
-   [thanksLayer removeFromSuperlayer];
-   [backButton removeFromSuperlayer];
 }
 
 @end

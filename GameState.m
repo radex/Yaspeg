@@ -7,7 +7,7 @@
 //
 
 #import "GameState.h"
-
+#import "YaspegController.h"
 
 @implementation GameState
 
@@ -34,6 +34,18 @@
    
    return 0;
 }
-- (void) cleanUp{}
+- (void) scheduleCleanUp:(NSTimeInterval)outroDuration
+{
+   removedObjects = [[YaspegController sharedYaspegController].rootLayer.sublayers copy];
+   [NSTimer scheduledTimerWithTimeInterval:outroDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
+}
+
+- (void) cleanUp
+{
+   for(CALayer *layer in removedObjects)
+   {
+      [layer removeFromSuperlayer];
+   }
+}
 
 @end

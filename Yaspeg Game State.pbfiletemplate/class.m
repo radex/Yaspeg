@@ -96,20 +96,9 @@
    
    [CATransaction commit];
    
-   [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
+   [super scheduleCleanUp: animationDuration];
    
    return animationDuration;
-}
-
-/*
- * cleanUp
- *
- *
- */
-
-- (void) cleanUp
-{
-   
 }
 
 @end

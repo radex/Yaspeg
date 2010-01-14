@@ -11,6 +11,7 @@
 
 #import "GameState.h"
 #import "MainMenuState.h"
+#import "SettingsState.h"
 #import "AuthorsState.h"
 
 @interface YaspegController : NSObject

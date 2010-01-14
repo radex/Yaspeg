@@ -16,6 +16,7 @@
 enum GameStateType_t
 {
    MainMenu_GS,
+   Settings_GS,
    Authors_GS,
    
    None_GS
@@ -55,6 +56,8 @@ typedef enum EventType_t EventType;
    bool      eventIsRepeat;
    NSPoint   eventMousePoint;
    bool      inited;
+   
+   NSArray  *removedObjects;
 }
 
 - (void) stateInit;
@@ -63,6 +66,7 @@ typedef enum EventType_t EventType;
 - (void) render;
 
 - (NSTimeInterval) outro;
+- (void) scheduleCleanUp: (NSTimeInterval) outroDuration;
 - (void) cleanUp;
 
 @property (assign, readwrite) YaspegController *yaspeg;

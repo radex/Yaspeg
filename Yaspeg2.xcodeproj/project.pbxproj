@@ -12,6 +12,11 @@
 		6E1DD85710FF8B6E00993443 /* ImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85210FF8B6E00993443 /* ImageLayer.m */; };
 		6E1DD85810FF8B6E00993443 /* KeyHandlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85410FF8B6E00993443 /* KeyHandlingView.m */; };
 		6E1DD85B10FF8B8B00993443 /* BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85A10FF8B8B00993443 /* BackButton.m */; };
+		6E1DD8C410FFB0A700993443 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD8C310FFB0A700993443 /* SettingsState.m */; };
+		6E1DD8EF10FFB38100993443 /* header-edytor-poziomow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */; };
+		6E1DD8F010FFB38100993443 /* header-jak-grac.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8EC10FFB38100993443 /* header-jak-grac.png */; };
+		6E1DD8F110FFB38100993443 /* header-pobierz-poziomy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8ED10FFB38100993443 /* header-pobierz-poziomy.png */; };
+		6E1DD8F210FFB38100993443 /* header-ustawienia.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8EE10FFB38100993443 /* header-ustawienia.png */; };
 		6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
@@ -76,6 +81,12 @@
 		6E1DD85410FF8B6E00993443 /* KeyHandlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyHandlingView.m; path = Graphics/KeyHandlingView.m; sourceTree = "<group>"; };
 		6E1DD85910FF8B8B00993443 /* BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackButton.h; path = UI/BackButton.h; sourceTree = "<group>"; };
 		6E1DD85A10FF8B8B00993443 /* BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackButton.m; path = UI/BackButton.m; sourceTree = "<group>"; };
+		6E1DD8C210FFB0A700993443 /* SettingsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsState.h; path = GameStates/SettingsState.h; sourceTree = "<group>"; };
+		6E1DD8C310FFB0A700993443 /* SettingsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsState.m; path = GameStates/SettingsState.m; sourceTree = "<group>"; };
+		6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-edytor-poziomow.png"; path = "gfx/header-edytor-poziomow.png"; sourceTree = "<group>"; };
+		6E1DD8EC10FFB38100993443 /* header-jak-grac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-jak-grac.png"; path = "gfx/header-jak-grac.png"; sourceTree = "<group>"; };
+		6E1DD8ED10FFB38100993443 /* header-pobierz-poziomy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-pobierz-poziomy.png"; path = "gfx/header-pobierz-poziomy.png"; sourceTree = "<group>"; };
+		6E1DD8EE10FFB38100993443 /* header-ustawienia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-ustawienia.png"; path = "gfx/header-ustawienia.png"; sourceTree = "<group>"; };
 		6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "by-radex-glow.png"; path = "gfx/by-radex-glow.png"; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
@@ -310,6 +321,8 @@
 				6E695DF010F9340800728B14 /* MainMenuState.m */,
 				6E70973210FD2FD100E04723 /* AuthorsState.h */,
 				6E70973310FD2FD100E04723 /* AuthorsState.m */,
+				6E1DD8C210FFB0A700993443 /* SettingsState.h */,
+				6E1DD8C310FFB0A700993443 /* SettingsState.m */,
 			);
 			name = "Game States";
 			sourceTree = "<group>";
@@ -317,6 +330,10 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */,
+				6E1DD8EC10FFB38100993443 /* header-jak-grac.png */,
+				6E1DD8ED10FFB38100993443 /* header-pobierz-poziomy.png */,
+				6E1DD8EE10FFB38100993443 /* header-ustawienia.png */,
 				6E2EDE6010FF577200EEECD7 /* back-button-selected.png */,
 				6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */,
 				6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */,
@@ -427,6 +444,10 @@
 				6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */,
 				6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */,
 				6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */,
+				6E1DD8EF10FFB38100993443 /* header-edytor-poziomow.png in Resources */,
+				6E1DD8F010FFB38100993443 /* header-jak-grac.png in Resources */,
+				6E1DD8F110FFB38100993443 /* header-pobierz-poziomy.png in Resources */,
+				6E1DD8F210FFB38100993443 /* header-ustawienia.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +467,7 @@
 				6E1DD85710FF8B6E00993443 /* ImageLayer.m in Sources */,
 				6E1DD85810FF8B6E00993443 /* KeyHandlingView.m in Sources */,
 				6E1DD85B10FF8B8B00993443 /* BackButton.m in Sources */,
+				6E1DD8C410FFB0A700993443 /* SettingsState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

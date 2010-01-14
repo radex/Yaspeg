@@ -92,6 +92,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    switch (state)
    {
       case MainMenu_GS: currentState = [[MainMenuState alloc] init]; break;
+      case Settings_GS: currentState = [[SettingsState alloc] init]; break;
       case Authors_GS:  currentState = [[AuthorsState  alloc] init]; break;
       default: break;
    }

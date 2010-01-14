@@ -21,7 +21,7 @@
    // background
    
    bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0.0;
+   bgLayer.opacity = 0;
    
    [yaspeg.rootLayer addSublayer:bgLayer];
    
@@ -96,7 +96,7 @@
       
       layer.y = 600 - 150 - itemsTotalHeight;
       layer.x = (800 - layer.w)/2;
-      layer.opacity = 0.0;
+      layer.opacity = 0;
       
       [yaspeg.rootLayer addSublayer:layer];
       
@@ -182,7 +182,7 @@
       
       if([footerLayer isInBounds:eventMousePoint])
       {
-         footerGlowLayer.opacity = 1.0;
+         footerGlowLayer.opacity = 1;
       }
       else
       {
@@ -240,9 +240,9 @@
    if(!inited)
    {
       [CATransaction begin];
-      [CATransaction setAnimationDuration_c:(menuForFirstTime ? 1.0 : 0.5)]; // longer animation if yaspeg just launched, shorter if when comming back from other state
+      [CATransaction setAnimationDuration_c:(menuForFirstTime ? 1 : 0.5)]; // longer animation if yaspeg just launched, shorter if when comming back from other state
       
-      bgLayer.opacity = 1.0;
+      bgLayer.opacity = 1;
       headerLayer.y = 590 - headerLayer.h;
       footerLayer.y = 0;
       footerGlowLayer.y = 0;
@@ -300,35 +300,11 @@
    
    [CATransaction commit];
    
-   [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
-   
-   return animationDuration;
-}
-
-/*
- * cleanUp
- *
- *
- */
-
-- (void) cleanUp
-{
-   [bgLayer removeFromSuperlayer];
-   [headerLayer removeFromSuperlayer];
-   [footerLayer removeFromSuperlayer];
-   
-   for(ImageLayer *layer in menuItems)
-   {
-      [layer removeFromSuperlayer];
-   }
-   
-   for(ImageLayer *layer in menuItems_g)
-   {
-      [layer removeAllAnimations];
-      [layer removeFromSuperlayer];
-   }
+   [super scheduleCleanUp:animationDuration];
    
    [self itemSelected:currentMenuItem];
+   
+   return animationDuration;
 }
 
 #pragma mark -
@@ -348,17 +324,26 @@
 
 - (bool) runMenuItem: (int) item
 {
-   switch(item)
+   if(item == 6)
    {
-      case 4:
-         [yaspeg scheduledNextState:Authors_GS];
-         return YES;
-         break;
-      case 6:
-         [yaspeg windowWillClose:nil];
-         return YES;
-      default:
-         break;
+      [yaspeg windowWillClose:nil];
+      return YES;
+   }
+   
+   GameStateType statesArray[6] = 
+   {
+      None_GS,
+      None_GS,
+      None_GS,
+      None_GS,
+      Authors_GS,
+      Settings_GS
+   };
+   
+   if(statesArray[item] != None_GS)
+   {
+      [yaspeg scheduledNextState:statesArray[item]];
+      return YES;
    }
    
    return NO;
