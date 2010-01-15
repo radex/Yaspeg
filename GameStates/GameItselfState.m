@@ -223,7 +223,7 @@
    if(!inited)
    {
       [CATransaction begin];
-      [CATransaction setAnimationDuration_c:1.0];
+      [CATransaction setAnimationDuration_c:0.5];
       
       bg.opacity = 1;
       dude.opacity = 1;

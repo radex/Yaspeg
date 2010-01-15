@@ -23,27 +23,18 @@
 		6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDAA0110062CB00993443 /* GameItselfState.m */; };
 		6E1DDABD1100667400993443 /* dude.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDABC1100667400993443 /* dude.png */; };
 		6E1DDACB110072F700993443 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDACA110072F700993443 /* bg2.png */; };
-		6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E418C6610FE749E00A4F432 /* header-autorzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6210FE749E00A4F432 /* header-autorzy.png */; };
-		6E418C6710FE749E00A4F432 /* radex-medium-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6310FE749E00A4F432 /* radex-medium-glow.png */; };
 		6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6410FE749E00A4F432 /* radex-medium.png */; };
 		6E418C6910FE749E00A4F432 /* scenariusz-rezyseria.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6510FE749E00A4F432 /* scenariusz-rezyseria.png */; };
-		6E4A843810FBD5790084C89F /* autorzy-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842910FBD5780084C89F /* autorzy-item-glow.png */; };
 		6E4A843910FBD5790084C89F /* autorzy-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842A10FBD5780084C89F /* autorzy-item.png */; };
 		6E4A843A10FBD5790084C89F /* by-radex.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842B10FBD5780084C89F /* by-radex.png */; };
-		6E4A843B10FBD5790084C89F /* edytor-poziomow-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842C10FBD5780084C89F /* edytor-poziomow-item-glow.png */; };
 		6E4A843C10FBD5790084C89F /* edytor-poziomow-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842D10FBD5780084C89F /* edytor-poziomow-item.png */; };
-		6E4A843D10FBD5790084C89F /* graj-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842E10FBD5780084C89F /* graj-item-glow.png */; };
 		6E4A843E10FBD5790084C89F /* graj-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A842F10FBD5780084C89F /* graj-item.png */; };
-		6E4A843F10FBD5790084C89F /* jak-grac-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843010FBD5780084C89F /* jak-grac-item-glow.png */; };
 		6E4A844010FBD5790084C89F /* jak-grac-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843110FBD5780084C89F /* jak-grac-item.png */; };
-		6E4A844110FBD5790084C89F /* koniec-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843210FBD5780084C89F /* koniec-item-glow.png */; };
 		6E4A844210FBD5790084C89F /* koniec-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843310FBD5780084C89F /* koniec-item.png */; };
-		6E4A844310FBD5790084C89F /* pobierz-poziomy-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843410FBD5780084C89F /* pobierz-poziomy-item-glow.png */; };
 		6E4A844410FBD5790084C89F /* pobierz-poziomy-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843510FBD5780084C89F /* pobierz-poziomy-item.png */; };
-		6E4A844510FBD5790084C89F /* ustawienia-item-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843610FBD5780084C89F /* ustawienia-item-glow.png */; };
 		6E4A844610FBD5790084C89F /* ustawienia-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A843710FBD5780084C89F /* ustawienia-item.png */; };
 		6E4D4F3710F7EB13003F7C7A /* YaspegIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */; };
 		6E61CB8210F0A12C0027DACF /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E61CB8110F0A12C0027DACF /* GameState.m */; };
@@ -103,27 +94,18 @@
 		6E1DDAA0110062CB00993443 /* GameItselfState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameItselfState.m; path = GameStates/GameItselfState.m; sourceTree = "<group>"; };
 		6E1DDABC1100667400993443 /* dude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dude.png; path = gfx/dude.png; sourceTree = "<group>"; };
 		6E1DDACA110072F700993443 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = gfx/bg2.png; sourceTree = "<group>"; };
-		6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "by-radex-glow.png"; path = "gfx/by-radex-glow.png"; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E418C6210FE749E00A4F432 /* header-autorzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-autorzy.png"; path = "gfx/header-autorzy.png"; sourceTree = "<group>"; };
-		6E418C6310FE749E00A4F432 /* radex-medium-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium-glow.png"; path = "gfx/radex-medium-glow.png"; sourceTree = "<group>"; };
 		6E418C6410FE749E00A4F432 /* radex-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium.png"; path = "gfx/radex-medium.png"; sourceTree = "<group>"; };
 		6E418C6510FE749E00A4F432 /* scenariusz-rezyseria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scenariusz-rezyseria.png"; path = "gfx/scenariusz-rezyseria.png"; sourceTree = "<group>"; };
-		6E4A842910FBD5780084C89F /* autorzy-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "autorzy-item-glow.png"; path = "gfx/autorzy-item-glow.png"; sourceTree = "<group>"; };
 		6E4A842A10FBD5780084C89F /* autorzy-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "autorzy-item.png"; path = "gfx/autorzy-item.png"; sourceTree = "<group>"; };
 		6E4A842B10FBD5780084C89F /* by-radex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "by-radex.png"; path = "gfx/by-radex.png"; sourceTree = "<group>"; };
-		6E4A842C10FBD5780084C89F /* edytor-poziomow-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edytor-poziomow-item-glow.png"; path = "gfx/edytor-poziomow-item-glow.png"; sourceTree = "<group>"; };
 		6E4A842D10FBD5780084C89F /* edytor-poziomow-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edytor-poziomow-item.png"; path = "gfx/edytor-poziomow-item.png"; sourceTree = "<group>"; };
-		6E4A842E10FBD5780084C89F /* graj-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graj-item-glow.png"; path = "gfx/graj-item-glow.png"; sourceTree = "<group>"; };
 		6E4A842F10FBD5780084C89F /* graj-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graj-item.png"; path = "gfx/graj-item.png"; sourceTree = "<group>"; };
-		6E4A843010FBD5780084C89F /* jak-grac-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jak-grac-item-glow.png"; path = "gfx/jak-grac-item-glow.png"; sourceTree = "<group>"; };
 		6E4A843110FBD5780084C89F /* jak-grac-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jak-grac-item.png"; path = "gfx/jak-grac-item.png"; sourceTree = "<group>"; };
-		6E4A843210FBD5780084C89F /* koniec-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "koniec-item-glow.png"; path = "gfx/koniec-item-glow.png"; sourceTree = "<group>"; };
 		6E4A843310FBD5780084C89F /* koniec-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "koniec-item.png"; path = "gfx/koniec-item.png"; sourceTree = "<group>"; };
-		6E4A843410FBD5780084C89F /* pobierz-poziomy-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pobierz-poziomy-item-glow.png"; path = "gfx/pobierz-poziomy-item-glow.png"; sourceTree = "<group>"; };
 		6E4A843510FBD5780084C89F /* pobierz-poziomy-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pobierz-poziomy-item.png"; path = "gfx/pobierz-poziomy-item.png"; sourceTree = "<group>"; };
-		6E4A843610FBD5780084C89F /* ustawienia-item-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ustawienia-item-glow.png"; path = "gfx/ustawienia-item-glow.png"; sourceTree = "<group>"; };
 		6E4A843710FBD5780084C89F /* ustawienia-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ustawienia-item.png"; path = "gfx/ustawienia-item.png"; sourceTree = "<group>"; };
 		6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = YaspegIcon.icns; sourceTree = "<group>"; };
 		6E4D4FC810F7F4A8003F7C7A /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
@@ -291,19 +273,12 @@
 		6E4A84E610FBDD700084C89F /* Menu Items */ = {
 			isa = PBXGroup;
 			children = (
-				6E4A843210FBD5780084C89F /* koniec-item-glow.png */,
 				6E4A843310FBD5780084C89F /* koniec-item.png */,
-				6E4A843610FBD5780084C89F /* ustawienia-item-glow.png */,
 				6E4A843710FBD5780084C89F /* ustawienia-item.png */,
-				6E4A842E10FBD5780084C89F /* graj-item-glow.png */,
 				6E4A842F10FBD5780084C89F /* graj-item.png */,
-				6E4A843010FBD5780084C89F /* jak-grac-item-glow.png */,
 				6E4A843110FBD5780084C89F /* jak-grac-item.png */,
-				6E4A843410FBD5780084C89F /* pobierz-poziomy-item-glow.png */,
 				6E4A843510FBD5780084C89F /* pobierz-poziomy-item.png */,
-				6E4A842C10FBD5780084C89F /* edytor-poziomow-item-glow.png */,
 				6E4A842D10FBD5780084C89F /* edytor-poziomow-item.png */,
-				6E4A842910FBD5780084C89F /* autorzy-item-glow.png */,
 				6E4A842A10FBD5780084C89F /* autorzy-item.png */,
 			);
 			name = "Menu Items";
@@ -362,11 +337,9 @@
 				6E1DD8EE10FFB38100993443 /* header-ustawienia.png */,
 				6E2EDE6010FF577200EEECD7 /* back-button-selected.png */,
 				6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */,
-				6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */,
 				6E4A84E710FBDD9C0084C89F /* Level Indicators */,
 				6E4A84E610FBDD700084C89F /* Menu Items */,
 				6E418C6210FE749E00A4F432 /* header-autorzy.png */,
-				6E418C6310FE749E00A4F432 /* radex-medium-glow.png */,
 				6E418C6410FE749E00A4F432 /* radex-medium.png */,
 				6E418C6510FE749E00A4F432 /* scenariusz-rezyseria.png */,
 				6E4A842B10FBD5780084C89F /* by-radex.png */,
@@ -448,26 +421,17 @@
 				6E61CC7B10F0ABEA0027DACF /* range-unselected.png in Resources */,
 				6E4D4F3710F7EB13003F7C7A /* YaspegIcon.icns in Resources */,
 				6E69623B10FA0F8100728B14 /* header-yaspeg-small.png in Resources */,
-				6E4A843810FBD5790084C89F /* autorzy-item-glow.png in Resources */,
 				6E4A843910FBD5790084C89F /* autorzy-item.png in Resources */,
 				6E4A843A10FBD5790084C89F /* by-radex.png in Resources */,
-				6E4A843B10FBD5790084C89F /* edytor-poziomow-item-glow.png in Resources */,
 				6E4A843C10FBD5790084C89F /* edytor-poziomow-item.png in Resources */,
-				6E4A843D10FBD5790084C89F /* graj-item-glow.png in Resources */,
 				6E4A843E10FBD5790084C89F /* graj-item.png in Resources */,
-				6E4A843F10FBD5790084C89F /* jak-grac-item-glow.png in Resources */,
 				6E4A844010FBD5790084C89F /* jak-grac-item.png in Resources */,
-				6E4A844110FBD5790084C89F /* koniec-item-glow.png in Resources */,
 				6E4A844210FBD5790084C89F /* koniec-item.png in Resources */,
-				6E4A844310FBD5790084C89F /* pobierz-poziomy-item-glow.png in Resources */,
 				6E4A844410FBD5790084C89F /* pobierz-poziomy-item.png in Resources */,
-				6E4A844510FBD5790084C89F /* ustawienia-item-glow.png in Resources */,
 				6E4A844610FBD5790084C89F /* ustawienia-item.png in Resources */,
 				6E418C6610FE749E00A4F432 /* header-autorzy.png in Resources */,
-				6E418C6710FE749E00A4F432 /* radex-medium-glow.png in Resources */,
 				6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */,
 				6E418C6910FE749E00A4F432 /* scenariusz-rezyseria.png in Resources */,
-				6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */,
 				6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */,
 				6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */,
 				6E1DD8EF10FFB38100993443 /* header-edytor-poziomow.png in Resources */,

@@ -21,9 +21,6 @@
    
 }
 
-#pragma mark -
-#pragma mark ELR
-
 /*
  * events
  *
@@ -75,9 +72,6 @@
    
    
 }
-
-#pragma mark -
-#pragma mark cleaning
 
 /*
  * outro

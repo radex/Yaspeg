@@ -16,7 +16,6 @@
    ImageLayer *headerLayer;
    ImageLayer *scenarioLayer;
    ImageLayer *radexLayer;
-   ImageLayer *radexGlowLayer;
    CATextLayer *thanksHeaderLayer;
    CATextLayer *thanksLayer;
    BackButton *backButton;

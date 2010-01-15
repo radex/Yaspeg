@@ -33,18 +33,15 @@
    
    // footer
    
-   footerLayer = [ImageLayer layerWithImageNamed:@"by-radex"];
+   footerLayer   = [ImageLayer layerWithImageNamed:@"by-radex"];
    footerLayer.x = 800 - footerLayer.w;
    footerLayer.y = -footerLayer.h;
    
+   footerLayer.shadowOpacity = 0;
+   footerLayer.shadowOffset  = NSMakeSize(0, 0);
+   footerLayer.shadowRadius  = 2;
+   
    [yaspeg.rootLayer addSublayer:footerLayer];
-   
-   footerGlowLayer = [ImageLayer layerWithImageNamed:@"by-radex-glow"];
-   footerGlowLayer.x = 800 - footerGlowLayer.w;
-   footerGlowLayer.y = -footerGlowLayer.h;
-   footerGlowLayer.opacity = 0;
-   
-   [yaspeg.rootLayer addSublayer:footerGlowLayer];
    
    // menu items (text)
    
@@ -66,37 +63,11 @@
    {
       itemsTotalHeight += layer.h;
       
-      layer.y = 600 - 150 - itemsTotalHeight;
-      layer.x = (800 - layer.w)/2;
-      
-      [yaspeg.rootLayer addSublayer:layer];
-      
-      i++;
-   }
-   
-   // menu items (glow)
-   
-   menuItems_g =
-   [NSArray arrayWithObjects:
-    [ImageLayer layerWithImageNamed:@"graj-item-glow"],
-    [ImageLayer layerWithImageNamed:@"jak-grac-item-glow"],
-    [ImageLayer layerWithImageNamed:@"edytor-poziomow-item-glow"],
-    [ImageLayer layerWithImageNamed:@"pobierz-poziomy-item-glow"],
-    [ImageLayer layerWithImageNamed:@"autorzy-item-glow"],
-    [ImageLayer layerWithImageNamed:@"ustawienia-item-glow"],
-    [ImageLayer layerWithImageNamed:@"koniec-item-glow"],
-    nil
-   ];
-   
-   i = 0;
-   itemsTotalHeight = 0;
-   for(ImageLayer *layer in menuItems_g)
-   {
-      itemsTotalHeight += layer.h;
-      
-      layer.y = 600 - 150 - itemsTotalHeight;
-      layer.x = (800 - layer.w)/2;
-      layer.opacity = 0;
+      layer.y             = 600 - 150 - itemsTotalHeight;
+      layer.x             = (800 - layer.w)/2;
+      layer.shadowOpacity = 0;
+      layer.shadowOffset  = NSMakeSize(0, 0);
+      layer.shadowRadius  = 5;
       
       [yaspeg.rootLayer addSublayer:layer];
       
@@ -108,9 +79,6 @@
    currentMenuItem = [self itemSelected:-1];
    changedMenuItem = -1;
 }
-
-#pragma mark -
-#pragma mark ELR
 
 /*
  * events
@@ -182,11 +150,11 @@
       
       if([footerLayer isInBounds:eventMousePoint])
       {
-         footerGlowLayer.opacity = 1;
+         footerLayer.shadowOpacity = 1;
       }
       else
       {
-         footerGlowLayer.opacity = 0;
+         footerLayer.shadowOpacity = 0;
       }
 
    }
@@ -245,7 +213,6 @@
       bgLayer.opacity = 1;
       headerLayer.y = 590 - headerLayer.h;
       footerLayer.y = 0;
-      footerGlowLayer.y = 0;
       
       [CATransaction commit];
       
@@ -253,13 +220,13 @@
       
       pulseAnimation;
       
-      pulseAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+      pulseAnimation = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
       pulseAnimation.duration = 0.7;
       pulseAnimation.repeatCount = HUGE_VALF;
       pulseAnimation.autoreverses = YES;
       pulseAnimation.fromValue = [NSNumber numberWithFloat:0.3];
-      pulseAnimation.toValue = [NSNumber numberWithFloat:1.0];
-      [[menuItems_g objectAtIndex:currentMenuItem] addAnimation:pulseAnimation forKey:@"animateOpacity"];
+      pulseAnimation.toValue = [NSNumber numberWithFloat:1];
+      [[menuItems objectAtIndex:currentMenuItem] addAnimation:pulseAnimation forKey:@"animateShadowOpacity"];
       
       inited = YES;
       menuForFirstTime = NO;
@@ -269,17 +236,14 @@
    
    if(changedMenuItem != -1)
    {
-      [[menuItems_g objectAtIndex:currentMenuItem] removeAllAnimations];
-      [[menuItems_g objectAtIndex:currentMenuItem] setOpacity: 0.0];
-      [[menuItems_g objectAtIndex:changedMenuItem] addAnimation:pulseAnimation forKey:@"animateOpacity"];
+      [[menuItems objectAtIndex:currentMenuItem] removeAllAnimations];
+      [[menuItems objectAtIndex:currentMenuItem] setShadowOpacity: 0];
+      [[menuItems objectAtIndex:changedMenuItem] addAnimation:pulseAnimation forKey:@"animateShadowOpacity"];
       
       currentMenuItem = changedMenuItem;
       changedMenuItem = -1;
    }
 }
-
-#pragma mark -
-#pragma mark cleaning
 
 /*
  * outro

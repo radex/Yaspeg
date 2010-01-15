@@ -49,18 +49,17 @@
    // radex, radex glow
    
    radexLayer     = [ImageLayer layerWithImageNamed:@"radex-medium"];
-   radexGlowLayer = [ImageLayer layerWithImageNamed:@"radex-medium-glow"];
    
    radexLayer.x = 250;
    radexLayer.y = 400;
-   radexGlowLayer.x = 250;
-   radexGlowLayer.y = 400;
    
    radexLayer.opacity = 0;
-   radexGlowLayer.opacity = 0;
+   
+   radexLayer.shadowOpacity = 0;
+   radexLayer.shadowOffset  = NSMakeSize(0, 0);
+   radexLayer.shadowRadius  = 4;
    
    [yaspeg.rootLayer addSublayer:radexLayer];
-   [yaspeg.rootLayer addSublayer:radexGlowLayer];
    
    // "podziękowaia" header
    
@@ -104,11 +103,11 @@
    {
       if([radexLayer isInBounds:eventMousePoint])
       {
-         radexGlowLayer.opacity = 1;
+         radexLayer.shadowOpacity = 1;
       }
       else
       {
-         radexGlowLayer.opacity = 0;
+         radexLayer.shadowOpacity = 0;
       }
    }
    else if(eventType == MouseDown_ET)
@@ -188,7 +187,6 @@
    bgLayer.opacity = 0;
    scenarioLayer.opacity = 0;
    radexLayer.opacity = 0;
-   radexGlowLayer.opacity = 0;
    thanksHeaderLayer.opacity = 0;
    thanksLayer.opacity = 0;
    
