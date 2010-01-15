@@ -1,0 +1,281 @@
+//
+//  GameItselfState.m
+//  Yaspeg2
+//
+//  Created by Radex on 10-01-15.
+//  Copyright 2010 Radex. All rights reserved.
+//
+
+#import "GameItselfState.h"
+
+@implementation GameItselfState
+
+/*
+ * stateInit
+ *
+ *
+ */
+
+- (void) stateInit
+{
+   // bg
+   
+   bg = [ImageLayer layerWithImageNamed:@"bg2"];
+   bg.opacity = 0;
+   [yaspeg.rootLayer addSublayer:bg];
+   
+   // dude
+   
+   dude = [ImageLayer layerWithImageNamed:@"dude"];
+   dude.opacity = 0;
+   [yaspeg.rootLayer addSublayer:dude];
+   
+   // vars
+   
+   x = 0;
+   y = 20;
+   
+   speed = 0;
+   runSpeed = 20;
+   bonusSpeed = 0;
+   ySpeed = 0;
+   
+   maxSpeed = 10;
+   runTime = 0;
+   
+   left = false;
+   right = false;
+   up = false;
+   
+   // info
+   
+   info = [CATextLayer layer];
+   info.frame = NSMakeRect(0, 550, 800, 50);
+   info.fontSize = 15;
+   [yaspeg.rootLayer addSublayer:info];
+}
+
+/*
+ * events
+ *
+ *
+ */
+
+- (void) events
+{
+   if(eventType == KeyDown_ET && !eventIsRepeat)
+   {
+      unichar pressedKey = [eventCharachters characterAtIndex:0];
+      
+      switch(pressedKey)
+      {
+         case YK_ESC:
+            [yaspeg scheduleNextState:MainMenu_GS];
+            return;
+         case NSRightArrowFunctionKey:
+            right = true;
+            left  = false;
+            break;
+         case NSLeftArrowFunctionKey:
+            left  = true;
+            right = false;
+            break;
+         case NSUpArrowFunctionKey:
+            up    = true;
+            break;
+      }
+   }
+   else if(eventType == KeyUp_ET && !eventIsRepeat)
+   {
+      unichar pressedKey = [eventCharachters characterAtIndex:0];
+      switch(pressedKey)
+      {
+         case NSRightArrowFunctionKey:
+            right   = false;
+            runTime = 0;
+            break;
+         case NSLeftArrowFunctionKey:
+            left    = false;
+            runTime = 0;
+            break;
+         case NSUpArrowFunctionKey:
+            up      = false;
+            break;
+      }
+   }
+   
+   eventType = None_ET;
+}
+
+/*
+ * logic
+ *
+ *
+ */
+
+- (void) logic
+{
+   // jump
+   
+   if(up && ySpeed == 0 && y == 20)
+   {
+      ySpeed = 13;
+      //up = false;
+   }
+   
+   // run speed
+   
+   if(right || left)
+   {
+      if(runTime < 50)
+      {
+         runSpeed = (right ? 1 : -1) * (maxSpeed - 1) * (runTime / 50.0) + (right ? 1 : -1);
+      }
+      
+      runTime++;
+   }
+   
+   // slow down if not running
+   
+   if(!right && !left && !up && ySpeed == 0 && y == 20)
+   {
+      if(runSpeed > 0.5)
+      {
+         runSpeed -= 0.5;
+      }
+      else if(runSpeed < -0.5)
+      {
+         runSpeed += 0.5;
+      }
+      else
+      {
+         runSpeed = 0;
+      }
+   }
+   
+   // slowing bonus speed
+   
+   if(bonusSpeed > 0.5)
+   {
+      bonusSpeed -= 0.5;
+   }
+   else if(bonusSpeed < -0.5)
+   {
+      bonusSpeed += 0.5;
+   }
+   else
+   {
+      bonusSpeed = 0;
+   }
+   
+   // Y axis speed
+   
+   if(y > 20 || ySpeed > 1)
+   {
+      if(y + ySpeed <= 20)
+      {
+         ySpeed = 0;
+         y = 20;
+      }
+      else
+      {
+         ySpeed -= 0.5;
+      }
+   }
+   else
+   {
+      ySpeed = 0;
+   }
+   
+   // bounds
+   
+   if(x + speed < 0)
+   {
+      x = 0;
+      runSpeed = 0;
+      bonusSpeed = 0;
+      ySpeed = 0;
+   }
+   else if(x + speed > 800 - 32)
+   {
+      x = 800 - 32;
+      runSpeed = 0;
+      bonusSpeed = 0;
+      ySpeed = 0;
+   }
+   
+   speed = runSpeed + bonusSpeed;
+   
+   x += speed;
+   y += ySpeed;
+}
+
+/*
+ * render
+ *
+ *
+ */
+
+- (void) render
+{
+   // rendering for first time
+   
+   if(!inited)
+   {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:1.0];
+      
+      bg.opacity = 1;
+      dude.opacity = 1;
+      
+      [CATransaction commit];
+      
+      inited = YES;
+   }
+   info.string = [NSString stringWithFormat:@"x:%1.2f y:%1.2f", x, y];
+   
+   
+   [CATransaction begin];
+   [CATransaction setAnimationDuration_c:0];
+   
+   dude.x = (int) x;
+   dude.y = (int) y;
+   
+   [CATransaction commit];
+}
+
+/*
+ * outro
+ *
+ *
+ */
+
+- (NSTimeInterval) outro
+{
+   NSTimeInterval animationDuration = 0.5;
+   
+   [CATransaction begin];
+   [CATransaction setAnimationDuration_c:animationDuration];
+   
+   bg.opacity = 0;
+   dude.opacity = 0;
+   
+   [CATransaction commit];
+   
+   [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
+   
+   return animationDuration;
+}
+
+/*
+ * cleanUp
+ *
+ *
+ */
+
+- (void) cleanUp
+{
+   
+}
+
+@end

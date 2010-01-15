@@ -91,12 +91,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    
    switch (state)
    {
-      case MainMenu_GS: currentState = [[MainMenuState alloc] init]; break;
-      case Help_GS:     currentState = [[HelpState     alloc] init]; break;
-      case Editor_GS:   currentState = [[EditorState   alloc] init]; break;
-      case Download_GS: currentState = [[DownloadState alloc] init]; break;
-      case Authors_GS:  currentState = [[AuthorsState  alloc] init]; break;
-      case Settings_GS: currentState = [[SettingsState alloc] init]; break;
+      case MainMenu_GS: currentState = [[MainMenuState   alloc] init]; break;
+      case Game_GS:     currentState = [[GameItselfState alloc] init]; break;
+      case Help_GS:     currentState = [[HelpState       alloc] init]; break;
+      case Editor_GS:   currentState = [[EditorState     alloc] init]; break;
+      case Download_GS: currentState = [[DownloadState   alloc] init]; break;
+      case Authors_GS:  currentState = [[AuthorsState    alloc] init]; break;
+      case Settings_GS: currentState = [[SettingsState   alloc] init]; break;
       default: break;
    }
    

@@ -20,6 +20,9 @@
 		6E1DDA1010FFCC7D00993443 /* HelpState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDA0F10FFCC7D00993443 /* HelpState.m */; };
 		6E1DDA2C10FFCDC600993443 /* DownloadState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDA2910FFCDC600993443 /* DownloadState.m */; };
 		6E1DDA2D10FFCDC600993443 /* EditorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDA2B10FFCDC600993443 /* EditorState.m */; };
+		6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDAA0110062CB00993443 /* GameItselfState.m */; };
+		6E1DDABD1100667400993443 /* dude.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDABC1100667400993443 /* dude.png */; };
+		6E1DDACB110072F700993443 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDACA110072F700993443 /* bg2.png */; };
 		6E2EDE0010FF46F600EEECD7 /* by-radex-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
@@ -96,6 +99,10 @@
 		6E1DDA2910FFCDC600993443 /* DownloadState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadState.m; path = GameStates/DownloadState.m; sourceTree = "<group>"; };
 		6E1DDA2A10FFCDC600993443 /* EditorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorState.h; path = GameStates/EditorState.h; sourceTree = "<group>"; };
 		6E1DDA2B10FFCDC600993443 /* EditorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorState.m; path = GameStates/EditorState.m; sourceTree = "<group>"; };
+		6E1DDA9F110062CB00993443 /* GameItselfState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameItselfState.h; path = GameStates/GameItselfState.h; sourceTree = "<group>"; };
+		6E1DDAA0110062CB00993443 /* GameItselfState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameItselfState.m; path = GameStates/GameItselfState.m; sourceTree = "<group>"; };
+		6E1DDABC1100667400993443 /* dude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dude.png; path = gfx/dude.png; sourceTree = "<group>"; };
+		6E1DDACA110072F700993443 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = gfx/bg2.png; sourceTree = "<group>"; };
 		6E2EDDFF10FF46F600EEECD7 /* by-radex-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "by-radex-glow.png"; path = "gfx/by-radex-glow.png"; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
@@ -338,6 +345,8 @@
 				6E1DD8C310FFB0A700993443 /* SettingsState.m */,
 				6E1DDA0E10FFCC7D00993443 /* HelpState.h */,
 				6E1DDA0F10FFCC7D00993443 /* HelpState.m */,
+				6E1DDA9F110062CB00993443 /* GameItselfState.h */,
+				6E1DDAA0110062CB00993443 /* GameItselfState.m */,
 			);
 			name = "Game States";
 			sourceTree = "<group>";
@@ -345,6 +354,8 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E1DDACA110072F700993443 /* bg2.png */,
+				6E1DDABC1100667400993443 /* dude.png */,
 				6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */,
 				6E1DD8EC10FFB38100993443 /* header-jak-grac.png */,
 				6E1DD8ED10FFB38100993443 /* header-pobierz-poziomy.png */,
@@ -463,6 +474,8 @@
 				6E1DD8F010FFB38100993443 /* header-jak-grac.png in Resources */,
 				6E1DD8F110FFB38100993443 /* header-pobierz-poziomy.png in Resources */,
 				6E1DD8F210FFB38100993443 /* header-ustawienia.png in Resources */,
+				6E1DDABD1100667400993443 /* dude.png in Resources */,
+				6E1DDACB110072F700993443 /* bg2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +499,7 @@
 				6E1DDA1010FFCC7D00993443 /* HelpState.m in Sources */,
 				6E1DDA2C10FFCDC600993443 /* DownloadState.m in Sources */,
 				6E1DDA2D10FFCDC600993443 /* EditorState.m in Sources */,
+				6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
