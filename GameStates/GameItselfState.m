@@ -50,7 +50,7 @@
    // info
    
    info = [CATextLayer layer];
-   info.frame = NSMakeRect(0, 550, 800, 50);
+   info.frame = CGRectMake(0, 550, 800, 50);
    info.fontSize = 15;
    [yaspeg.rootLayer addSublayer:info];
 }
@@ -187,13 +187,21 @@
       ySpeed = 0;
    }
    
+   /***/
+   
+   speed = runSpeed + bonusSpeed;
+   
+   x += speed;
+   y += ySpeed;
+   
    // bounds
    
    if(x + speed < 0)
    {
       x = 0;
       runSpeed = 0;
-      bonusSpeed = 0;
+      bonusSpeed = 0; // fixme
+      speed = 0;
       ySpeed = 0;
    }
    else if(x + speed > 800 - 32)
@@ -203,11 +211,6 @@
       bonusSpeed = 0;
       ySpeed = 0;
    }
-   
-   speed = runSpeed + bonusSpeed;
-   
-   x += speed;
-   y += ySpeed;
 }
 
 /*
@@ -259,23 +262,13 @@
    
    bg.opacity = 0;
    dude.opacity = 0;
+   info.opacity = 0;
    
    [CATransaction commit];
    
    [NSTimer scheduledTimerWithTimeInterval:animationDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
    
    return animationDuration;
-}
-
-/*
- * cleanUp
- *
- *
- */
-
-- (void) cleanUp
-{
-   
 }
 
 @end

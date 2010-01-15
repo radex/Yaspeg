@@ -21,7 +21,7 @@
    // background
    
    bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0.0;
+   bgLayer.opacity = 0;
    
    [yaspeg.rootLayer addSublayer:bgLayer];
    
@@ -45,7 +45,7 @@
    textLayer.font     = @"palatino";
    textLayer.fontSize = 20;
    textLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
-   textLayer.frame = NSMakeRect(25, 0, 800, 300);
+   textLayer.frame = CGRectMake(25, 0, 800, 300);
    
    [yaspeg.rootLayer addSublayer:textLayer];
 }
@@ -96,8 +96,8 @@
       
       [backButton handleRender];
       
-      bgLayer.opacity = 1.0;
-      textLayer.opacity = 1.0;
+      bgLayer.opacity = 1;
+      textLayer.opacity = 1;
       
       headerLayer.y = 600 - 10 - headerLayer.h;
       

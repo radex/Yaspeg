@@ -144,7 +144,7 @@
 		drawInRect:NSRectFromCGRect([self bounds])
 		fromRect:[image alignmentRect]
 		operation:NSCompositeSourceOver
-		fraction:1.0];
+		fraction:1];
 	
 	NSGraphicsContext.currentContext = oldContext;
 }

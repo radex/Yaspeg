@@ -28,12 +28,14 @@
 - (void) events{eventType = None_ET;}
 - (void) logic{}
 - (void) render{}
+
 - (NSTimeInterval) outro
 {
    [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
    
    return 0;
 }
+
 - (void) scheduleCleanUp:(NSTimeInterval)outroDuration
 {
    removedObjects = [[YaspegController sharedYaspegController].rootLayer.sublayers copy];

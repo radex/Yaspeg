@@ -38,7 +38,7 @@
    footerLayer.y = -footerLayer.h;
    
    footerLayer.shadowOpacity = 0;
-   footerLayer.shadowOffset  = NSMakeSize(0, 0);
+   footerLayer.shadowOffset  = CGSizeMake(0, 0);
    footerLayer.shadowRadius  = 2;
    
    [yaspeg.rootLayer addSublayer:footerLayer];
@@ -66,7 +66,7 @@
       layer.y             = 600 - 150 - itemsTotalHeight;
       layer.x             = (800 - layer.w)/2;
       layer.shadowOpacity = 0;
-      layer.shadowOffset  = NSMakeSize(0, 0);
+      layer.shadowOffset  = CGSizeMake(0, 0);
       layer.shadowRadius  = 5;
       
       [yaspeg.rootLayer addSublayer:layer];

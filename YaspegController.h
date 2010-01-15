@@ -33,6 +33,8 @@
 
 + (YaspegController *)sharedYaspegController;
 
+- (void) windowWillClose:(NSNotification *)aNotification;
+
 - (void) setNextState:(GameStateType) state;
 - (void) scheduleNextState:(GameStateType) state;
 - (IBAction) runAuthorsState: (id) sender;

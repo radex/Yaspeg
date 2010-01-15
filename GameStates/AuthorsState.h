@@ -18,6 +18,7 @@
    ImageLayer *radexLayer;
    CATextLayer *thanksHeaderLayer;
    CATextLayer *thanksLayer;
+   CATextLayer *footerLayer;
    BackButton *backButton;
 }
 

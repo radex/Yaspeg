@@ -21,7 +21,7 @@
    // background
    
    bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0.0;
+   bgLayer.opacity = 0;
    
    [yaspeg.rootLayer addSublayer:bgLayer];
    
@@ -56,7 +56,7 @@
    radexLayer.opacity = 0;
    
    radexLayer.shadowOpacity = 0;
-   radexLayer.shadowOffset  = NSMakeSize(0, 0);
+   radexLayer.shadowOffset  = CGSizeMake(0, 0);
    radexLayer.shadowRadius  = 4;
    
    [yaspeg.rootLayer addSublayer:radexLayer];
@@ -69,7 +69,7 @@
    thanksHeaderLayer.font     = @"palatino";
    thanksHeaderLayer.fontSize = 28;
    thanksHeaderLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
-   thanksHeaderLayer.frame = NSMakeRect(25, 250, 500, 70);
+   thanksHeaderLayer.frame = CGRectMake(25, 250, 500, 70);
    
    [yaspeg.rootLayer addSublayer:thanksHeaderLayer];
    
@@ -81,9 +81,22 @@
    thanksLayer.font     = @"palatino";
    thanksLayer.fontSize = 20;
    thanksLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
-   thanksLayer.frame = NSMakeRect(15, 0, 800, 275);
+   thanksLayer.frame = CGRectMake(15, 0, 800, 275);
    
    [yaspeg.rootLayer addSublayer:thanksLayer];
+   
+   // footer text
+   
+   footerLayer = [CATextLayer layer];
+   footerLayer.opacity  = 0;
+   footerLayer.string   = @"Wyprodukowano na Maku przy użyciu XCode, Cocoa i Core Animation.\nStatystyki: 30 plików źródłowych, 2544 linijek kodu, 693 średników.";
+   footerLayer.font     = @"palatino";
+   footerLayer.fontSize = 12;
+   footerLayer.alignmentMode   = @"center";
+   footerLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
+   footerLayer.frame = CGRectMake(0, 0, 800, 35);
+   
+   [yaspeg.rootLayer addSublayer:footerLayer];
 }
 
 #pragma mark -
@@ -155,6 +168,7 @@
       radexLayer.opacity = 1;
       thanksLayer.opacity = 1;
       thanksHeaderLayer.opacity = 1;
+      footerLayer.opacity = 1;
       
       headerLayer.y = 600 - 10 - headerLayer.h;
       
@@ -189,6 +203,7 @@
    radexLayer.opacity = 0;
    thanksHeaderLayer.opacity = 0;
    thanksLayer.opacity = 0;
+   footerLayer.opacity = 0;
    
    headerLayer.y = 600;
    
