@@ -37,6 +37,10 @@
    
    backButton = [BackButton buttonWithTargetState:MainMenu_GS];
    
+   // testing checkboxes, radio buttons, buttons etc etc
+   
+   testCheckBox = [CheckBox buttonWithLabel:@"testowanie bla bla bla" position:NSMakePoint(100, 50)];
+   
    // some text
    
    textLayer = [CATextLayer layer];
@@ -59,6 +63,7 @@
 - (void) events
 {
    [backButton handleEvents];
+   [testCheckBox handleEvents];
    
    if(eventType == None_ET)
    {
@@ -95,6 +100,7 @@
       [CATransaction setAnimationDuration_c:0.5];
       
       [backButton handleRender];
+      [testCheckBox handleRender];
       
       bgLayer.opacity = 1;
       textLayer.opacity = 1;
@@ -123,6 +129,7 @@
    [CATransaction setAnimationDuration_c:animationDuration];
    
    [backButton handleOutro];
+   [testCheckBox handleOutro];
    
    bgLayer.opacity = 0;
    textLayer.opacity = 0;

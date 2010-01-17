@@ -14,6 +14,7 @@
 //
 
 #import "ImageLayer.h"
+#import "YaspegController.h"
 
 @implementation ImageLayer
 
@@ -151,7 +152,7 @@
 
 - (bool)isInBounds:(NSPoint)point
 {
-   NSRect frame = NSRectFromCGRect(self.frame);
+   NSRect frame = NSRectFromCGRect([self convertRect:self.bounds toLayer:[YaspegController sharedYaspegController].rootLayer]);
    
    if(point.x > frame.origin.x &&
       point.x < frame.origin.x + frame.size.width &&

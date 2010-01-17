@@ -23,6 +23,11 @@
 		6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDAA0110062CB00993443 /* GameItselfState.m */; };
 		6E1DDABD1100667400993443 /* dude.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDABC1100667400993443 /* dude.png */; };
 		6E1DDACB110072F700993443 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDACA110072F700993443 /* bg2.png */; };
+		6E1DDDE01101134C00993443 /* CheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDDDF1101134C00993443 /* CheckBox.m */; };
+		6E1DDE1A11011C8D00993443 /* checkbox-tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1611011C8D00993443 /* checkbox-tick.png */; };
+		6E1DDE1B11011C8D00993443 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1711011C8D00993443 /* checkbox.png */; };
+		6E1DDE1C11011C8D00993443 /* radio-button-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1811011C8D00993443 /* radio-button-dot.png */; };
+		6E1DDE1D11011C8D00993443 /* radio-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1911011C8D00993443 /* radio-button.png */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E418C6610FE749E00A4F432 /* header-autorzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6210FE749E00A4F432 /* header-autorzy.png */; };
@@ -94,6 +99,12 @@
 		6E1DDAA0110062CB00993443 /* GameItselfState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameItselfState.m; path = GameStates/GameItselfState.m; sourceTree = "<group>"; };
 		6E1DDABC1100667400993443 /* dude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dude.png; path = gfx/dude.png; sourceTree = "<group>"; };
 		6E1DDACA110072F700993443 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = gfx/bg2.png; sourceTree = "<group>"; };
+		6E1DDDDE1101134C00993443 /* CheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckBox.h; path = UI/CheckBox.h; sourceTree = "<group>"; };
+		6E1DDDDF1101134C00993443 /* CheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckBox.m; path = UI/CheckBox.m; sourceTree = "<group>"; };
+		6E1DDE1611011C8D00993443 /* checkbox-tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-tick.png"; path = "gfx/checkbox-tick.png"; sourceTree = "<group>"; };
+		6E1DDE1711011C8D00993443 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox.png; path = gfx/checkbox.png; sourceTree = "<group>"; };
+		6E1DDE1811011C8D00993443 /* radio-button-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-button-dot.png"; path = "gfx/radio-button-dot.png"; sourceTree = "<group>"; };
+		6E1DDE1911011C8D00993443 /* radio-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-button.png"; path = "gfx/radio-button.png"; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E418C6210FE749E00A4F432 /* header-autorzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-autorzy.png"; path = "gfx/header-autorzy.png"; sourceTree = "<group>"; };
@@ -253,6 +264,8 @@
 			children = (
 				6E1DD85910FF8B8B00993443 /* BackButton.h */,
 				6E1DD85A10FF8B8B00993443 /* BackButton.m */,
+				6E1DDDDE1101134C00993443 /* CheckBox.h */,
+				6E1DDDDF1101134C00993443 /* CheckBox.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -329,6 +342,10 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E1DDE1611011C8D00993443 /* checkbox-tick.png */,
+				6E1DDE1711011C8D00993443 /* checkbox.png */,
+				6E1DDE1811011C8D00993443 /* radio-button-dot.png */,
+				6E1DDE1911011C8D00993443 /* radio-button.png */,
 				6E1DDACA110072F700993443 /* bg2.png */,
 				6E1DDABC1100667400993443 /* dude.png */,
 				6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */,
@@ -440,6 +457,10 @@
 				6E1DD8F210FFB38100993443 /* header-ustawienia.png in Resources */,
 				6E1DDABD1100667400993443 /* dude.png in Resources */,
 				6E1DDACB110072F700993443 /* bg2.png in Resources */,
+				6E1DDE1A11011C8D00993443 /* checkbox-tick.png in Resources */,
+				6E1DDE1B11011C8D00993443 /* checkbox.png in Resources */,
+				6E1DDE1C11011C8D00993443 /* radio-button-dot.png in Resources */,
+				6E1DDE1D11011C8D00993443 /* radio-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +485,7 @@
 				6E1DDA2C10FFCDC600993443 /* DownloadState.m in Sources */,
 				6E1DDA2D10FFCDC600993443 /* EditorState.m in Sources */,
 				6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */,
+				6E1DDDE01101134C00993443 /* CheckBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

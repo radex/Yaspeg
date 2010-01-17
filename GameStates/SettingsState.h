@@ -9,6 +9,7 @@
 #import "GameState.h"
 #import "YaspegController.h"
 #import "BackButton.h"
+#import "CheckBox.h"
 
 @interface SettingsState : GameState
 {
@@ -16,6 +17,7 @@
    ImageLayer *headerLayer;
    CATextLayer*textLayer;
    BackButton *backButton;
+   CheckBox   *testCheckBox;
 }
 
 @end

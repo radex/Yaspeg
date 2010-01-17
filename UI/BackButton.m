@@ -11,14 +11,6 @@
 
 @implementation BackButton
 
-#pragma mark -
-#pragma mark initializers
-
-- (id)initWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame{return nil;}   /* thou shall not use it */
-- (id)initWithImageNamed:(NSString *)newImageName{return nil;}
-+ (id)layerWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame{return nil;}
-+ (id)layerWithImageNamed:(NSString *)newImageName{return nil;}
-
 - (id)initWithTargetState:(GameStateType)stateType
 {
    if(self = [super init])
@@ -70,7 +62,7 @@
          selectedButtonLayer.opacity = 0;
       }
    }
-   else if(state.eventType == MouseDown_ET)
+   else if(state.eventType == MouseUp_ET)
    {
       if([buttonLayer isInBounds:state.eventMousePoint])
       {
