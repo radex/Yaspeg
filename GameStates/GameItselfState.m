@@ -199,15 +199,16 @@
    if(x + speed < 0)
    {
       x = 0;
-      runSpeed = 0;
-      bonusSpeed = 0; // fixme
       speed = 0;
+      runSpeed = -0.5 * runSpeed;
+      bonusSpeed = 0;
       ySpeed = 0;
    }
    else if(x + speed > 800 - 32)
    {
       x = 800 - 32;
-      runSpeed = 0;
+      speed = 0;
+      runSpeed = -0.5 * runSpeed;
       bonusSpeed = 0;
       ySpeed = 0;
    }
