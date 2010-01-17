@@ -24,16 +24,35 @@
       
       self.frame = CGRectMake(position.x, position.y, 800, 50);
       
-      boxLayer  = [ImageLayer layerWithImageNamed:@"checkbox"];
-      tickLayer = [ImageLayer layerWithImageNamed:@"checkbox-tick"];
+      // box
       
+      boxLayer = [ImageLayer layerWithImageNamed:@"checkbox"];
       boxLayer.opacity  = -2;
       
+      [self addSublayer:boxLayer];
+      
+      // tick
+      
+      tickLayer = [ImageLayer layerWithImageNamed:@"checkbox-tick"];
       tickLayer.opacity = -0.5;
       tickLayer.y = 30;
       
-      [self addSublayer:boxLayer];
       [self addSublayer:tickLayer];
+      
+      // label
+      
+      labelLayer          = [CATextLayer layer];
+      labelLayer.frame    = CGRectMake(45, 5, 750, 24);
+      labelLayer.font     = @"palatino";
+      labelLayer.fontSize = 24;
+      labelLayer.string   = label;
+      labelLayer.foregroundColor = CGColorCreateGenericRGB(0, 0, 0, 1);
+      labelLayer.opacity  = 0;
+      
+      [self addSublayer:labelLayer];
+      
+      /***/
+      
       [self setNeedsDisplay];
       
       [yaspeg.rootLayer addSublayer:self];
@@ -87,14 +106,16 @@
 
 - (void) handleRender
 {
-   boxLayer.opacity = 1;
+   boxLayer.opacity   = 1;
+   labelLayer.opacity = 1;
 }
 
 - (void) handleOutro
 {
-   boxLayer.opacity = -2;
-   tickLayer.y = -30;
+   boxLayer.opacity  = -2;
+   tickLayer.y       = -30;
    tickLayer.opacity = -0.5;
+   labelLayer.opacity = 0;
 }
 
 @end
