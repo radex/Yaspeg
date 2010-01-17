@@ -10,6 +10,7 @@
 #import "YaspegController.h"
 #import "BackButton.h"
 #import "CheckBox.h"
+#import "RadioButton.h"
 
 @interface SettingsState : GameState
 {
@@ -18,6 +19,7 @@
    CATextLayer*textLayer;
    BackButton *backButton;
    CheckBox   *testCheckBox;
+   RadioButton*testRadioButton;
 }
 
 @end

@@ -61,6 +61,7 @@
 		6E695DF110F9340800728B14 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E695DF010F9340800728B14 /* MainMenuState.m */; };
 		6E69623B10FA0F8100728B14 /* header-yaspeg-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E69623A10FA0F8100728B14 /* header-yaspeg-small.png */; };
 		6E70973410FD2FD100E04723 /* AuthorsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E70973310FD2FD100E04723 /* AuthorsState.m */; };
+		6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7816B011033D1E00EEA56B /* RadioButton.m */; };
 		6E91680910EE8573002F70CC /* YaspegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91680410EE8573002F70CC /* YaspegController.m */; };
 		6E91681210EE85A0002F70CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E91681110EE85A0002F70CC /* QuartzCore.framework */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -142,6 +143,8 @@
 		6E69623A10FA0F8100728B14 /* header-yaspeg-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-yaspeg-small.png"; path = "gfx/header-yaspeg-small.png"; sourceTree = "<group>"; };
 		6E70973210FD2FD100E04723 /* AuthorsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthorsState.h; path = GameStates/AuthorsState.h; sourceTree = "<group>"; };
 		6E70973310FD2FD100E04723 /* AuthorsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthorsState.m; path = GameStates/AuthorsState.m; sourceTree = "<group>"; };
+		6E7816AF11033D1E00EEA56B /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadioButton.h; path = UI/RadioButton.h; sourceTree = "<group>"; };
+		6E7816B011033D1E00EEA56B /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadioButton.m; path = UI/RadioButton.m; sourceTree = "<group>"; };
 		6E8749BC10FD2B74004745EF /* class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = class.h; path = "Yaspeg Game State.pbfiletemplate/class.h"; sourceTree = "<group>"; };
 		6E8749BD10FD2B74004745EF /* class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = class.m; path = "Yaspeg Game State.pbfiletemplate/class.m"; sourceTree = "<group>"; };
 		6E8749BE10FD2B74004745EF /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = TemplateInfo.plist; path = "Yaspeg Game State.pbfiletemplate/TemplateInfo.plist"; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 				6E1DD85A10FF8B8B00993443 /* BackButton.m */,
 				6E1DDDDE1101134C00993443 /* CheckBox.h */,
 				6E1DDDDF1101134C00993443 /* CheckBox.m */,
+				6E7816AF11033D1E00EEA56B /* RadioButton.h */,
+				6E7816B011033D1E00EEA56B /* RadioButton.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -486,6 +491,7 @@
 				6E1DDA2D10FFCDC600993443 /* EditorState.m in Sources */,
 				6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */,
 				6E1DDDE01101134C00993443 /* CheckBox.m in Sources */,
+				6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

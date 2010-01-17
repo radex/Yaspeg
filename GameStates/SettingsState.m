@@ -41,6 +41,8 @@
    
    testCheckBox = [CheckBox buttonWithLabel:@"testowanie bla bla bla" position:NSMakePoint(100, 50)];
    
+   testRadioButton = [RadioButton buttonWithLabel:@"radio button foo bar" position:NSMakePoint(100, 100)];
+   
    // some text
    
    textLayer = [CATextLayer layer];
@@ -64,6 +66,7 @@
 {
    [backButton handleEvents];
    [testCheckBox handleEvents];
+   [testRadioButton handleEvents];
    
    if(eventType == None_ET)
    {
@@ -101,6 +104,7 @@
       
       [backButton handleRender];
       [testCheckBox handleRender];
+      [testRadioButton handleRender];
       
       bgLayer.opacity = 1;
       textLayer.opacity = 1;
@@ -130,6 +134,7 @@
    
    [backButton handleOutro];
    [testCheckBox handleOutro];
+   [testRadioButton handleOutro];
    
    bgLayer.opacity = 0;
    textLayer.opacity = 0;

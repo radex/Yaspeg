@@ -1,0 +1,134 @@
+//
+//  RadioButton.m
+//  Yaspeg2
+//
+//  Created by Radex on 10-01-17.
+//  Copyright 2010 Radex. All rights reserved.
+//
+
+#import "RadioButton.h"
+#import "YaspegController.h"
+
+@implementation RadioButton
+
+@synthesize state;
+
+- (id) initWithLabel:(NSString*)label position:(NSPoint)position
+{
+   if(self = [super init])
+   {
+      yaspeg    = [YaspegController sharedYaspegController];
+      gameState = yaspeg.currentState;
+      
+      state = NO;
+      
+      self.frame = CGRectMake(position.x, position.y, 800, 50);
+      
+      // circle
+      
+      circleLayer = [ImageLayer layerWithImageNamed:@"radio-button"];
+      circleLayer.opacity  = -2;
+      
+      [self addSublayer:circleLayer];
+      
+      // dot
+      
+      dotLayer = [ImageLayer layerWithImageNamed:@"radio-button-dot"];
+      dotLayer.opacity = 0;
+      
+      [self addSublayer:dotLayer];
+      
+      // label
+      
+      labelLayer          = [CATextLayer layer];
+      labelLayer.frame    = CGRectMake(45, 5, 750, 24);
+      labelLayer.font     = @"palatino";
+      labelLayer.fontSize = 24;
+      labelLayer.string   = label;
+      labelLayer.foregroundColor = CGColorCreateGenericRGB(0, 0, 0, 1);
+      labelLayer.opacity  = 0;
+      
+      [self addSublayer:labelLayer];
+      
+      /***/
+      
+      [self setNeedsDisplay];
+      
+      [yaspeg.rootLayer addSublayer:self];
+   }
+   
+   return self;
+}
+
++ (id) buttonWithLabel:(NSString*)label position:(NSPoint)position
+{
+   return [[self alloc] initWithLabel:label position:position];
+}
+
+- (void) handleEvents
+{
+   if(gameState.eventType == MouseUp_ET && [circleLayer isInBounds:gameState.eventMousePoint])
+   {
+      if(state == YES)
+      {
+         state = NO;
+         
+         [CATransaction begin];
+         [CATransaction setAnimationDuration_c:0.5];
+         dotLayer.x = 16;
+         dotLayer.y = 16;
+         dotLayer.w = 0;
+         dotLayer.h = 0;
+         dotLayer.opacity = 0;
+         [CATransaction commit];
+      }
+      else
+      {
+         state = YES;
+         
+         [CATransaction begin];
+         [CATransaction setAnimationDuration_c:0];
+         dotLayer.opacity = -0.5;
+         dotLayer.x = -32;
+         dotLayer.y = -32;
+         dotLayer.w = 96;
+         dotLayer.h = 96;
+         [CATransaction commit];
+         
+         [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(tickSlideDown) userInfo:nil repeats:NO];
+      }
+   }
+}
+
+- (void) tickSlideDown
+{
+   [CATransaction begin];
+   [CATransaction setAnimationDuration_c:0.5];
+   dotLayer.y = 0;
+   dotLayer.x = 0;
+   dotLayer.w = 32;
+   dotLayer.h = 32;
+   dotLayer.opacity = 1;
+   [CATransaction commit];
+}
+
+- (void) handleRender
+{
+   circleLayer.opacity = 1;
+   labelLayer.opacity  = 1;
+}
+
+- (void) handleOutro
+{
+   circleLayer.opacity = -2;
+   
+   dotLayer.x = 16;
+   dotLayer.y = 16;
+   dotLayer.w = 0;
+   dotLayer.h = 0;
+   dotLayer.opacity = 0;
+   
+   labelLayer.opacity  = 0;
+}
+
+@end
