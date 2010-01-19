@@ -30,6 +30,7 @@
 		6E1DDE1D11011C8D00993443 /* radio-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1911011C8D00993443 /* radio-button.png */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
+		6E40CED81106763100466539 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 6E40CED71106763100466539 /* COPYING */; };
 		6E418C6610FE749E00A4F432 /* header-autorzy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6210FE749E00A4F432 /* header-autorzy.png */; };
 		6E418C6810FE749E00A4F432 /* radex-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6410FE749E00A4F432 /* radex-medium.png */; };
 		6E418C6910FE749E00A4F432 /* scenariusz-rezyseria.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E418C6510FE749E00A4F432 /* scenariusz-rezyseria.png */; };
@@ -108,6 +109,7 @@
 		6E1DDE1911011C8D00993443 /* radio-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-button.png"; path = "gfx/radio-button.png"; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
+		6E40CED71106763100466539 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		6E418C6210FE749E00A4F432 /* header-autorzy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-autorzy.png"; path = "gfx/header-autorzy.png"; sourceTree = "<group>"; };
 		6E418C6410FE749E00A4F432 /* radex-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radex-medium.png"; path = "gfx/radex-medium.png"; sourceTree = "<group>"; };
 		6E418C6510FE749E00A4F432 /* scenariusz-rezyseria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scenariusz-rezyseria.png"; path = "gfx/scenariusz-rezyseria.png"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				6E40CED91106768700466539 /* Docs */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -273,6 +276,14 @@
 				6E7816B011033D1E00EEA56B /* RadioButton.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		6E40CED91106768700466539 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				6E40CED71106763100466539 /* COPYING */,
+			);
+			name = Docs;
 			sourceTree = "<group>";
 		};
 		6E4A83A710FBC0A20084C89F /* Graphics etc */ = {
@@ -466,6 +477,7 @@
 				6E1DDE1B11011C8D00993443 /* checkbox.png in Resources */,
 				6E1DDE1C11011C8D00993443 /* radio-button-dot.png in Resources */,
 				6E1DDE1D11011C8D00993443 /* radio-button.png in Resources */,
+				6E40CED81106763100466539 /* COPYING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
