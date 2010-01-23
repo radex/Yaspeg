@@ -40,9 +40,17 @@
       // circle
       
       circleLayer = [ImageLayer layerWithImageNamed:@"radio-button"];
-      circleLayer.opacity  = -2;
+      circleLayer.opacity = -2;
       
       [self addSublayer:circleLayer];
+      
+      // flipped circle
+      
+      circleFlippedLayer = [ImageLayer layerWithImageNamed:@"radio-button"];
+      circleFlippedLayer.opacity   = -2;
+      circleFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+      
+      [self addSublayer:circleFlippedLayer];
       
       // dot
       
@@ -80,6 +88,18 @@
 
 - (void) handleEvents
 {
+   if(gameState.eventType == MouseMove_ET)
+   {
+      if([circleLayer isInBounds:gameState.eventMousePoint])
+      {
+         circleFlippedLayer.opacity = 1;
+      }
+      else
+      {
+         circleFlippedLayer.opacity = 0;
+      }
+   }
+   
    if(gameState.eventType == MouseUp_ET && [circleLayer isInBounds:gameState.eventMousePoint])
    {
       if(state == YES)

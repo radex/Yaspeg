@@ -231,8 +231,6 @@
       
       // making "selection pulse" animation
       
-      pulseAnimation;
-      
       pulseAnimation = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
       pulseAnimation.duration = 0.7;
       pulseAnimation.repeatCount = HUGE_VALF;

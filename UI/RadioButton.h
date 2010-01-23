@@ -32,6 +32,7 @@
    bool state;
    
    ImageLayer  *circleLayer;
+   ImageLayer  *circleFlippedLayer;
    ImageLayer  *dotLayer;
    CATextLayer *labelLayer;
 }

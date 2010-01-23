@@ -40,9 +40,17 @@
       // box
       
       boxLayer = [ImageLayer layerWithImageNamed:@"checkbox"];
-      boxLayer.opacity  = -2;
+      boxLayer.opacity = -2;
       
       [self addSublayer:boxLayer];
+      
+      // flipped box
+      
+      boxFlippedLayer = [ImageLayer layerWithImageNamed:@"checkbox"];
+      boxFlippedLayer.opacity   = 0;
+      boxFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+      
+      [self addSublayer:boxFlippedLayer];
       
       // tick
       
@@ -81,6 +89,18 @@
 
 - (void) handleEvents
 {
+   if(gameState.eventType == MouseMove_ET)
+   {
+      if([boxLayer isInBounds:gameState.eventMousePoint])
+      {
+         boxFlippedLayer.opacity = 1;
+      }
+      else
+      {
+         boxFlippedLayer.opacity = 0;
+      }
+   }
+   
    if(gameState.eventType == MouseUp_ET && [boxLayer isInBounds:gameState.eventMousePoint])
    {
       if(state == YES)

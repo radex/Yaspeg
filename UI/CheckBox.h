@@ -32,6 +32,7 @@
    bool state;
    
    ImageLayer  *boxLayer;
+   ImageLayer  *boxFlippedLayer;
    ImageLayer  *tickLayer;
    CATextLayer *labelLayer;
 }
