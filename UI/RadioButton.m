@@ -33,8 +33,6 @@
       yaspeg    = [YaspegController sharedYaspegController];
       gameState = yaspeg.currentState;
       
-      state = NO;
-      
       self.frame = CGRectMake(position.x, position.y, 800, 50);
       
       // circle
@@ -102,38 +100,43 @@
    
    if(gameState.eventType == MouseUp_ET && [circleLayer isInBounds:gameState.eventMousePoint])
    {
-      if(state == YES)
-      {
-         state = NO;
-         
-         [CATransaction begin];
-         [CATransaction setAnimationDuration_c:0.5];
-         dotLayer.x = 16;
-         dotLayer.y = 16;
-         dotLayer.w = 0;
-         dotLayer.h = 0;
-         dotLayer.opacity = 0;
-         [CATransaction commit];
-      }
-      else
-      {
-         state = YES;
-         
-         [CATransaction begin];
-         [CATransaction setAnimationDuration_c:0];
-         dotLayer.opacity = -0.5;
-         dotLayer.x = -32;
-         dotLayer.y = -32;
-         dotLayer.w = 96;
-         dotLayer.h = 96;
-         [CATransaction commit];
-         
-         [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(tickSlideDown) userInfo:nil repeats:NO];
-      }
+      self.state = !state; // swapping state. "self." is needed to invoke setState
    }
 }
 
-- (void) tickSlideDown
+- (void) setState:(bool)newState
+{
+   if(state == newState) return;
+   
+   state = newState;
+   
+   if(newState)
+   {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:0];
+      dotLayer.opacity = -0.5;
+      dotLayer.x = -32;
+      dotLayer.y = -32;
+      dotLayer.w = 96;
+      dotLayer.h = 96;
+      [CATransaction commit];
+      
+      [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(dotRevert) userInfo:nil repeats:NO];
+   }
+   else
+   {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:0.5];
+      dotLayer.x = 16;
+      dotLayer.y = 16;
+      dotLayer.w = 0;
+      dotLayer.h = 0;
+      dotLayer.opacity = 0;
+      [CATransaction commit];
+   }
+}
+
+- (void) dotRevert
 {
    [CATransaction begin];
    [CATransaction setAnimationDuration_c:0.5];

@@ -53,8 +53,10 @@
    // testing checkboxes, radio buttons, buttons etc etc
    
    testCheckBox = [CheckBox buttonWithLabel:@"testowanie ggyy" position:NSMakePoint(100, 50)];
+   //testCheckBox.state = YES;
    
    testRadioButton = [RadioButton buttonWithLabel:@"radio ggyy" position:NSMakePoint(100, 100)];
+   testRadioButton.state = YES;
    
    testButton = [Button buttonWithLabel:@"testing foobar" position:NSMakePoint(400, 100) width:250];
    

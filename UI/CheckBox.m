@@ -33,8 +33,6 @@
       yaspeg    = [YaspegController sharedYaspegController];
       gameState = yaspeg.currentState;
       
-      state = NO;
-      
       self.frame = CGRectMake(position.x, position.y, 800, 50);
       
       // box
@@ -103,28 +101,33 @@
    
    if(gameState.eventType == MouseUp_ET && [boxLayer isInBounds:gameState.eventMousePoint])
    {
-      if(state == YES)
-      {
-         state = NO;
-         
-         [CATransaction begin];
-         [CATransaction setAnimationDuration_c:0.5];
-         tickLayer.y = -30;
-         tickLayer.opacity = -0.5;
-         [CATransaction commit];
-      }
-      else
-      {
-         state = YES;
-         
-         [CATransaction begin];
-         [CATransaction setAnimationDuration_c:0];
-         tickLayer.y = 30;
-         tickLayer.opacity = -0.5;
-         [CATransaction commit];
-         
-         [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(tickSlideDown) userInfo:nil repeats:NO];
-      }
+      self.state = !state; // swapping state. "self." is needed to invoke setState
+   }
+}
+
+- (void) setState:(bool)newState
+{
+   if(state == newState) return;
+   
+   state = newState;
+   
+   if(newState)
+   {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:0];
+      tickLayer.y = 30;
+      tickLayer.opacity = -0.5;
+      [CATransaction commit];
+      
+      [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(tickSlideDown) userInfo:nil repeats:NO];
+   }
+   else
+   {
+      [CATransaction begin];
+      [CATransaction setAnimationDuration_c:0.5];
+      tickLayer.y = -30;
+      tickLayer.opacity = -0.5;
+      [CATransaction commit];
    }
 }
 
