@@ -102,7 +102,7 @@
    
    footerLayer = [CATextLayer layer];
    footerLayer.opacity  = 0;
-   footerLayer.string   = @"Wyprodukowano na Maku przy użyciu XCode, Cocoa i Core Animation.\nStatystyki: 30 plików źródłowych, 2544 linijek kodu, 693 średników.";
+   footerLayer.string   = @"Wyprodukowano na Maku przy użyciu XCode, Cocoa i Core Animation.\nStatystyki: 38 plików źródłowych, 3604 linijek kodu, 979 średników.";
    footerLayer.font     = @"palatino";
    footerLayer.fontSize = 12;
    footerLayer.alignmentMode   = @"center";
