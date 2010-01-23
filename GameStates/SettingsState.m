@@ -52,9 +52,11 @@
    
    // testing checkboxes, radio buttons, buttons etc etc
    
-   testCheckBox = [CheckBox buttonWithLabel:@"testowanie bla bla bla" position:NSMakePoint(100, 50)];
+   testCheckBox = [CheckBox buttonWithLabel:@"testowanie ggyy" position:NSMakePoint(100, 50)];
    
-   testRadioButton = [RadioButton buttonWithLabel:@"radio button foo bar" position:NSMakePoint(100, 100)];
+   testRadioButton = [RadioButton buttonWithLabel:@"radio ggyy" position:NSMakePoint(100, 100)];
+   
+   testButton = [Button buttonWithLabel:@"testing foobar" position:NSMakePoint(400, 100) width:250];
    
    // some text
    
@@ -80,6 +82,7 @@
    [backButton handleEvents];
    [testCheckBox handleEvents];
    [testRadioButton handleEvents];
+   [testButton handleEvents];
    
    if(eventType == None_ET)
    {
@@ -118,6 +121,7 @@
       [backButton handleRender];
       [testCheckBox handleRender];
       [testRadioButton handleRender];
+      [testButton handleRender];
       
       bgLayer.opacity = 1;
       textLayer.opacity = 1;
@@ -148,6 +152,7 @@
    [backButton handleOutro];
    [testCheckBox handleOutro];
    [testRadioButton handleOutro];
+   [testButton handleOutro];
    
    bgLayer.opacity = 0;
    textLayer.opacity = 0;

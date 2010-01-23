@@ -65,6 +65,10 @@
 		6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7816B011033D1E00EEA56B /* RadioButton.m */; };
 		6E91680910EE8573002F70CC /* YaspegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91680410EE8573002F70CC /* YaspegController.m */; };
 		6E91681210EE85A0002F70CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E91681110EE85A0002F70CC /* QuartzCore.framework */; };
+		6E942FAE110BA67700685348 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E942FAD110BA67700685348 /* Button.m */; };
+		6E942FB2110BA75D00685348 /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB0110BA75D00685348 /* button-bg.png */; };
+		6E942FB3110BA75D00685348 /* button-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB1110BA75D00685348 /* button-left.png */; };
+		6E94301B110BACEC00685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94301A110BACEC00685348 /* CALayer+radex.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -153,6 +157,12 @@
 		6E91680310EE8573002F70CC /* YaspegController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YaspegController.h; sourceTree = "<group>"; };
 		6E91680410EE8573002F70CC /* YaspegController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YaspegController.m; sourceTree = "<group>"; };
 		6E91681110EE85A0002F70CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6E942FAC110BA67700685348 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Button.h; path = UI/Button.h; sourceTree = "<group>"; };
+		6E942FAD110BA67700685348 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Button.m; path = UI/Button.m; sourceTree = "<group>"; };
+		6E942FB0110BA75D00685348 /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-bg.png"; path = "gfx/button-bg.png"; sourceTree = "<group>"; };
+		6E942FB1110BA75D00685348 /* button-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-left.png"; path = "gfx/button-left.png"; sourceTree = "<group>"; };
+		6E943019110BACEC00685348 /* CALayer+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+radex.h"; sourceTree = "<group>"; };
+		6E94301A110BACEC00685348 /* CALayer+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+radex.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Yaspeg2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg2-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Yaspeg2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -274,6 +284,8 @@
 				6E1DDDDF1101134C00993443 /* CheckBox.m */,
 				6E7816AF11033D1E00EEA56B /* RadioButton.h */,
 				6E7816B011033D1E00EEA56B /* RadioButton.m */,
+				6E942FAC110BA67700685348 /* Button.h */,
+				6E942FAD110BA67700685348 /* Button.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -291,6 +303,8 @@
 			children = (
 				6E1DD84F10FF8B6E00993443 /* CATransaction+radex.h */,
 				6E1DD85010FF8B6E00993443 /* CATransaction+radex.m */,
+				6E943019110BACEC00685348 /* CALayer+radex.h */,
+				6E94301A110BACEC00685348 /* CALayer+radex.m */,
 				6E1DD85110FF8B6E00993443 /* ImageLayer.h */,
 				6E1DD85210FF8B6E00993443 /* ImageLayer.m */,
 				6E1DD85310FF8B6E00993443 /* KeyHandlingView.h */,
@@ -358,6 +372,8 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E942FB0110BA75D00685348 /* button-bg.png */,
+				6E942FB1110BA75D00685348 /* button-left.png */,
 				6E1DDE1611011C8D00993443 /* checkbox-tick.png */,
 				6E1DDE1711011C8D00993443 /* checkbox.png */,
 				6E1DDE1811011C8D00993443 /* radio-button-dot.png */,
@@ -478,6 +494,8 @@
 				6E1DDE1C11011C8D00993443 /* radio-button-dot.png in Resources */,
 				6E1DDE1D11011C8D00993443 /* radio-button.png in Resources */,
 				6E40CED81106763100466539 /* COPYING in Resources */,
+				6E942FB2110BA75D00685348 /* button-bg.png in Resources */,
+				6E942FB3110BA75D00685348 /* button-left.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +522,8 @@
 				6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */,
 				6E1DDDE01101134C00993443 /* CheckBox.m in Sources */,
 				6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */,
+				6E942FAE110BA67700685348 /* Button.m in Sources */,
+				6E94301B110BACEC00685348 /* CALayer+radex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 //
-//  SettingsState.h
+//  Button.h
 //  Yaspeg2
 //
-//  Created by Radex on 10-01-14.
+//  Created by Radex on 10-01-23.
 //  Copyright 2010 Radex. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
@@ -19,23 +19,34 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import "ImageLayer.h"
 #import "GameState.h"
-#import "YaspegController.h"
-#import "BackButton.h"
-#import "CheckBox.h"
-#import "RadioButton.h"
-#import "Button.h"
 
-@interface SettingsState : GameState
+@class YaspegController;
+
+@interface Button : CALayer
 {
-   ImageLayer *bgLayer;
-   ImageLayer *headerLayer;
-   CATextLayer*textLayer;
-   BackButton *backButton;
+   GameState        *gameState;
+   YaspegController *yaspeg;
    
-   CheckBox   *testCheckBox;
-   RadioButton*testRadioButton;
-   Button     *testButton;
+   ImageLayer  *leftLayer;
+   ImageLayer  *rightLayer;
+   ImageLayer  *bgLayer;
+   
+   ImageLayer  *leftFlippedLayer;
+   ImageLayer  *rightFlippedLayer;
+   ImageLayer  *bgFlippedLayer;
+   
+   CATextLayer *labelLayer;
 }
+
+@property (readwrite) bool state;
+
+- (id)   initWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
++ (id) buttonWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
+
+- (void) handleEvents;
+- (void) handleRender;
+- (void) handleOutro;
 
 @end
