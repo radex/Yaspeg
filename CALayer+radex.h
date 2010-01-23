@@ -1,10 +1,10 @@
 //
-//  CATransaction+radex.m
+//  CALayer+radex.h
 //  Yaspeg2
 //
-//  Created by Radex on 10-01-14.
+//  Created by Radex on 10-01-23.
 //  Copyright 2010 Radex. All rights reserved.
-//  
+//
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 3 of the License, or
@@ -19,13 +19,8 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "CATransaction+radex.h"
+@interface CALayer (radex)
 
-@implementation CATransaction (radex)
-
-+ (void)setAnimationDuration_c:(CFTimeInterval)duration
-{
-   [CATransaction setValue:[NSNumber numberWithFloat:duration] forKey:kCATransactionAnimationDuration]; //that's for 10.5 compatibility
-}
+- (bool)isInBounds:(NSPoint)point;
 
 @end

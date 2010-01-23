@@ -35,6 +35,5 @@
 + (id)layerWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame;
 + (id)layerWithImageNamed:(NSString *)newImageName;
 
-- (bool)isInBounds:(NSPoint)point;
 @end
 

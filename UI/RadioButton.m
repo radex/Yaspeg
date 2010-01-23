@@ -62,7 +62,7 @@
       // label
       
       labelLayer          = [CATextLayer layer];
-      labelLayer.frame    = CGRectMake(45, 5, 750, 24);
+      labelLayer.frame    = CGRectMake(45, 0, 750, 30);
       labelLayer.font     = @"palatino";
       labelLayer.fontSize = 24;
       labelLayer.string   = label;

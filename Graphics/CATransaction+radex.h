@@ -19,7 +19,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-@interface CATransaction (Radex)
+@interface CATransaction (radex)
 
 + (void)setAnimationDuration_c:(CFTimeInterval)duration; // 10.5 compatibility
 

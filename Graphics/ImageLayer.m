@@ -150,20 +150,5 @@
 	NSGraphicsContext.currentContext = oldContext;
 }
 
-- (bool)isInBounds:(NSPoint)point
-{
-   NSRect frame = NSRectFromCGRect([self convertRect:self.bounds toLayer:[YaspegController sharedYaspegController].rootLayer]);
-   
-   if(point.x > frame.origin.x &&
-      point.x < frame.origin.x + frame.size.width &&
-      point.y > frame.origin.y &&
-      point.y < frame.origin.y + frame.size.height)
-   {
-      return YES;
-   }
-   
-   return NO;
-}
-
 @end
 
