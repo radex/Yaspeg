@@ -48,7 +48,7 @@
       
       boxFlippedLayer = [ImageLayer layerWithImageNamed:@"checkbox"];
       boxFlippedLayer.opacity   = 0;
-      boxFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+      boxFlippedLayer.transform = CATransform3DMakeScale(1, -1, 1);
       
       [self addSublayer:boxFlippedLayer];
       
@@ -146,8 +146,11 @@
 - (void) handleOutro
 {
    boxLayer.opacity  = -2;
+   boxFlippedLayer.opacity = -2;
+   
    tickLayer.y       = -30;
    tickLayer.opacity = -0.5;
+   
    labelLayer.opacity = 0;
 }
 

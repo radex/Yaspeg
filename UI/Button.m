@@ -48,7 +48,7 @@
       rightLayer.x = width - 15;
       
       rightLayer.opacity   = -2;
-      rightLayer.transform = CATransform3DMakeRotation(M_PI, 0, 1, 0);
+      rightLayer.transform = CATransform3DMakeScale(-1, 1, 1);
       
       [self addSublayer:rightLayer];
       
@@ -65,7 +65,7 @@
       
       leftFlippedLayer = [ImageLayer layerWithImageNamed:@"button-left.png"];
       leftFlippedLayer.opacity   = 0;
-      leftFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+      leftFlippedLayer.transform = CATransform3DMakeScale(1, -1, 1);
       
       [self addSublayer:leftFlippedLayer];
       
@@ -75,7 +75,7 @@
       rightFlippedLayer.x = width - 15;
       
       rightFlippedLayer.opacity   = 0;
-      rightFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 0, 1, 0);
+      rightFlippedLayer.transform = CATransform3DMakeScale(-1, -1, 1);
       
       [self addSublayer:rightFlippedLayer];
       
@@ -86,7 +86,7 @@
       bgFlippedLayer.w = width - 30;
       
       bgFlippedLayer.opacity   = 0;
-      bgFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+      bgFlippedLayer.transform = CATransform3DMakeScale(1, -1, 1);
       [self addSublayer:bgFlippedLayer];
       
       // label

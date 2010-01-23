@@ -48,7 +48,7 @@
       
       circleFlippedLayer = [ImageLayer layerWithImageNamed:@"radio-button"];
       circleFlippedLayer.opacity   = -2;
-      circleFlippedLayer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+      circleFlippedLayer.transform = CATransform3DMakeScale(1, -1, 1);
       
       [self addSublayer:circleFlippedLayer];
       
@@ -154,6 +154,7 @@
 - (void) handleOutro
 {
    circleLayer.opacity = -2;
+   circleFlippedLayer.opacity = -2;
    
    dotLayer.x = 16;
    dotLayer.y = 16;
