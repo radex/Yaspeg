@@ -117,7 +117,7 @@
    return [[self alloc] initWithLabel:label position:position width:width];
 }
 
-- (void) handleEvents
+- (int) handleEvents
 {
    if(gameState.eventType == MouseMove_ET)
    {
@@ -134,6 +134,13 @@
          bgFlippedLayer.opacity    = 0;
       }
    }
+   
+   if(gameState.eventType == MouseUp_ET && [self isInBounds:gameState.eventMousePoint])
+   {
+      return 1; // 1 if clicked
+   }
+   
+   return 0; // 0 if nothing happened
 }
 
 - (void) handleRender

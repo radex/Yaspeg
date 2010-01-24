@@ -71,6 +71,23 @@
    textLayer.frame = CGRectMake(25, 0, 800, 300);
    
    [yaspeg.rootLayer addSublayer:textLayer];
+   
+   // flash
+   
+   flashLayer = [CALayer layer];
+   flashLayer.frame = CGRectMake(0, 0, 800, 600);
+   flashLayer.backgroundColor = CGColorCreateGenericRGB(1, 1, 1, 1);
+   flashLayer.opacity = 0;
+   
+   [yaspeg.rootLayer addSublayer:flashLayer];
+   
+   flashAnimation = [CABasicAnimation animation];
+   flashAnimation.keyPath      = @"opacity";
+   flashAnimation.repeatCount  = 1;
+   flashAnimation.duration     = 0.3;
+   flashAnimation.fromValue    = [NSNumber numberWithFloat:0];
+   flashAnimation.toValue      = [NSNumber numberWithFloat:0.7];
+   flashAnimation.autoreverses = YES;
 }
 
 /*
@@ -84,11 +101,10 @@
    [backButton handleEvents];
    [testCheckBox handleEvents];
    [testRadioButton handleEvents];
-   [testButton handleEvents];
    
-   if(eventType == None_ET)
+   if([testButton handleEvents] == 1)
    {
-      
+      [flashLayer addAnimation:flashAnimation forKey:@"animateOpacity"];
    }
    
    eventType = None_ET;

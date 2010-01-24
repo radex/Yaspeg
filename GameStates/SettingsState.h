@@ -36,6 +36,9 @@
    CheckBox   *testCheckBox;
    RadioButton*testRadioButton;
    Button     *testButton;
+   
+   CALayer    *flashLayer;
+   CABasicAnimation *flashAnimation;
 }
 
 @end

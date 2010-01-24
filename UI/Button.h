@@ -45,7 +45,7 @@
 - (id)   initWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
 
-- (void) handleEvents;
+- (int)  handleEvents;
 - (void) handleRender;
 - (void) handleOutro;
 
