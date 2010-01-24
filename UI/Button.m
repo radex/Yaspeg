@@ -1,6 +1,6 @@
 //
 //  Button.m
-//  Yaspeg2
+//  Yaspeg
 //
 //  Created by Radex on 10-01-23.
 //  Copyright 2010 Radex. All rights reserved.

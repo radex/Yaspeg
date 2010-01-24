@@ -1,6 +1,6 @@
 //
 //  RadioButton.h
-//  Yaspeg2
+//  Yaspeg
 //
 //  Created by Radex on 10-01-17.
 //  Copyright 2010 Radex. All rights reserved.
