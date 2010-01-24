@@ -8,22 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		6E1DD85610FF8B6E00993443 /* CATransaction+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85010FF8B6E00993443 /* CATransaction+radex.m */; };
-		6E1DD85710FF8B6E00993443 /* ImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85210FF8B6E00993443 /* ImageLayer.m */; };
-		6E1DD85810FF8B6E00993443 /* KeyHandlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85410FF8B6E00993443 /* KeyHandlingView.m */; };
-		6E1DD85B10FF8B8B00993443 /* BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD85A10FF8B8B00993443 /* BackButton.m */; };
-		6E1DD8C410FFB0A700993443 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DD8C310FFB0A700993443 /* SettingsState.m */; };
 		6E1DD8EF10FFB38100993443 /* header-edytor-poziomow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */; };
 		6E1DD8F010FFB38100993443 /* header-jak-grac.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8EC10FFB38100993443 /* header-jak-grac.png */; };
 		6E1DD8F110FFB38100993443 /* header-pobierz-poziomy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8ED10FFB38100993443 /* header-pobierz-poziomy.png */; };
 		6E1DD8F210FFB38100993443 /* header-ustawienia.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DD8EE10FFB38100993443 /* header-ustawienia.png */; };
-		6E1DDA1010FFCC7D00993443 /* HelpState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDA0F10FFCC7D00993443 /* HelpState.m */; };
-		6E1DDA2C10FFCDC600993443 /* DownloadState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDA2910FFCDC600993443 /* DownloadState.m */; };
-		6E1DDA2D10FFCDC600993443 /* EditorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDA2B10FFCDC600993443 /* EditorState.m */; };
-		6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDAA0110062CB00993443 /* GameItselfState.m */; };
 		6E1DDABD1100667400993443 /* dude.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDABC1100667400993443 /* dude.png */; };
 		6E1DDACB110072F700993443 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDACA110072F700993443 /* bg2.png */; };
-		6E1DDDE01101134C00993443 /* CheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1DDDDF1101134C00993443 /* CheckBox.m */; };
 		6E1DDE1A11011C8D00993443 /* checkbox-tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1611011C8D00993443 /* checkbox-tick.png */; };
 		6E1DDE1B11011C8D00993443 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1711011C8D00993443 /* checkbox.png */; };
 		6E1DDE1C11011C8D00993443 /* radio-button-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1811011C8D00993443 /* radio-button-dot.png */; };
@@ -59,17 +49,27 @@
 		6E61CC7110F0ABEA0027DACF /* level-nolevel-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4810F0ABEA0027DACF /* level-nolevel-unselected.png */; };
 		6E61CC7A10F0ABEA0027DACF /* range-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC5110F0ABEA0027DACF /* range-selected.png */; };
 		6E61CC7B10F0ABEA0027DACF /* range-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC5210F0ABEA0027DACF /* range-unselected.png */; };
-		6E695DF110F9340800728B14 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E695DF010F9340800728B14 /* MainMenuState.m */; };
 		6E69623B10FA0F8100728B14 /* header-yaspeg-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E69623A10FA0F8100728B14 /* header-yaspeg-small.png */; };
-		6E70973410FD2FD100E04723 /* AuthorsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E70973310FD2FD100E04723 /* AuthorsState.m */; };
-		6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7816B011033D1E00EEA56B /* RadioButton.m */; };
 		6E91680910EE8573002F70CC /* YaspegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91680410EE8573002F70CC /* YaspegController.m */; };
 		6E91681210EE85A0002F70CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E91681110EE85A0002F70CC /* QuartzCore.framework */; };
-		6E942FAE110BA67700685348 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E942FAD110BA67700685348 /* Button.m */; };
 		6E942FB2110BA75D00685348 /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB0110BA75D00685348 /* button-bg.png */; };
 		6E942FB3110BA75D00685348 /* button-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB1110BA75D00685348 /* button-left.png */; };
-		6E94301B110BACEC00685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94301A110BACEC00685348 /* CALayer+radex.m */; };
-		6E9431FB110C55F400685348 /* RadioButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9431FA110C55F400685348 /* RadioButtonGroup.m */; };
+		6E9432DC110C70B600685348 /* BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432D3110C70B600685348 /* BackButton.m */; };
+		6E9432DD110C70B600685348 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432D5110C70B600685348 /* Button.m */; };
+		6E9432DE110C70B600685348 /* CheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432D7110C70B600685348 /* CheckBox.m */; };
+		6E9432DF110C70B600685348 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432D9110C70B600685348 /* RadioButton.m */; };
+		6E9432E0110C70B600685348 /* RadioButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432DB110C70B600685348 /* RadioButtonGroup.m */; };
+		6E9432E8110C70BD00685348 /* CATransaction+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432E3110C70BD00685348 /* CATransaction+radex.m */; };
+		6E9432E9110C70BD00685348 /* ImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432E5110C70BD00685348 /* ImageLayer.m */; };
+		6E9432EA110C70BD00685348 /* KeyHandlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432E7110C70BD00685348 /* KeyHandlingView.m */; };
+		6E9432FA110C70C400685348 /* AuthorsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432ED110C70C400685348 /* AuthorsState.m */; };
+		6E9432FB110C70C400685348 /* DownloadState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432EF110C70C400685348 /* DownloadState.m */; };
+		6E9432FC110C70C400685348 /* EditorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F1110C70C400685348 /* EditorState.m */; };
+		6E9432FD110C70C400685348 /* GameItselfState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F3110C70C400685348 /* GameItselfState.m */; };
+		6E9432FE110C70C400685348 /* HelpState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F5110C70C400685348 /* HelpState.m */; };
+		6E9432FF110C70C400685348 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F7110C70C400685348 /* MainMenuState.m */; };
+		6E943300110C70C400685348 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F9110C70C400685348 /* SettingsState.m */; };
+		6E943303110C70E200685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E943302110C70E200685348 /* CALayer+radex.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -82,32 +82,12 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		6E099B4810F8E06800B8666E /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
-		6E1DD84F10FF8B6E00993443 /* CATransaction+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CATransaction+radex.h"; path = "Graphics/CATransaction+radex.h"; sourceTree = "<group>"; };
-		6E1DD85010FF8B6E00993443 /* CATransaction+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+radex.m"; path = "Graphics/CATransaction+radex.m"; sourceTree = "<group>"; };
-		6E1DD85110FF8B6E00993443 /* ImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageLayer.h; path = Graphics/ImageLayer.h; sourceTree = "<group>"; };
-		6E1DD85210FF8B6E00993443 /* ImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageLayer.m; path = Graphics/ImageLayer.m; sourceTree = "<group>"; };
-		6E1DD85310FF8B6E00993443 /* KeyHandlingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyHandlingView.h; path = Graphics/KeyHandlingView.h; sourceTree = "<group>"; };
-		6E1DD85410FF8B6E00993443 /* KeyHandlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyHandlingView.m; path = Graphics/KeyHandlingView.m; sourceTree = "<group>"; };
-		6E1DD85910FF8B8B00993443 /* BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackButton.h; path = UI/BackButton.h; sourceTree = "<group>"; };
-		6E1DD85A10FF8B8B00993443 /* BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackButton.m; path = UI/BackButton.m; sourceTree = "<group>"; };
-		6E1DD8C210FFB0A700993443 /* SettingsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsState.h; path = GameStates/SettingsState.h; sourceTree = "<group>"; };
-		6E1DD8C310FFB0A700993443 /* SettingsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsState.m; path = GameStates/SettingsState.m; sourceTree = "<group>"; };
 		6E1DD8EB10FFB38100993443 /* header-edytor-poziomow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-edytor-poziomow.png"; path = "gfx/header-edytor-poziomow.png"; sourceTree = "<group>"; };
 		6E1DD8EC10FFB38100993443 /* header-jak-grac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-jak-grac.png"; path = "gfx/header-jak-grac.png"; sourceTree = "<group>"; };
 		6E1DD8ED10FFB38100993443 /* header-pobierz-poziomy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-pobierz-poziomy.png"; path = "gfx/header-pobierz-poziomy.png"; sourceTree = "<group>"; };
 		6E1DD8EE10FFB38100993443 /* header-ustawienia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-ustawienia.png"; path = "gfx/header-ustawienia.png"; sourceTree = "<group>"; };
-		6E1DDA0E10FFCC7D00993443 /* HelpState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpState.h; path = GameStates/HelpState.h; sourceTree = "<group>"; };
-		6E1DDA0F10FFCC7D00993443 /* HelpState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpState.m; path = GameStates/HelpState.m; sourceTree = "<group>"; };
-		6E1DDA2810FFCDC600993443 /* DownloadState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadState.h; path = GameStates/DownloadState.h; sourceTree = "<group>"; };
-		6E1DDA2910FFCDC600993443 /* DownloadState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadState.m; path = GameStates/DownloadState.m; sourceTree = "<group>"; };
-		6E1DDA2A10FFCDC600993443 /* EditorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorState.h; path = GameStates/EditorState.h; sourceTree = "<group>"; };
-		6E1DDA2B10FFCDC600993443 /* EditorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorState.m; path = GameStates/EditorState.m; sourceTree = "<group>"; };
-		6E1DDA9F110062CB00993443 /* GameItselfState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameItselfState.h; path = GameStates/GameItselfState.h; sourceTree = "<group>"; };
-		6E1DDAA0110062CB00993443 /* GameItselfState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameItselfState.m; path = GameStates/GameItselfState.m; sourceTree = "<group>"; };
 		6E1DDABC1100667400993443 /* dude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dude.png; path = gfx/dude.png; sourceTree = "<group>"; };
 		6E1DDACA110072F700993443 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = gfx/bg2.png; sourceTree = "<group>"; };
-		6E1DDDDE1101134C00993443 /* CheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckBox.h; path = UI/CheckBox.h; sourceTree = "<group>"; };
-		6E1DDDDF1101134C00993443 /* CheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckBox.m; path = UI/CheckBox.m; sourceTree = "<group>"; };
 		6E1DDE1611011C8D00993443 /* checkbox-tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-tick.png"; path = "gfx/checkbox-tick.png"; sourceTree = "<group>"; };
 		6E1DDE1711011C8D00993443 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox.png; path = gfx/checkbox.png; sourceTree = "<group>"; };
 		6E1DDE1811011C8D00993443 /* radio-button-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-button-dot.png"; path = "gfx/radio-button-dot.png"; sourceTree = "<group>"; };
@@ -145,27 +125,47 @@
 		6E61CC5110F0ABEA0027DACF /* range-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "range-selected.png"; path = "gfx/range-selected.png"; sourceTree = "<group>"; };
 		6E61CC5210F0ABEA0027DACF /* range-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "range-unselected.png"; path = "gfx/range-unselected.png"; sourceTree = "<group>"; };
 		6E61CE8410F53D450027DACF /* Polish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Polish; path = Polish.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		6E695DEF10F9340800728B14 /* MainMenuState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuState.h; path = GameStates/MainMenuState.h; sourceTree = "<group>"; };
-		6E695DF010F9340800728B14 /* MainMenuState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuState.m; path = GameStates/MainMenuState.m; sourceTree = "<group>"; };
 		6E69623A10FA0F8100728B14 /* header-yaspeg-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header-yaspeg-small.png"; path = "gfx/header-yaspeg-small.png"; sourceTree = "<group>"; };
-		6E70973210FD2FD100E04723 /* AuthorsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthorsState.h; path = GameStates/AuthorsState.h; sourceTree = "<group>"; };
-		6E70973310FD2FD100E04723 /* AuthorsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthorsState.m; path = GameStates/AuthorsState.m; sourceTree = "<group>"; };
-		6E7816AF11033D1E00EEA56B /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadioButton.h; path = UI/RadioButton.h; sourceTree = "<group>"; };
-		6E7816B011033D1E00EEA56B /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadioButton.m; path = UI/RadioButton.m; sourceTree = "<group>"; };
 		6E8749BC10FD2B74004745EF /* class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = class.h; path = "Yaspeg Game State.pbfiletemplate/class.h"; sourceTree = "<group>"; };
 		6E8749BD10FD2B74004745EF /* class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = class.m; path = "Yaspeg Game State.pbfiletemplate/class.m"; sourceTree = "<group>"; };
 		6E8749BE10FD2B74004745EF /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = TemplateInfo.plist; path = "Yaspeg Game State.pbfiletemplate/TemplateInfo.plist"; sourceTree = "<group>"; };
 		6E91680310EE8573002F70CC /* YaspegController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YaspegController.h; sourceTree = "<group>"; };
 		6E91680410EE8573002F70CC /* YaspegController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YaspegController.m; sourceTree = "<group>"; };
 		6E91681110EE85A0002F70CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6E942FAC110BA67700685348 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Button.h; path = UI/Button.h; sourceTree = "<group>"; };
-		6E942FAD110BA67700685348 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Button.m; path = UI/Button.m; sourceTree = "<group>"; };
 		6E942FB0110BA75D00685348 /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-bg.png"; path = "gfx/button-bg.png"; sourceTree = "<group>"; };
 		6E942FB1110BA75D00685348 /* button-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-left.png"; path = "gfx/button-left.png"; sourceTree = "<group>"; };
-		6E943019110BACEC00685348 /* CALayer+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+radex.h"; sourceTree = "<group>"; };
-		6E94301A110BACEC00685348 /* CALayer+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+radex.m"; sourceTree = "<group>"; };
-		6E9431F9110C55F400685348 /* RadioButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadioButtonGroup.h; path = UI/RadioButtonGroup.h; sourceTree = "<group>"; };
-		6E9431FA110C55F400685348 /* RadioButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadioButtonGroup.m; path = UI/RadioButtonGroup.m; sourceTree = "<group>"; };
+		6E9432D2110C70B600685348 /* BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackButton.h; sourceTree = "<group>"; };
+		6E9432D3110C70B600685348 /* BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackButton.m; sourceTree = "<group>"; };
+		6E9432D4110C70B600685348 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		6E9432D5110C70B600685348 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		6E9432D6110C70B600685348 /* CheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckBox.h; sourceTree = "<group>"; };
+		6E9432D7110C70B600685348 /* CheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckBox.m; sourceTree = "<group>"; };
+		6E9432D8110C70B600685348 /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
+		6E9432D9110C70B600685348 /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		6E9432DA110C70B600685348 /* RadioButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButtonGroup.h; sourceTree = "<group>"; };
+		6E9432DB110C70B600685348 /* RadioButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButtonGroup.m; sourceTree = "<group>"; };
+		6E9432E2110C70BD00685348 /* CATransaction+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransaction+radex.h"; sourceTree = "<group>"; };
+		6E9432E3110C70BD00685348 /* CATransaction+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+radex.m"; sourceTree = "<group>"; };
+		6E9432E4110C70BD00685348 /* ImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLayer.h; sourceTree = "<group>"; };
+		6E9432E5110C70BD00685348 /* ImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLayer.m; sourceTree = "<group>"; };
+		6E9432E6110C70BD00685348 /* KeyHandlingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHandlingView.h; sourceTree = "<group>"; };
+		6E9432E7110C70BD00685348 /* KeyHandlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHandlingView.m; sourceTree = "<group>"; };
+		6E9432EC110C70C400685348 /* AuthorsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorsState.h; sourceTree = "<group>"; };
+		6E9432ED110C70C400685348 /* AuthorsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorsState.m; sourceTree = "<group>"; };
+		6E9432EE110C70C400685348 /* DownloadState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadState.h; sourceTree = "<group>"; };
+		6E9432EF110C70C400685348 /* DownloadState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadState.m; sourceTree = "<group>"; };
+		6E9432F0110C70C400685348 /* EditorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorState.h; sourceTree = "<group>"; };
+		6E9432F1110C70C400685348 /* EditorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorState.m; sourceTree = "<group>"; };
+		6E9432F2110C70C400685348 /* GameItselfState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameItselfState.h; sourceTree = "<group>"; };
+		6E9432F3110C70C400685348 /* GameItselfState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameItselfState.m; sourceTree = "<group>"; };
+		6E9432F4110C70C400685348 /* HelpState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpState.h; sourceTree = "<group>"; };
+		6E9432F5110C70C400685348 /* HelpState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpState.m; sourceTree = "<group>"; };
+		6E9432F6110C70C400685348 /* MainMenuState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuState.h; sourceTree = "<group>"; };
+		6E9432F7110C70C400685348 /* MainMenuState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuState.m; sourceTree = "<group>"; };
+		6E9432F8110C70C400685348 /* SettingsState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsState.h; sourceTree = "<group>"; };
+		6E9432F9110C70C400685348 /* SettingsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsState.m; sourceTree = "<group>"; };
+		6E943301110C70E200685348 /* CALayer+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+radex.h"; sourceTree = "<group>"; };
+		6E943302110C70E200685348 /* CALayer+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+radex.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Yaspeg2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg2-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Yaspeg2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -224,9 +224,9 @@
 		29B97314FDCFA39411CA2CEA /* Yaspeg2 */ = {
 			isa = PBXGroup;
 			children = (
-				6E1DD83910FF889300993443 /* UI */,
-				6E4A83A710FBC0A20084C89F /* Graphics etc */,
-				6E61CB2B10F09C370027DACF /* Game States */,
+				6E9432E1110C70BD00685348 /* Graphics etc */,
+				6E9432D1110C70B600685348 /* UI */,
+				6E9432EB110C70C400685348 /* Game States */,
 				080E96DDFE201D6D7F000001 /* Other Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				6E40CED91106768700466539 /* Docs */,
@@ -278,44 +278,12 @@
 			name = "Game State Template";
 			sourceTree = "<group>";
 		};
-		6E1DD83910FF889300993443 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				6E1DD85910FF8B8B00993443 /* BackButton.h */,
-				6E1DD85A10FF8B8B00993443 /* BackButton.m */,
-				6E1DDDDE1101134C00993443 /* CheckBox.h */,
-				6E1DDDDF1101134C00993443 /* CheckBox.m */,
-				6E7816AF11033D1E00EEA56B /* RadioButton.h */,
-				6E7816B011033D1E00EEA56B /* RadioButton.m */,
-				6E942FAC110BA67700685348 /* Button.h */,
-				6E942FAD110BA67700685348 /* Button.m */,
-				6E9431F9110C55F400685348 /* RadioButtonGroup.h */,
-				6E9431FA110C55F400685348 /* RadioButtonGroup.m */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
 		6E40CED91106768700466539 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
 				6E40CED71106763100466539 /* COPYING */,
 			);
 			name = Docs;
-			sourceTree = "<group>";
-		};
-		6E4A83A710FBC0A20084C89F /* Graphics etc */ = {
-			isa = PBXGroup;
-			children = (
-				6E1DD84F10FF8B6E00993443 /* CATransaction+radex.h */,
-				6E1DD85010FF8B6E00993443 /* CATransaction+radex.m */,
-				6E943019110BACEC00685348 /* CALayer+radex.h */,
-				6E94301A110BACEC00685348 /* CALayer+radex.m */,
-				6E1DD85110FF8B6E00993443 /* ImageLayer.h */,
-				6E1DD85210FF8B6E00993443 /* ImageLayer.m */,
-				6E1DD85310FF8B6E00993443 /* KeyHandlingView.h */,
-				6E1DD85410FF8B6E00993443 /* KeyHandlingView.m */,
-			);
-			name = "Graphics etc";
 			sourceTree = "<group>";
 		};
 		6E4A84E610FBDD700084C89F /* Menu Items */ = {
@@ -353,27 +321,6 @@
 			name = "Level Indicators";
 			sourceTree = "<group>";
 		};
-		6E61CB2B10F09C370027DACF /* Game States */ = {
-			isa = PBXGroup;
-			children = (
-				6E1DDA2810FFCDC600993443 /* DownloadState.h */,
-				6E1DDA2910FFCDC600993443 /* DownloadState.m */,
-				6E1DDA2A10FFCDC600993443 /* EditorState.h */,
-				6E1DDA2B10FFCDC600993443 /* EditorState.m */,
-				6E695DEF10F9340800728B14 /* MainMenuState.h */,
-				6E695DF010F9340800728B14 /* MainMenuState.m */,
-				6E70973210FD2FD100E04723 /* AuthorsState.h */,
-				6E70973310FD2FD100E04723 /* AuthorsState.m */,
-				6E1DD8C210FFB0A700993443 /* SettingsState.h */,
-				6E1DD8C310FFB0A700993443 /* SettingsState.m */,
-				6E1DDA0E10FFCC7D00993443 /* HelpState.h */,
-				6E1DDA0F10FFCC7D00993443 /* HelpState.m */,
-				6E1DDA9F110062CB00993443 /* GameItselfState.h */,
-				6E1DDAA0110062CB00993443 /* GameItselfState.m */,
-			);
-			name = "Game States";
-			sourceTree = "<group>";
-		};
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +348,61 @@
 				6E61CC3310F0ABEA0027DACF /* bg.png */,
 			);
 			name = gfx;
+			sourceTree = "<group>";
+		};
+		6E9432D1110C70B600685348 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6E9432D2110C70B600685348 /* BackButton.h */,
+				6E9432D3110C70B600685348 /* BackButton.m */,
+				6E9432D4110C70B600685348 /* Button.h */,
+				6E9432D5110C70B600685348 /* Button.m */,
+				6E9432D6110C70B600685348 /* CheckBox.h */,
+				6E9432D7110C70B600685348 /* CheckBox.m */,
+				6E9432D8110C70B600685348 /* RadioButton.h */,
+				6E9432D9110C70B600685348 /* RadioButton.m */,
+				6E9432DA110C70B600685348 /* RadioButtonGroup.h */,
+				6E9432DB110C70B600685348 /* RadioButtonGroup.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6E9432E1110C70BD00685348 /* Graphics etc */ = {
+			isa = PBXGroup;
+			children = (
+				6E9432E2110C70BD00685348 /* CATransaction+radex.h */,
+				6E9432E3110C70BD00685348 /* CATransaction+radex.m */,
+				6E943301110C70E200685348 /* CALayer+radex.h */,
+				6E943302110C70E200685348 /* CALayer+radex.m */,
+				6E9432E4110C70BD00685348 /* ImageLayer.h */,
+				6E9432E5110C70BD00685348 /* ImageLayer.m */,
+				6E9432E6110C70BD00685348 /* KeyHandlingView.h */,
+				6E9432E7110C70BD00685348 /* KeyHandlingView.m */,
+			);
+			name = "Graphics etc";
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		6E9432EB110C70C400685348 /* Game States */ = {
+			isa = PBXGroup;
+			children = (
+				6E9432EC110C70C400685348 /* AuthorsState.h */,
+				6E9432ED110C70C400685348 /* AuthorsState.m */,
+				6E9432EE110C70C400685348 /* DownloadState.h */,
+				6E9432EF110C70C400685348 /* DownloadState.m */,
+				6E9432F0110C70C400685348 /* EditorState.h */,
+				6E9432F1110C70C400685348 /* EditorState.m */,
+				6E9432F2110C70C400685348 /* GameItselfState.h */,
+				6E9432F3110C70C400685348 /* GameItselfState.m */,
+				6E9432F4110C70C400685348 /* HelpState.h */,
+				6E9432F5110C70C400685348 /* HelpState.m */,
+				6E9432F6110C70C400685348 /* MainMenuState.h */,
+				6E9432F7110C70C400685348 /* MainMenuState.m */,
+				6E9432F8110C70C400685348 /* SettingsState.h */,
+				6E9432F9110C70C400685348 /* SettingsState.m */,
+			);
+			name = "Game States";
+			path = GameStates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,22 +516,22 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				6E91680910EE8573002F70CC /* YaspegController.m in Sources */,
 				6E61CB8210F0A12C0027DACF /* GameState.m in Sources */,
-				6E695DF110F9340800728B14 /* MainMenuState.m in Sources */,
-				6E70973410FD2FD100E04723 /* AuthorsState.m in Sources */,
-				6E1DD85610FF8B6E00993443 /* CATransaction+radex.m in Sources */,
-				6E1DD85710FF8B6E00993443 /* ImageLayer.m in Sources */,
-				6E1DD85810FF8B6E00993443 /* KeyHandlingView.m in Sources */,
-				6E1DD85B10FF8B8B00993443 /* BackButton.m in Sources */,
-				6E1DD8C410FFB0A700993443 /* SettingsState.m in Sources */,
-				6E1DDA1010FFCC7D00993443 /* HelpState.m in Sources */,
-				6E1DDA2C10FFCDC600993443 /* DownloadState.m in Sources */,
-				6E1DDA2D10FFCDC600993443 /* EditorState.m in Sources */,
-				6E1DDAA1110062CB00993443 /* GameItselfState.m in Sources */,
-				6E1DDDE01101134C00993443 /* CheckBox.m in Sources */,
-				6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */,
-				6E942FAE110BA67700685348 /* Button.m in Sources */,
-				6E94301B110BACEC00685348 /* CALayer+radex.m in Sources */,
-				6E9431FB110C55F400685348 /* RadioButtonGroup.m in Sources */,
+				6E9432DC110C70B600685348 /* BackButton.m in Sources */,
+				6E9432DD110C70B600685348 /* Button.m in Sources */,
+				6E9432DE110C70B600685348 /* CheckBox.m in Sources */,
+				6E9432DF110C70B600685348 /* RadioButton.m in Sources */,
+				6E9432E0110C70B600685348 /* RadioButtonGroup.m in Sources */,
+				6E9432E8110C70BD00685348 /* CATransaction+radex.m in Sources */,
+				6E9432E9110C70BD00685348 /* ImageLayer.m in Sources */,
+				6E9432EA110C70BD00685348 /* KeyHandlingView.m in Sources */,
+				6E9432FA110C70C400685348 /* AuthorsState.m in Sources */,
+				6E9432FB110C70C400685348 /* DownloadState.m in Sources */,
+				6E9432FC110C70C400685348 /* EditorState.m in Sources */,
+				6E9432FD110C70C400685348 /* GameItselfState.m in Sources */,
+				6E9432FE110C70C400685348 /* HelpState.m in Sources */,
+				6E9432FF110C70C400685348 /* MainMenuState.m in Sources */,
+				6E943300110C70C400685348 /* SettingsState.m in Sources */,
+				6E943303110C70E200685348 /* CALayer+radex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
