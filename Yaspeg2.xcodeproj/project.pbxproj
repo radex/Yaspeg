@@ -69,6 +69,7 @@
 		6E942FB2110BA75D00685348 /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB0110BA75D00685348 /* button-bg.png */; };
 		6E942FB3110BA75D00685348 /* button-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB1110BA75D00685348 /* button-left.png */; };
 		6E94301B110BACEC00685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E94301A110BACEC00685348 /* CALayer+radex.m */; };
+		6E9431FB110C55F400685348 /* RadioButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9431FA110C55F400685348 /* RadioButtonGroup.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -163,6 +164,8 @@
 		6E942FB1110BA75D00685348 /* button-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-left.png"; path = "gfx/button-left.png"; sourceTree = "<group>"; };
 		6E943019110BACEC00685348 /* CALayer+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+radex.h"; sourceTree = "<group>"; };
 		6E94301A110BACEC00685348 /* CALayer+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+radex.m"; sourceTree = "<group>"; };
+		6E9431F9110C55F400685348 /* RadioButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadioButtonGroup.h; path = UI/RadioButtonGroup.h; sourceTree = "<group>"; };
+		6E9431FA110C55F400685348 /* RadioButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadioButtonGroup.m; path = UI/RadioButtonGroup.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Yaspeg2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg2-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Yaspeg2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,18 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		080E96DDFE201D6D7F000001 /* Other Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6E1DD83910FF889300993443 /* UI */,
-				6E4A83A710FBC0A20084C89F /* Graphics etc */,
-				6E61CB2B10F09C370027DACF /* Game States */,
 				6E91680310EE8573002F70CC /* YaspegController.h */,
 				6E91680410EE8573002F70CC /* YaspegController.m */,
 				6E4D4FC810F7F4A8003F7C7A /* GameState.h */,
 				6E61CB8110F0A12C0027DACF /* GameState.m */,
 			);
-			name = Classes;
+			name = "Other Classes";
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -224,7 +224,10 @@
 		29B97314FDCFA39411CA2CEA /* Yaspeg2 */ = {
 			isa = PBXGroup;
 			children = (
-				080E96DDFE201D6D7F000001 /* Classes */,
+				6E1DD83910FF889300993443 /* UI */,
+				6E4A83A710FBC0A20084C89F /* Graphics etc */,
+				6E61CB2B10F09C370027DACF /* Game States */,
+				080E96DDFE201D6D7F000001 /* Other Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				6E40CED91106768700466539 /* Docs */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -248,8 +251,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */,
 				6E61CC2E10F0ABDA0027DACF /* gfx */,
+				6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */,
 				8D1107310486CEB800E47090 /* Yaspeg2-Info.plist */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
@@ -286,6 +289,8 @@
 				6E7816B011033D1E00EEA56B /* RadioButton.m */,
 				6E942FAC110BA67700685348 /* Button.h */,
 				6E942FAD110BA67700685348 /* Button.m */,
+				6E9431F9110C55F400685348 /* RadioButtonGroup.h */,
+				6E9431FA110C55F400685348 /* RadioButtonGroup.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 				6E7816B111033D1E00EEA56B /* RadioButton.m in Sources */,
 				6E942FAE110BA67700685348 /* Button.m in Sources */,
 				6E94301B110BACEC00685348 /* CALayer+radex.m in Sources */,
+				6E9431FB110C55F400685348 /* RadioButtonGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

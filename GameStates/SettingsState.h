@@ -24,6 +24,7 @@
 #import "BackButton.h"
 #import "CheckBox.h"
 #import "RadioButton.h"
+#import "RadioButtonGroup.h"
 #import "Button.h"
 
 @interface SettingsState : GameState
@@ -36,6 +37,7 @@
    CheckBox   *testCheckBox;
    RadioButton*testRadioButton;
    Button     *testButton;
+   RadioButtonGroup *testGroup;
    
    CALayer    *flashLayer;
    CABasicAnimation *flashAnimation;

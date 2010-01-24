@@ -45,7 +45,7 @@
       // flipped circle
       
       circleFlippedLayer = [ImageLayer layerWithImageNamed:@"radio-button"];
-      circleFlippedLayer.opacity   = -2;
+      circleFlippedLayer.opacity   = 0;
       circleFlippedLayer.transform = CATransform3DMakeScale(1, -1, 1);
       
       [self addSublayer:circleFlippedLayer];
@@ -84,7 +84,7 @@
    return [[self alloc] initWithLabel:label position:position];
 }
 
-- (void) handleEvents
+- (int) handleEvents
 {
    if(gameState.eventType == MouseMove_ET)
    {
@@ -101,7 +101,11 @@
    if(gameState.eventType == MouseUp_ET && [circleLayer isInBounds:gameState.eventMousePoint])
    {
       self.state = !state; // swapping state. "self." is needed to invoke setState
+      
+      return 1; // state changed
    }
+   
+   return 0; // nothing happened
 }
 
 - (void) setState:(bool)newState
@@ -150,6 +154,7 @@
 
 - (void) handleRender
 {
+   NSLog(@"g");
    circleLayer.opacity = 1;
    labelLayer.opacity  = 1;
 }

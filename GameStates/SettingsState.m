@@ -53,12 +53,13 @@
    // testing checkboxes, radio buttons, buttons etc etc
    
    testCheckBox = [CheckBox buttonWithLabel:@"testowanie ggyy" position:NSMakePoint(100, 50)];
-   //testCheckBox.state = YES;
    
    testRadioButton = [RadioButton buttonWithLabel:@"radio ggyy" position:NSMakePoint(100, 100)];
    testRadioButton.state = YES;
    
    testButton = [Button buttonWithLabel:@"testing foobar" position:NSMakePoint(400, 100) width:250];
+   
+   testGroup = [RadioButtonGroup buttonGroupWithLabels:[NSArray arrayWithObjects:@"test1", @"test2", @"test3", nil] current:1 position:NSMakePoint(100, 200)];
    
    // some text
    
@@ -68,7 +69,7 @@
    textLayer.font     = @"palatino";
    textLayer.fontSize = 20;
    textLayer.foregroundColor = (CGColorRef)[NSColor blackColor];
-   textLayer.frame = CGRectMake(25, 0, 800, 300);
+   textLayer.frame = CGRectMake(25, 0, 800, 500);
    
    [yaspeg.rootLayer addSublayer:textLayer];
    
@@ -101,6 +102,7 @@
    [backButton handleEvents];
    [testCheckBox handleEvents];
    [testRadioButton handleEvents];
+   [testGroup handleEvents];
    
    if([testButton handleEvents] == 1)
    {
@@ -140,6 +142,7 @@
       [testCheckBox handleRender];
       [testRadioButton handleRender];
       [testButton handleRender];
+      [testGroup handleRender];
       
       bgLayer.opacity = 1;
       textLayer.opacity = 1;
@@ -171,6 +174,7 @@
    [testCheckBox handleOutro];
    [testRadioButton handleOutro];
    [testButton handleOutro];
+   [testGroup handleOutro];
    
    bgLayer.opacity = 0;
    textLayer.opacity = 0;
