@@ -85,7 +85,7 @@
    return [[self alloc] initWithLabel:label position:position];
 }
 
-- (void) handleEvents
+- (int) handleEvents
 {
    if(gameState.eventType == MouseMove_ET)
    {
@@ -102,7 +102,11 @@
    if(gameState.eventType == MouseUp_ET && [boxLayer isInBounds:gameState.eventMousePoint])
    {
       self.state = !state; // swapping state. "self." is needed to invoke setState
+      
+      return 1; // state changed
    }
+   
+   return 0; // nothing happened
 }
 
 - (void) setState:(bool)newState

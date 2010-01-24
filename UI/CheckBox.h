@@ -42,7 +42,7 @@
 - (id)   initWithLabel:(NSString*)label position:(NSPoint)position;
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position;
 
-- (void) handleEvents;
+- (int)  handleEvents;
 - (void) handleRender;
 - (void) handleOutro;
 
