@@ -70,6 +70,7 @@
 		6E9432FF110C70C400685348 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F7110C70C400685348 /* MainMenuState.m */; };
 		6E943300110C70C400685348 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F9110C70C400685348 /* SettingsState.m */; };
 		6E943303110C70E200685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E943302110C70E200685348 /* CALayer+radex.m */; };
+		6E943334110C73BC00685348 /* Yaspeg-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E943333110C73BC00685348 /* Yaspeg-Info.plist */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -77,7 +78,6 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		256AC3F00F4B6AF500CF3369 /* Yaspeg2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaspeg2_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -166,8 +166,9 @@
 		6E9432F9110C70C400685348 /* SettingsState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsState.m; sourceTree = "<group>"; };
 		6E943301110C70E200685348 /* CALayer+radex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+radex.h"; sourceTree = "<group>"; };
 		6E943302110C70E200685348 /* CALayer+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+radex.m"; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Yaspeg2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg2-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Yaspeg2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E943330110C73A900685348 /* Yaspeg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaspeg_Prefix.pch; sourceTree = "<group>"; };
+		6E943333110C73BC00685348 /* Yaspeg-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Yaspeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +217,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Yaspeg2.app */,
+				8D1107320486CEB800E47090 /* Yaspeg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,8 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				6E1094AE10FD299F00703F04 /* Game State Template */,
+				6E943330110C73A900685348 /* Yaspeg_Prefix.pch */,
 				6E099B4810F8E06800B8666E /* SynthesizeSingleton.h */,
-				256AC3F00F4B6AF500CF3369 /* Yaspeg2_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -252,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				6E61CC2E10F0ABDA0027DACF /* gfx */,
+				6E943333110C73BC00685348 /* Yaspeg-Info.plist */,
 				6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */,
-				8D1107310486CEB800E47090 /* Yaspeg2-Info.plist */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -408,9 +409,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* Yaspeg2 */ = {
+		8D1107260486CEB800E47090 /* Yaspeg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Yaspeg2" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Yaspeg" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -420,10 +421,10 @@
 			);
 			dependencies = (
 			);
-			name = Yaspeg2;
+			name = Yaspeg;
 			productInstallPath = "$(HOME)/Applications";
 			productName = Yaspeg2;
-			productReference = 8D1107320486CEB800E47090 /* Yaspeg2.app */;
+			productReference = 8D1107320486CEB800E47090 /* Yaspeg.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -434,7 +435,7 @@
 			attributes = {
 				ORGANIZATIONNAME = Radex;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Yaspeg2" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Yaspeg" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -449,7 +450,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* Yaspeg2 */,
+				8D1107260486CEB800E47090 /* Yaspeg */,
 			);
 		};
 /* End PBXProject section */
@@ -503,6 +504,7 @@
 				6E40CED81106763100466539 /* COPYING in Resources */,
 				6E942FB2110BA75D00685348 /* button-bg.png in Resources */,
 				6E942FB3110BA75D00685348 /* button-left.png in Resources */,
+				6E943334110C73BC00685348 /* Yaspeg-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,10 +562,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Yaspeg2_Prefix.pch;
-				INFOPLIST_FILE = "Yaspeg2-Info.plist";
+				GCC_PREFIX_HEADER = Yaspeg_Prefix.pch;
+				INFOPLIST_FILE = "Yaspeg-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = Yaspeg2;
+				PRODUCT_NAME = Yaspeg;
 				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
@@ -576,10 +578,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Yaspeg2_Prefix.pch;
-				INFOPLIST_FILE = "Yaspeg2-Info.plist";
+				GCC_PREFIX_HEADER = Yaspeg_Prefix.pch;
+				INFOPLIST_FILE = "Yaspeg-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = Yaspeg2;
+				PRODUCT_NAME = Yaspeg;
 				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
@@ -615,7 +617,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Yaspeg2" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Yaspeg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -624,7 +626,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Yaspeg2" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Yaspeg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>Polish</string>
 	<key>CFBundleExecutable</key>
-	<string>Yaspeg2</string>
+	<string>Yaspeg</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.radexp.yaspeg2</string>
+	<string>com.radexp.yaspeg</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Yaspeg 2</string>
+	<string>Yaspeg</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
