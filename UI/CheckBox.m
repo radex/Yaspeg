@@ -87,7 +87,7 @@
 
 - (int) handleEvents
 {
-   if(gameState.eventType == MouseMove_ET)
+   if(gameState.eventType == MouseMove_ET || gameState.eventType == MouseDrag_ET)
    {
       if([boxLayer isInBounds:gameState.eventMousePoint])
       {
@@ -99,11 +99,24 @@
       }
    }
    
-   if(gameState.eventType == MouseUp_ET && [boxLayer isInBounds:gameState.eventMousePoint])
+   if(gameState.eventType == MouseDown_ET && [boxLayer isInBounds:gameState.eventMousePoint])
    {
-      self.state = !state; // swapping state. "self." is needed to invoke setState
+      boxLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
+      boxLayer.shadowOffset  = CGSizeMake(0, 0);
+      boxLayer.shadowRadius  = 5;
+      boxLayer.shadowOpacity = 1;
+   }
+   
+   if(gameState.eventType == MouseUp_ET)
+   {
+      boxLayer.shadowOpacity = 0;
       
-      return 1; // state changed
+      if([boxLayer isInBounds:gameState.eventMousePoint])
+      {
+         self.state = !state; // swapping state. "self." is needed to invoke setState
+         
+         return 1; // 1 if clicked
+      }
    }
    
    return 0; // nothing happened

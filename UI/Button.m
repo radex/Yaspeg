@@ -119,7 +119,7 @@
 
 - (int) handleEvents
 {
-   if(gameState.eventType == MouseMove_ET)
+   if(gameState.eventType == MouseMove_ET || gameState.eventType == MouseDrag_ET)
    {
       if([self isInBounds:gameState.eventMousePoint])
       {
@@ -135,9 +135,22 @@
       }
    }
    
-   if(gameState.eventType == MouseUp_ET && [self isInBounds:gameState.eventMousePoint])
+   if(gameState.eventType == MouseDown_ET && [self isInBounds:gameState.eventMousePoint])
    {
-      return 1; // 1 if clicked
+      self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
+      self.shadowOffset  = CGSizeMake(0, 0);
+      self.shadowRadius  = 5;
+      self.shadowOpacity = 1;
+   }
+   
+   if(gameState.eventType == MouseUp_ET)
+   {
+      self.shadowOpacity = 0;
+      
+      if([self isInBounds:gameState.eventMousePoint])
+      {
+         return 1; // 1 if clicked
+      }
    }
    
    return 0; // 0 if nothing happened

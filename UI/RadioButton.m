@@ -86,7 +86,7 @@
 
 - (int) handleEvents
 {
-   if(gameState.eventType == MouseMove_ET)
+   if(gameState.eventType == MouseMove_ET || gameState.eventType == MouseDrag_ET)
    {
       if([circleLayer isInBounds:gameState.eventMousePoint])
       {
@@ -98,11 +98,24 @@
       }
    }
    
-   if(gameState.eventType == MouseUp_ET && [circleLayer isInBounds:gameState.eventMousePoint])
+   if(gameState.eventType == MouseDown_ET && [circleLayer isInBounds:gameState.eventMousePoint])
    {
-      self.state = !state; // swapping state. "self." is needed to invoke setState
+      circleLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
+      circleLayer.shadowOffset  = CGSizeMake(0, 0);
+      circleLayer.shadowRadius  = 5;
+      circleLayer.shadowOpacity = 1;
+   }
+   
+   if(gameState.eventType == MouseUp_ET)
+   {
+      circleLayer.shadowOpacity = 0;
       
-      return 1; // state changed
+      if([circleLayer isInBounds:gameState.eventMousePoint])
+      {
+         self.state = !state; // swapping state. "self." is needed to invoke setState
+         
+         return 1; // state changed
+      }
    }
    
    return 0; // nothing happened
@@ -154,7 +167,6 @@
 
 - (void) handleRender
 {
-   NSLog(@"g");
    circleLayer.opacity = 1;
    labelLayer.opacity  = 1;
 }

@@ -64,7 +64,8 @@
          return;
       }
    }
-   else if(state.eventType == MouseMove_ET)
+   
+   if(state.eventType == MouseMove_ET || state.eventType == MouseDrag_ET)
    {
       if([buttonLayer isInBounds:state.eventMousePoint])
       {
@@ -75,8 +76,19 @@
          selectedButtonLayer.opacity = 0;
       }
    }
-   else if(state.eventType == MouseUp_ET)
+   
+   if(state.eventType == MouseDown_ET && [buttonLayer isInBounds:state.eventMousePoint])
    {
+      buttonLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
+      buttonLayer.shadowOffset  = CGSizeMake(0, 0);
+      buttonLayer.shadowRadius  = 5;
+      buttonLayer.shadowOpacity = 1;
+   }
+   
+   if(state.eventType == MouseUp_ET)
+   {
+      buttonLayer.shadowOpacity = 0;
+      
       if([buttonLayer isInBounds:state.eventMousePoint])
       {
          [yaspeg scheduleNextState:targetState];
