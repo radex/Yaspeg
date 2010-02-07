@@ -35,20 +35,6 @@
 		6E4D4F3710F7EB13003F7C7A /* YaspegIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */; };
 		6E61CB8210F0A12C0027DACF /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E61CB8110F0A12C0027DACF /* GameState.m */; };
 		6E61CC5C10F0ABEA0027DACF /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC3310F0ABEA0027DACF /* bg.png */; };
-		6E61CC6610F0ABEA0027DACF /* level-banal-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC3D10F0ABEA0027DACF /* level-banal-selected.png */; };
-		6E61CC6710F0ABEA0027DACF /* level-banal-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC3E10F0ABEA0027DACF /* level-banal-unselected.png */; };
-		6E61CC6810F0ABEA0027DACF /* level-easy-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC3F10F0ABEA0027DACF /* level-easy-selected.png */; };
-		6E61CC6910F0ABEA0027DACF /* level-easy-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4010F0ABEA0027DACF /* level-easy-unselected.png */; };
-		6E61CC6A10F0ABEA0027DACF /* level-extreme-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4110F0ABEA0027DACF /* level-extreme-selected.png */; };
-		6E61CC6B10F0ABEA0027DACF /* level-extreme-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4210F0ABEA0027DACF /* level-extreme-unselected.png */; };
-		6E61CC6C10F0ABEA0027DACF /* level-hard-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4310F0ABEA0027DACF /* level-hard-selected.png */; };
-		6E61CC6D10F0ABEA0027DACF /* level-hard-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4410F0ABEA0027DACF /* level-hard-unselected.png */; };
-		6E61CC6E10F0ABEA0027DACF /* level-medium-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4510F0ABEA0027DACF /* level-medium-selected.png */; };
-		6E61CC6F10F0ABEA0027DACF /* level-medium-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4610F0ABEA0027DACF /* level-medium-unselected.png */; };
-		6E61CC7010F0ABEA0027DACF /* level-nolevel-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4710F0ABEA0027DACF /* level-nolevel-selected.png */; };
-		6E61CC7110F0ABEA0027DACF /* level-nolevel-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC4810F0ABEA0027DACF /* level-nolevel-unselected.png */; };
-		6E61CC7A10F0ABEA0027DACF /* range-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC5110F0ABEA0027DACF /* range-selected.png */; };
-		6E61CC7B10F0ABEA0027DACF /* range-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E61CC5210F0ABEA0027DACF /* range-unselected.png */; };
 		6E69623B10FA0F8100728B14 /* header-yaspeg-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E69623A10FA0F8100728B14 /* header-yaspeg-small.png */; };
 		6E91680910EE8573002F70CC /* YaspegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91680410EE8573002F70CC /* YaspegController.m */; };
 		6E91681210EE85A0002F70CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E91681110EE85A0002F70CC /* QuartzCore.framework */; };
@@ -71,6 +57,7 @@
 		6E943300110C70C400685348 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F9110C70C400685348 /* SettingsState.m */; };
 		6E943303110C70E200685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E943302110C70E200685348 /* CALayer+radex.m */; };
 		6E943334110C73BC00685348 /* Yaspeg-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E943333110C73BC00685348 /* Yaspeg-Info.plist */; };
+		6E943382110DC57E00685348 /* testLevel1.yaspeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E94334D110C7B7300685348 /* testLevel1.yaspeg */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -168,6 +155,7 @@
 		6E943302110C70E200685348 /* CALayer+radex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+radex.m"; sourceTree = "<group>"; };
 		6E943330110C73A900685348 /* Yaspeg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaspeg_Prefix.pch; sourceTree = "<group>"; };
 		6E943333110C73BC00685348 /* Yaspeg-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg-Info.plist"; sourceTree = "<group>"; };
+		6E94334D110C7B7300685348 /* testLevel1.yaspeg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = testLevel1.yaspeg; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Yaspeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -252,6 +240,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E94334C110C7B4800685348 /* levels */,
 				6E61CC2E10F0ABDA0027DACF /* gfx */,
 				6E943333110C73BC00685348 /* Yaspeg-Info.plist */,
 				6E4D4F3610F7EB13003F7C7A /* YaspegIcon.icns */,
@@ -406,6 +395,14 @@
 			path = GameStates;
 			sourceTree = "<group>";
 		};
+		6E94334C110C7B4800685348 /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				6E94334D110C7B7300685348 /* testLevel1.yaspeg */,
+			);
+			name = levels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,20 +459,6 @@
 			files = (
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				6E61CC5C10F0ABEA0027DACF /* bg.png in Resources */,
-				6E61CC6610F0ABEA0027DACF /* level-banal-selected.png in Resources */,
-				6E61CC6710F0ABEA0027DACF /* level-banal-unselected.png in Resources */,
-				6E61CC6810F0ABEA0027DACF /* level-easy-selected.png in Resources */,
-				6E61CC6910F0ABEA0027DACF /* level-easy-unselected.png in Resources */,
-				6E61CC6A10F0ABEA0027DACF /* level-extreme-selected.png in Resources */,
-				6E61CC6B10F0ABEA0027DACF /* level-extreme-unselected.png in Resources */,
-				6E61CC6C10F0ABEA0027DACF /* level-hard-selected.png in Resources */,
-				6E61CC6D10F0ABEA0027DACF /* level-hard-unselected.png in Resources */,
-				6E61CC6E10F0ABEA0027DACF /* level-medium-selected.png in Resources */,
-				6E61CC6F10F0ABEA0027DACF /* level-medium-unselected.png in Resources */,
-				6E61CC7010F0ABEA0027DACF /* level-nolevel-selected.png in Resources */,
-				6E61CC7110F0ABEA0027DACF /* level-nolevel-unselected.png in Resources */,
-				6E61CC7A10F0ABEA0027DACF /* range-selected.png in Resources */,
-				6E61CC7B10F0ABEA0027DACF /* range-unselected.png in Resources */,
 				6E4D4F3710F7EB13003F7C7A /* YaspegIcon.icns in Resources */,
 				6E69623B10FA0F8100728B14 /* header-yaspeg-small.png in Resources */,
 				6E4A843910FBD5790084C89F /* autorzy-item.png in Resources */,
@@ -505,6 +488,7 @@
 				6E942FB2110BA75D00685348 /* button-bg.png in Resources */,
 				6E942FB3110BA75D00685348 /* button-left.png in Resources */,
 				6E943334110C73BC00685348 /* Yaspeg-Info.plist in Resources */,
+				6E943382110DC57E00685348 /* testLevel1.yaspeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +577,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -607,6 +592,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = required;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
