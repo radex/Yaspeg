@@ -112,9 +112,6 @@
    [yaspeg.rootLayer addSublayer:footerLayer];
 }
 
-#pragma mark -
-#pragma mark ELR
-
 /*
  * events
  *
@@ -189,12 +186,7 @@
       
       inited = YES;
    }
-   
-   
 }
-
-#pragma mark -
-#pragma mark cleaning
 
 /*
  * outro
