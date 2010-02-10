@@ -137,6 +137,7 @@
    
    if(gameState.eventType == MouseDown_ET && [self isInBounds:gameState.eventMousePoint])
    {
+      clicked = YES;
       self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
       self.shadowOffset  = CGSizeMake(0, 0);
       self.shadowRadius  = 5;
@@ -147,10 +148,12 @@
    {
       self.shadowOpacity = 0;
       
-      if([self isInBounds:gameState.eventMousePoint])
+      if([self isInBounds:gameState.eventMousePoint] && clicked)
       {
          return 1; // 1 if clicked
       }
+      
+      clicked = NO;
    }
    
    return 0; // 0 if nothing happened

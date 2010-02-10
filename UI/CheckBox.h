@@ -35,6 +35,8 @@
    ImageLayer  *boxFlippedLayer;
    ImageLayer  *tickLayer;
    CATextLayer *labelLayer;
+   
+   bool clicked;
 }
 
 @property (readwrite) bool state;

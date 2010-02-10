@@ -100,6 +100,7 @@
    
    if(gameState.eventType == MouseDown_ET && [circleLayer isInBounds:gameState.eventMousePoint])
    {
+      clicked = YES;
       circleLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
       circleLayer.shadowOffset  = CGSizeMake(0, 0);
       circleLayer.shadowRadius  = 5;
@@ -110,12 +111,14 @@
    {
       circleLayer.shadowOpacity = 0;
       
-      if([circleLayer isInBounds:gameState.eventMousePoint])
+      if([circleLayer isInBounds:gameState.eventMousePoint] && clicked)
       {
          self.state = !state; // swapping state. "self." is needed to invoke setState
          
          return 1; // state changed
       }
+      
+      clicked = NO;
    }
    
    return 0; // nothing happened

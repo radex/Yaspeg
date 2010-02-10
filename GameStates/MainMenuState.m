@@ -101,12 +101,7 @@
 
 - (void) events
 {
-   /*
-    
-    note: sometimes (like here) it's better to use if..elseif..elseif
-    instead of switch, even if switch seems to be more convenient
-    
-    */
+   // keyboard control
    
    if(eventType == KeyDown_ET)
    {
@@ -143,7 +138,10 @@
          }
       }
    }
-   else if(eventType == MouseMove_ET)
+   
+   // mouse moved
+   
+   if(eventType == MouseMove_ET)
    {
       int i = 0;
       
@@ -171,8 +169,33 @@
       }
 
    }
-   else if(eventType == MouseDown_ET)
+   
+   // mouse down - making cool shadowRadius animation
+   
+   if(eventType == MouseDown_ET)
    {
+      int i = 0;
+      
+      for(ImageLayer *item in menuItems)
+      {
+         if([item isInBounds:eventMousePoint])
+         {
+            item.shadowRadius = 10;
+            break;
+         }
+         
+         i++;
+      }
+   }
+   
+   // mouse up - running some state or yaspeg homepage
+   
+   if(eventType == MouseUp_ET)
+   {
+      ImageLayer *selectedItem = [menuItems objectAtIndex:currentMenuItem];
+      
+      selectedItem.shadowRadius = 5; // necessary if someone clicks on menu item, but then (when holding) moves mouse away
+      
       int i = 0;
       
       for(ImageLayer *item in menuItems)

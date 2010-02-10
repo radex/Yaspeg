@@ -35,6 +35,8 @@
    ImageLayer  *circleFlippedLayer;
    ImageLayer  *dotLayer;
    CATextLayer *labelLayer;
+   
+   bool clicked;
 }
 
 @property (readwrite) bool state;

@@ -84,9 +84,10 @@
    
    if(state.eventType == MouseDown_ET && [buttonLayer isInBounds:state.eventMousePoint])
    {
+      clicked = YES;
       buttonLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
       buttonLayer.shadowOffset  = CGSizeMake(0, 0);
-      buttonLayer.shadowRadius  = 5;
+      buttonLayer.shadowRadius  = 10;
       buttonLayer.shadowOpacity = 1;
    }
    
@@ -94,10 +95,12 @@
    {
       buttonLayer.shadowOpacity = 0;
       
-      if([buttonLayer isInBounds:state.eventMousePoint])
+      if([buttonLayer isInBounds:state.eventMousePoint] && clicked)
       {
          [yaspeg scheduleNextState:targetState];
       }
+      
+      clicked = NO;
    }
    
 }

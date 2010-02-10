@@ -32,6 +32,8 @@
    
    ImageLayer *buttonLayer;
    ImageLayer *selectedButtonLayer;
+   
+   bool clicked;
 }
 
 - (id) initWithTargetState:(NSString*)stateType;

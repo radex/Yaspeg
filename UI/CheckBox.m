@@ -101,6 +101,7 @@
    
    if(gameState.eventType == MouseDown_ET && [boxLayer isInBounds:gameState.eventMousePoint])
    {
+      clicked = YES;
       boxLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
       boxLayer.shadowOffset  = CGSizeMake(0, 0);
       boxLayer.shadowRadius  = 5;
@@ -111,12 +112,14 @@
    {
       boxLayer.shadowOpacity = 0;
       
-      if([boxLayer isInBounds:gameState.eventMousePoint])
+      if([boxLayer isInBounds:gameState.eventMousePoint] && clicked)
       {
          self.state = !state; // swapping state. "self." is needed to invoke setState
          
          return 1; // 1 if clicked
       }
+      
+      clicked = NO;
    }
    
    return 0; // nothing happened

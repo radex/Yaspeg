@@ -38,6 +38,8 @@
    ImageLayer  *bgFlippedLayer;
    
    CATextLayer *labelLayer;
+   
+   bool clicked;
 }
 
 @property (readwrite) bool state;
