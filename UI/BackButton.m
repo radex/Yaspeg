@@ -24,7 +24,7 @@
 
 @implementation BackButton
 
-- (id)initWithTargetState:(GameStateType)stateType
+- (id)initWithTargetState:(NSString*)stateType
 {
    if(self = [super init])
    {
@@ -49,9 +49,14 @@
    return self;
 }
 
-+ (id)buttonWithTargetState:(GameStateType)stateType
++ (id)buttonWithTargetState:(NSString*)stateType
 {
    return [[self alloc] initWithTargetState:stateType];
+}
+
++ (id)button
+{
+   return [[self alloc] initWithTargetState:MainMenu_GS];
 }
 
 - (void)handleEvents

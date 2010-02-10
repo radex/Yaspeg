@@ -22,6 +22,14 @@
 #import "YaspegController.h"
 #import "SynthesizeSingleton.h"
 
+#import "MainMenuState.h"
+#import "GameItselfState.h"
+#import "HelpState.h"
+#import "EditorState.h"
+#import "DownloadState.h"
+#import "AuthorsState.h"
+#import "SettingsState.h"
+
 @implementation YaspegController
 
 @synthesize rootLayer, currentState;
@@ -43,7 +51,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    
    [[contentView window] setAcceptsMouseMovedEvents:YES];
    
-   [self setNextState:MainMenu_GS];
+   // setting up main menu
+   
+   currentState = [[MainMenuState alloc] init];
+   currentState.yaspeg = self;
+   
+   [currentState stateInit];
+   
+   shouldUpdate = YES;
+   
+   // scheduling main timer
    
    [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateState) userInfo:nil repeats:YES];
 }
@@ -91,32 +108,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
  * closes current state, and launches new one
  */
 
-- (void) setNextState: (GameStateType) state
+- (void) setNextState: (NSTimer*) timer
 {
-   if(nextState != None_GS)
-   {
-      state = nextState;
-   }
-   else
-   {
-      [currentState outro];
-   }
+   NSString *state = [timer userInfo];
    
-   switch (state)
-   {
-      case MainMenu_GS: currentState = [[MainMenuState   alloc] init]; break;
-      case Game_GS:     currentState = [[GameItselfState alloc] init]; break;
-      case Help_GS:     currentState = [[HelpState       alloc] init]; break;
-      case Editor_GS:   currentState = [[EditorState     alloc] init]; break;
-      case Download_GS: currentState = [[DownloadState   alloc] init]; break;
-      case Authors_GS:  currentState = [[AuthorsState    alloc] init]; break;
-      case Settings_GS: currentState = [[SettingsState   alloc] init]; break;
-      default: break;
-   }
-   
+   currentState = [[NSClassFromString([state stringByAppendingString:@"State"]) alloc] init];
    currentState.yaspeg = self;
+   
    [currentState stateInit];
-   nextState = None_GS;
+   
    shouldUpdate = YES;
 }
 
@@ -127,14 +127,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
  * (it will launch after outro)
  */
 
-- (void) scheduleNextState: (GameStateType) state
+- (void) scheduleNextState: (NSString*) state
 {
    shouldUpdate = NO;
-   nextState = state;
    
    NSTimeInterval outroTime = 0.3 * [currentState outro];
    
-   [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(setNextState:) userInfo:nil repeats:NO];
+   [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(setNextState:) userInfo:state repeats:NO];
 }
 
 /*

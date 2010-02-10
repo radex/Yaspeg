@@ -28,14 +28,15 @@
 {
    GameState        *state;
    YaspegController *yaspeg;
-   GameStateType    targetState;
+   NSString         *targetState;
    
    ImageLayer *buttonLayer;
    ImageLayer *selectedButtonLayer;
 }
 
-- (id) initWithTargetState:(GameStateType)stateType;
-+ (id) buttonWithTargetState:(GameStateType)stateType;
+- (id) initWithTargetState:(NSString*)stateType;
++ (id) buttonWithTargetState:(NSString*)stateType;
++ (id) button;
 
 - (void) handleEvents;
 - (void) handleRender;

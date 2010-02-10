@@ -48,7 +48,7 @@
    
    // back button
    
-   backButton = [BackButton buttonWithTargetState:MainMenu_GS];
+   backButton = [BackButton button];
    
    // some text
    

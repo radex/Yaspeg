@@ -26,25 +26,18 @@
 #pragma mark -
 #pragma mark Game State Type
 
-enum GameStateType_t
-{
-   MainMenu_GS,
-   Game_GS,
-   Help_GS,
-   Editor_GS,
-   Download_GS,
-   Settings_GS,
-   Authors_GS,
-   
-   None_GS
-};
-
-typedef enum GameStateType_t GameStateType;
+#define MainMenu_GS @"MainMenu"
+#define Game_GS     @"GameItself"
+#define Help_GS     @"Help"
+#define Editor_GS   @"Editor"
+#define Download_GS @"Download"
+#define Settings_GS @"Settings"
+#define Authors_GS  @"Authors"
 
 #pragma mark -
-#pragma mark Event Type enum
+#pragma mark Event Type
 
-enum EventType_t
+typedef enum
 {
    KeyDown_ET,
    KeyUp_ET,
@@ -53,13 +46,11 @@ enum EventType_t
    MouseMove_ET,
    MouseUp_ET,
    None_ET
-};
+}EventType;
 
 #define YK_ESC 27
 #define YK_RETURN NSCarriageReturnCharacter
 #define YK_ENTER NSEnterCharacter
-
-typedef enum EventType_t EventType;
 
 #pragma mark -
 #pragma mark GameState

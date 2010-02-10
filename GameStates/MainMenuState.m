@@ -305,7 +305,7 @@
       return YES;
    }
    
-   GameStateType statesArray[6] = 
+   NSString *statesArray[6] = 
    {
       Game_GS,
       Help_GS,
@@ -315,13 +315,9 @@
       Settings_GS
    };
    
-   if(statesArray[item] != None_GS)
-   {
-      [yaspeg scheduleNextState:statesArray[item]];
-      return YES;
-   }
+   [yaspeg scheduleNextState:statesArray[item]];
    
-   return NO;
+   return YES;
 }
 
 @end

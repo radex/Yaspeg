@@ -24,13 +24,6 @@
 #import "ImageLayer.h"
 
 #import "GameState.h"
-#import "MainMenuState.h"
-#import "GameItselfState.h"
-#import "HelpState.h"
-#import "EditorState.h"
-#import "DownloadState.h"
-#import "AuthorsState.h"
-#import "SettingsState.h"
 
 @interface YaspegController : NSObject
 {
@@ -38,7 +31,6 @@
 	IBOutlet NSView *contentView;
    
    GameState    *currentState;
-   GameStateType nextState;
    bool          shouldUpdate;
 }
 
@@ -49,8 +41,7 @@
 
 - (void) windowWillClose:(NSNotification *)aNotification;
 
-- (void) setNextState:(GameStateType) state;
-- (void) scheduleNextState:(GameStateType) state;
+- (void) scheduleNextState:(NSString*) state;
 - (IBAction) runAuthorsState: (id) sender;
 - (IBAction) runHelp: (id) sender;
 

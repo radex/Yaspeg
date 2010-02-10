@@ -56,7 +56,6 @@
 		6E9432FF110C70C400685348 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F7110C70C400685348 /* MainMenuState.m */; };
 		6E943300110C70C400685348 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F9110C70C400685348 /* SettingsState.m */; };
 		6E943303110C70E200685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E943302110C70E200685348 /* CALayer+radex.m */; };
-		6E943334110C73BC00685348 /* Yaspeg-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E943333110C73BC00685348 /* Yaspeg-Info.plist */; };
 		6E943382110DC57E00685348 /* testLevel1.yaspeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E94334D110C7B7300685348 /* testLevel1.yaspeg */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -487,7 +486,6 @@
 				6E40CED81106763100466539 /* COPYING in Resources */,
 				6E942FB2110BA75D00685348 /* button-bg.png in Resources */,
 				6E942FB3110BA75D00685348 /* button-left.png in Resources */,
-				6E943334110C73BC00685348 /* Yaspeg-Info.plist in Resources */,
 				6E943382110DC57E00685348 /* testLevel1.yaspeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
