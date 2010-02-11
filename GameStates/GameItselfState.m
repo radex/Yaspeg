@@ -66,10 +66,6 @@
    info.frame = CGRectMake(0, 550, 800, 50);
    info.fontSize = 15;
    [yaspeg.rootLayer addSublayer:info];
-   
-   /***/
-   
-   [self testing];
 }
 
 /*
@@ -287,34 +283,6 @@
    [super scheduleCleanUp:animationDuration];
    
    return animationDuration;
-}
-
-
-/*
- * XML testing
- *
- *
- */
-
--(void) testing
-{
-   NSString *path = [[NSBundle mainBundle] pathForResource:@"testLevel1" ofType:@"yaspeg"];
-   NSData *plistData = [NSData dataWithContentsOfFile:path];
-   NSString *error;
-   NSPropertyListFormat format;
-   id plist;
-   
-   plist = [NSPropertyListSerialization propertyListFromData:plistData
-                                            mutabilityOption:NSPropertyListImmutable
-                                                      format:&format
-                                            errorDescription:&error];
-   if(!plist)
-   {
-      NSLog(@"%@", error);
-      [error release];
-   }
-   
-   NSLog(@"%@", plist);
 }
 
 @end

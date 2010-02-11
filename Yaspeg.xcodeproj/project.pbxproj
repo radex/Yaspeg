@@ -18,6 +18,9 @@
 		6E1DDE1B11011C8D00993443 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1711011C8D00993443 /* checkbox.png */; };
 		6E1DDE1C11011C8D00993443 /* radio-button-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1811011C8D00993443 /* radio-button-dot.png */; };
 		6E1DDE1D11011C8D00993443 /* radio-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1DDE1911011C8D00993443 /* radio-button.png */; };
+		6E203D0711242C1300AFE166 /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203D0611242C1300AFE166 /* GameBoard.m */; };
+		6E203D0A11242D2500AFE166 /* TestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203D0911242D2500AFE166 /* TestState.m */; };
+		6E203D131124301F00AFE166 /* ModalAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203D121124301F00AFE166 /* ModalAlert.m */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E40CED81106763100466539 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 6E40CED71106763100466539 /* COPYING */; };
@@ -78,6 +81,12 @@
 		6E1DDE1711011C8D00993443 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox.png; path = gfx/checkbox.png; sourceTree = "<group>"; };
 		6E1DDE1811011C8D00993443 /* radio-button-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-button-dot.png"; path = "gfx/radio-button-dot.png"; sourceTree = "<group>"; };
 		6E1DDE1911011C8D00993443 /* radio-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radio-button.png"; path = "gfx/radio-button.png"; sourceTree = "<group>"; };
+		6E203D0511242C1300AFE166 /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
+		6E203D0611242C1300AFE166 /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
+		6E203D0811242D2500AFE166 /* TestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestState.h; sourceTree = "<group>"; };
+		6E203D0911242D2500AFE166 /* TestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestState.m; sourceTree = "<group>"; };
+		6E203D111124301F00AFE166 /* ModalAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalAlert.h; sourceTree = "<group>"; };
+		6E203D121124301F00AFE166 /* ModalAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalAlert.m; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E40CED71106763100466539 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
@@ -214,6 +223,7 @@
 			children = (
 				6E9432E1110C70BD00685348 /* Graphics etc */,
 				6E9432D1110C70B600685348 /* UI */,
+				6E203D0011242BBF00AFE166 /* Game */,
 				6E9432EB110C70C400685348 /* Game States */,
 				080E96DDFE201D6D7F000001 /* Other Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -265,6 +275,15 @@
 				6E8749BE10FD2B74004745EF /* TemplateInfo.plist */,
 			);
 			name = "Game State Template";
+			sourceTree = "<group>";
+		};
+		6E203D0011242BBF00AFE166 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				6E203D0511242C1300AFE166 /* GameBoard.h */,
+				6E203D0611242C1300AFE166 /* GameBoard.m */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		6E40CED91106768700466539 /* Docs */ = {
@@ -352,6 +371,8 @@
 				6E9432D9110C70B600685348 /* RadioButton.m */,
 				6E9432DA110C70B600685348 /* RadioButtonGroup.h */,
 				6E9432DB110C70B600685348 /* RadioButtonGroup.m */,
+				6E203D111124301F00AFE166 /* ModalAlert.h */,
+				6E203D121124301F00AFE166 /* ModalAlert.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -389,6 +410,8 @@
 				6E9432F7110C70C400685348 /* MainMenuState.m */,
 				6E9432F8110C70C400685348 /* SettingsState.h */,
 				6E9432F9110C70C400685348 /* SettingsState.m */,
+				6E203D0811242D2500AFE166 /* TestState.h */,
+				6E203D0911242D2500AFE166 /* TestState.m */,
 			);
 			name = "Game States";
 			path = GameStates;
@@ -516,6 +539,9 @@
 				6E9432FF110C70C400685348 /* MainMenuState.m in Sources */,
 				6E943300110C70C400685348 /* SettingsState.m in Sources */,
 				6E943303110C70E200685348 /* CALayer+radex.m in Sources */,
+				6E203D0711242C1300AFE166 /* GameBoard.m in Sources */,
+				6E203D0A11242D2500AFE166 /* TestState.m in Sources */,
+				6E203D131124301F00AFE166 /* ModalAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

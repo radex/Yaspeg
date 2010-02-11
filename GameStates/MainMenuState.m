@@ -330,7 +330,8 @@
    
    NSString *statesArray[6] = 
    {
-      Game_GS,
+      //Game_GS,
+      Test_GS,
       Help_GS,
       Editor_GS,
       Download_GS,

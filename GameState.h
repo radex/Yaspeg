@@ -33,6 +33,7 @@
 #define Download_GS @"Download"
 #define Settings_GS @"Settings"
 #define Authors_GS  @"Authors"
+#define Test_GS     @"Test"
 
 #pragma mark -
 #pragma mark Event Type
