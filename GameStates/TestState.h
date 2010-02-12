@@ -23,6 +23,7 @@
 #import "YaspegController.h"
 
 #import "BackButton.h"
+#import "Background.h"
 #import "Button.h"
 #import "ModalAlert.h"
 
@@ -30,9 +31,6 @@
 
 @interface TestState : GameState
 {
-   ImageLayer *bgLayer;
-   BackButton *backButton;
-   
    Button *btn;
    ModalAlert *alert;
 }

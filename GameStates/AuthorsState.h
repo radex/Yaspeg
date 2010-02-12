@@ -21,18 +21,18 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
+
 #import "BackButton.h"
+#import "Background.h"
 
 @interface AuthorsState : GameState
 {
-   ImageLayer *bgLayer;
    ImageLayer *headerLayer;
    ImageLayer *scenarioLayer;
    ImageLayer *radexLayer;
    CATextLayer *thanksHeaderLayer;
    CATextLayer *thanksLayer;
    CATextLayer *footerLayer;
-   BackButton *backButton;
 }
 
 @end

@@ -21,7 +21,9 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
+
 #import "BackButton.h"
+#import "Background.h"
 #import "CheckBox.h"
 #import "RadioButton.h"
 #import "RadioButtonGroup.h"
@@ -29,10 +31,8 @@
 
 @interface SettingsState : GameState
 {
-   ImageLayer *bgLayer;
    ImageLayer *headerLayer;
    CATextLayer*textLayer;
-   BackButton *backButton;
    
    CheckBox   *testCheckBox;
    RadioButton*testRadioButton;

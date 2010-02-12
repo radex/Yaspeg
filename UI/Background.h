@@ -1,8 +1,8 @@
 //
-//  DownloadState.h
+//  Background.h
 //  Yaspeg
 //
-//  Created by Radex on 10-01-14.
+//  Created by Radex on 10-02-12.
 //  Copyright 2010 Radex. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
@@ -19,16 +19,25 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import "ImageLayer.h"
 #import "GameState.h"
-#import "YaspegController.h"
 
-#import "BackButton.h"
-#import "Background.h"
+@class YaspegController;
 
-@interface DownloadState : GameState
+@interface Background : CALayer
 {
-   ImageLayer *headerLayer;
-   CATextLayer*textLayer;
+   GameState        *gameState;
+   YaspegController *yaspeg;
+   
+   ImageLayer       *image;
 }
+
+- (id)       initWithFilename:(NSString*)name;
++ (id) backgroundWithFilename:(NSString*)name;
++ (id) genericBackground;
+
+- (int)  handleEvents;
+- (void) handleRender;
+- (void) handleOutro;
 
 @end

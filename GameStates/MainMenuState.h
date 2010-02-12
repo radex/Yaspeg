@@ -22,9 +22,10 @@
 #import "GameState.h"
 #import "YaspegController.h"
 
+#import "Background.h"
+
 @interface MainMenuState : GameState
 {
-   ImageLayer *bgLayer;
    ImageLayer *headerLayer;
    ImageLayer *footerLayer;
    

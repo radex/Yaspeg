@@ -21,14 +21,14 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
+
 #import "BackButton.h"
+#import "Background.h"
 
 @interface EditorState : GameState
 {
-   ImageLayer *bgLayer;
    ImageLayer *headerLayer;
    CATextLayer*textLayer;
-   BackButton *backButton;
 }
 
 @end

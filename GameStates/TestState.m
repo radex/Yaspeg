@@ -31,18 +31,8 @@
 
 - (void) stateInit
 {
-   // background
-   
-   bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0;
-   
-   [yaspeg.rootLayer addSublayer:bgLayer];
-   
-   // back button
-   
-   backButton = [BackButton button];
-   
-   //****//
+   [Background genericBackground];
+   [BackButton button];
    
    btn = [Button buttonWithLabel:@"Boom!" position:NSMakePoint(100, 100) width:150];
    
@@ -108,8 +98,6 @@
       
       [super handleRender];
       
-      bgLayer.opacity = 1;
-      
       [CATransaction commit];
       
       inited = YES;
@@ -132,8 +120,6 @@
    [CATransaction setAnimationDuration_c:animationDuration];
    
    [super handleOutro];
-   
-   bgLayer.opacity = 0;
    
    [CATransaction commit];
    

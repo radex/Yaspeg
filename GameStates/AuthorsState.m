@@ -31,12 +31,8 @@
 
 - (void) stateInit
 {
-   // background
-   
-   bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0;
-   
-   [yaspeg.rootLayer addSublayer:bgLayer];
+   [Background genericBackground];
+   [BackButton button];
    
    // header
    
@@ -45,10 +41,6 @@
    headerLayer.y = 600;
    
    [yaspeg.rootLayer addSublayer:headerLayer];
-   
-   // back button
-   
-   backButton = [BackButton button];
    
    // scenario, direction, graphics
    
@@ -173,7 +165,6 @@
       
       [super handleRender];
       
-      bgLayer.opacity = 1;
       scenarioLayer.opacity = 1;
       radexLayer.opacity = 1;
       thanksLayer.opacity = 1;
@@ -203,7 +194,6 @@
    
    [super handleOutro];
    
-   bgLayer.opacity = 0;
    scenarioLayer.opacity = 0;
    radexLayer.opacity = 0;
    thanksHeaderLayer.opacity = 0;

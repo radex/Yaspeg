@@ -31,12 +31,8 @@
 
 - (void) stateInit
 {
-   // background
-   
-   bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0;
-   
-   [yaspeg.rootLayer addSublayer:bgLayer];
+   [Background genericBackground];
+   [BackButton button];
    
    // header
    
@@ -45,10 +41,6 @@
    headerLayer.y = 600;
    
    [yaspeg.rootLayer addSublayer:headerLayer];
-   
-   // back button
-   
-   backButton = [BackButton button];
    
    // testing checkboxes, radio buttons, buttons etc etc
    
@@ -137,7 +129,6 @@
       
       [super handleRender];
       
-      bgLayer.opacity = 1;
       textLayer.opacity = 1;
       
       headerLayer.y = 600 - 10 - headerLayer.h;
@@ -163,7 +154,6 @@
    
    [super handleOutro];
    
-   bgLayer.opacity = 0;
    textLayer.opacity = 0;
    
    headerLayer.y = 600;

@@ -31,12 +31,7 @@
 
 - (void) stateInit
 {
-   // background
-   
-   bgLayer = [ImageLayer layerWithImageNamed:@"bg"];
-   bgLayer.opacity = 0;
-   
-   [yaspeg.rootLayer addSublayer:bgLayer];
+   [Background genericBackground];
    
    // header
    
@@ -246,7 +241,8 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:(menuForFirstTime ? 1 : 0.5)]; // longer animation if yaspeg just launched, shorter if when comming back from other state
       
-      bgLayer.opacity = 1;
+      [super handleRender];
+      
       headerLayer.y = 590 - headerLayer.h;
       footerLayer.y = 0;
       
@@ -292,7 +288,7 @@
    [CATransaction begin];
    [CATransaction setAnimationDuration_c:animationDuration];
    
-   bgLayer.opacity = 0;
+   [super handleOutro];
    headerLayer.y = 600;
    footerLayer.y = -30;
    
