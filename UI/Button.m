@@ -104,6 +104,12 @@
       
       [self addSublayer:labelLayer];
       
+      // shadow
+      
+      self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
+      self.shadowOffset  = CGSizeMake(0, 0);
+      self.shadowRadius  = 5;
+      
       /***/
       
       [self setNeedsDisplay];
@@ -149,9 +155,6 @@
    if(gameState.eventType == MouseDown_ET && [self isInBounds:gameState.eventMousePoint])
    {
       clicked = YES;
-      self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
-      self.shadowOffset  = CGSizeMake(0, 0);
-      self.shadowRadius  = 5;
       self.shadowOpacity = 1;
    }
    
@@ -170,7 +173,7 @@
    return 0; // 0 if nothing happened
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    leftLayer.opacity  = 1;
    rightLayer.opacity = 1;

@@ -120,7 +120,7 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:0.5];
       
-      [super handleRender];
+      [super handleIntro];
       
       textLayer.opacity = 1;
       

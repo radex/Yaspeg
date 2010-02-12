@@ -24,7 +24,7 @@
 
 @implementation RadioButton
 
-@synthesize state, eventsHandled;
+@synthesize state, eventsHandled, selectable;
 
 - (id) initWithLabel:(NSString*)label position:(NSPoint)position
 {
@@ -36,6 +36,8 @@
       [gameState.handledObjects addObject:self];
       
       self.frame = CGRectMake(position.x, position.y, 800, 50);
+      
+      selectable = YES;
       
       // circle
       
@@ -122,7 +124,7 @@
    {
       circleLayer.shadowOpacity = 0;
       
-      if([circleLayer isInBounds:gameState.eventMousePoint] && clicked)
+      if([circleLayer isInBounds:gameState.eventMousePoint] && clicked && selectable)
       {
          self.state = !state; // swapping state. "self." is needed to invoke setState
          
@@ -179,7 +181,7 @@
    [CATransaction commit];
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    circleLayer.opacity = 1;
    labelLayer.opacity  = 1;

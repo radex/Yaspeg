@@ -81,8 +81,12 @@ static ModalAlert *ModalAlert_instance;
       // button
       
       okButton = [Button buttonWithLabel:@"OK" position:NSMakePoint(362, 210) width:75];
-      [okButton handleRender];
       [gameState.handledObjects removeObject:okButton];
+      
+      [okButton removeFromSuperlayer];
+      [self addSublayer:okButton];
+      
+      [okButton handleIntro];
    }
    
    return self;

@@ -29,25 +29,26 @@
    GameState        *gameState;
    YaspegController *yaspeg;
    
-   bool state;
-   
    ImageLayer  *circleLayer;
    ImageLayer  *circleFlippedLayer;
    ImageLayer  *dotLayer;
    CATextLayer *labelLayer;
    
+   bool state;
    bool clicked;
+   bool selectable;
    bool eventsHandled;
 }
 
 @property (readwrite) bool state;
+@property (readwrite) bool selectable;
 @property (readwrite) bool eventsHandled;
 
 - (id)   initWithLabel:(NSString*)label position:(NSPoint)position;
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position;
 
 - (int)  handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end

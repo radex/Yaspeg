@@ -35,6 +35,12 @@
    {
       NSLog(@"%@", [YaspegController sharedYaspegController].rootLayer.sublayers);
    }
+   
+   if([event.characters characterAtIndex:0] == 'y')
+   {
+      NSLog(@"%@", [YaspegController sharedYaspegController].currentState.handledObjects);
+   }
+   
    yaspeg.currentState.eventType = KeyDown_ET;
    yaspeg.currentState.eventCharachters = event.characters;
    yaspeg.currentState.eventIsRepeat = event.isARepeat;

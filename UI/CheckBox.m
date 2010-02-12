@@ -171,7 +171,7 @@
    [CATransaction commit];
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    boxLayer.opacity   = 1;
    labelLayer.opacity = 1;

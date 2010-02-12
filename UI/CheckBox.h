@@ -29,13 +29,12 @@
    GameState        *gameState;
    YaspegController *yaspeg;
    
-   bool state;
-   
    ImageLayer  *boxLayer;
    ImageLayer  *boxFlippedLayer;
    ImageLayer  *tickLayer;
    CATextLayer *labelLayer;
    
+   bool state;
    bool clicked;
    bool eventsHandled;
 }
@@ -47,7 +46,7 @@
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position;
 
 - (int)  handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end

@@ -31,7 +31,8 @@
 
 - (void) stateInit
 {
-   
+   [Background genericBackground];
+   [BackButton button];
 }
 
 /*
@@ -94,18 +95,7 @@
 
 - (NSTimeInterval) outro
 {
-   NSTimeInterval animationDuration = 0.5;
    
-   [CATransaction begin];
-   [CATransaction setAnimationDuration_c:animationDuration];
-   
-   
-   
-   [CATransaction commit];
-   
-   [super scheduleCleanUp: animationDuration];
-   
-   return animationDuration;
 }
 
 @end

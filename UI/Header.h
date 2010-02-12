@@ -36,7 +36,7 @@
 + (id) headerWithFilename:(NSString*)name;
 
 - (int)  handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end

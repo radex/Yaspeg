@@ -21,6 +21,7 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
+#import "UI.h"
 
 @interface «FILEBASENAMEASIDENTIFIER» : GameState
 {

@@ -62,6 +62,7 @@
       
       RadioButton *b = [buttons objectAtIndex:selectedButton];
       b.state = YES;
+      b.selectable = NO;
       
       /***/
       
@@ -84,17 +85,17 @@
    
    for(RadioButton *button in buttons)
    {
-      if([button handleEvents] == 1)
+      if([button handleEvents] == 1 && selectedButton != i)
       {
-         // if one radio button has been selected, unselect others
+         button.selectable = NO; // preventing selected button from unselecting
          
-         for(int j = 0; j < [buttons count]; j++)
-         {
-            if(j == i) continue;
-            
-            RadioButton *b = [buttons objectAtIndex:j];
-            b.state = NO;
-         }
+         // unselecting previously selected button and making it selectable
+         
+         RadioButton *b = [buttons objectAtIndex:selectedButton];
+         b.state = NO;
+         b.selectable = YES;
+         
+         selectedButton = i;
          
          return 1;
       }
@@ -109,11 +110,11 @@
    return 0;
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    for(RadioButton *button in buttons)
    {
-      [button handleRender];
+      [button handleIntro];
    }
 }
 

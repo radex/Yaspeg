@@ -50,7 +50,7 @@
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
 
 - (int)  handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end

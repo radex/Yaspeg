@@ -67,7 +67,7 @@
    return 0;
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    image.opacity = 1;
 }

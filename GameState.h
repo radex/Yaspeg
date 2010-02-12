@@ -76,11 +76,11 @@ typedef enum
 - (void) render;
 
 - (void) handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 - (void) outro;
-- (void) scheduleCleanUp: (NSTimeInterval) outroDuration;
+- (void) scheduleCleanUp;
 - (void) cleanUp;
 
 @property (assign, readwrite) YaspegController *yaspeg;

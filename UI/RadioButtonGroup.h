@@ -39,7 +39,7 @@
 + (id) buttonGroupWithLabels:(NSArray*)labels current:(int)current position:(NSPoint)position;
 
 - (int)  handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end

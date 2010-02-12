@@ -236,7 +236,7 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:(menuForFirstTime ? 1 : 0.5)]; // longer animation if yaspeg just launched, shorter if when comming back from other state
       
-      [super handleRender];
+      [super handleIntro];
       
       footerLayer.y = 0;
       

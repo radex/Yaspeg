@@ -63,7 +63,7 @@
    return 0;
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    image.y = 600 - 10 - image.h;
 }

@@ -156,7 +156,7 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:0.5];
       
-      [super handleRender];
+      [super handleIntro];
       
       scenarioLayer.opacity = 1;
       radexLayer.opacity = 1;

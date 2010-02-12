@@ -107,7 +107,7 @@
    
 }
 
-- (void)handleRender
+- (void)handleIntro
 {
    buttonLayer.x = 10;
    selectedButtonLayer.x = 10;

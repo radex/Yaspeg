@@ -144,7 +144,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    
    [CATransaction commit];
    
-   [currentState scheduleCleanUp:0.5];
+   [currentState scheduleCleanUp];
    
    [NSTimer scheduledTimerWithTimeInterval:0.5 * 0.3 target:self selector:@selector(setNextState:) userInfo:state repeats:NO];
 }

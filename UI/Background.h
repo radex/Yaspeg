@@ -37,7 +37,7 @@
 + (id) genericBackground;
 
 - (int)  handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end

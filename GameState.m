@@ -51,11 +51,11 @@
    }
 }
 
-- (void) handleRender
+- (void) handleIntro
 {
    for(id object in handledObjects)
    {
-      [object handleRender];
+      [object handleIntro];
    }
 }
 
@@ -69,11 +69,11 @@
 
 - (void) outro{}
 
-- (void) scheduleCleanUp:(NSTimeInterval)outroDuration
+- (void) scheduleCleanUp
 {
    removedObjects = [[YaspegController sharedYaspegController].rootLayer.sublayers copy];
    
-   [NSTimer scheduledTimerWithTimeInterval:outroDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
+   [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
 }
 
 - (void) cleanUp

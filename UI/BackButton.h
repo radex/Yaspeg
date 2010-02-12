@@ -41,7 +41,7 @@
 + (id) button;
 
 - (void) handleEvents;
-- (void) handleRender;
+- (void) handleIntro;
 - (void) handleOutro;
 
 @end
