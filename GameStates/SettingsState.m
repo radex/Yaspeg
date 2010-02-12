@@ -99,15 +99,12 @@
 
 - (void) events
 {
-   [backButton handleEvents];
-   [testCheckBox handleEvents];
-   [testRadioButton handleEvents];
-   [testGroup handleEvents];
-   
    if([testButton handleEvents] == 1)
    {
       [flashLayer addAnimation:flashAnimation forKey:@"animateOpacity"];
    }
+   
+   [super handleEvents];
    
    eventType = None_ET;
 }
@@ -138,11 +135,7 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:0.5];
       
-      [backButton handleRender];
-      [testCheckBox handleRender];
-      [testRadioButton handleRender];
-      [testButton handleRender];
-      [testGroup handleRender];
+      [super handleRender];
       
       bgLayer.opacity = 1;
       textLayer.opacity = 1;
@@ -168,11 +161,7 @@
    [CATransaction begin];
    [CATransaction setAnimationDuration_c:animationDuration];
    
-   [backButton handleOutro];
-   [testCheckBox handleOutro];
-   [testRadioButton handleOutro];
-   [testButton handleOutro];
-   [testGroup handleOutro];
+   [super handleOutro];
    
    bgLayer.opacity = 0;
    textLayer.opacity = 0;

@@ -24,7 +24,7 @@
 
 @implementation GameState
 
-@synthesize yaspeg, eventType, eventIsRepeat, eventCharachters, eventMousePoint;
+@synthesize yaspeg, eventType, eventIsRepeat, eventCharachters, eventMousePoint, handledObjects;
 
 - (id) init
 {
@@ -32,6 +32,7 @@
    {
       eventType = None_ET;
       inited    = NO;
+      handledObjects = [NSMutableArray array];
    }
    
    return self;
@@ -41,6 +42,30 @@
 - (void) events{eventType = None_ET;}
 - (void) logic{}
 - (void) render{}
+
+- (void) handleEvents
+{
+   for(id object in handledObjects)
+   {
+      [object handleEvents];
+   }
+}
+
+- (void) handleRender
+{
+   for(id object in handledObjects)
+   {
+      [object handleRender];
+   }
+}
+
+- (void) handleOutro
+{
+   for(id object in handledObjects)
+   {
+      [object handleOutro];
+   }
+}
 
 - (NSTimeInterval) outro
 {

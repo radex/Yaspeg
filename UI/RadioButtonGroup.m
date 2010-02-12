@@ -31,6 +31,8 @@
       yaspeg    = [YaspegController sharedYaspegController];
       gameState = yaspeg.currentState;
       
+      [gameState.handledObjects addObject:self];
+      
       self.frame = CGRectMake(position.x, position.y, 800, [labels count] * 50);
       
       // creating buttons
@@ -49,6 +51,9 @@
       {                                   // so we have to remove it from rootLayer, and add to [self]
          [button removeFromSuperlayer];
          [self addSublayer:button];
+         
+         [gameState.handledObjects removeObject:button]; // RadioButton class also sets up automatic events handling.
+                                                         // But we don't want that.
       }
       
       // setting selected radio button
@@ -93,6 +98,10 @@
          
          return 1;
       }
+      
+      button.eventsHandled = NO; // events in RadioButton are meant to be handled automatically,
+                                 // but because we are preventing this, we have to explicitly mark it as handled.
+                                 // (I know that the expression eventsHandled = NO seems to do something opposite)
       
       i++;
    }

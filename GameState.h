@@ -67,12 +67,17 @@ typedef enum
    bool      inited;
    
    NSArray  *removedObjects;
+   NSMutableArray *handledObjects;
 }
 
 - (void) stateInit;
 - (void) events;
 - (void) logic;
 - (void) render;
+
+- (void) handleEvents;
+- (void) handleRender;
+- (void) handleOutro;
 
 - (NSTimeInterval) outro;
 - (void) scheduleCleanUp: (NSTimeInterval) outroDuration;
@@ -84,5 +89,7 @@ typedef enum
 @property (assign, readwrite) NSString *eventCharachters;
 @property (assign, readwrite) bool      eventIsRepeat;
 @property (assign, readwrite) NSPoint   eventMousePoint;
+
+@property (assign, readwrite) NSMutableArray *handledObjects;
 
 @end

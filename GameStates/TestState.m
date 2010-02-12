@@ -65,12 +65,12 @@
       return;
    }
    
-   [backButton handleEvents];
-   
    if([btn handleEvents] == 1)
    {
       alert = [ModalAlert alertWithHeader:@"hejder" description:@"deskrypcja"];
    }
+   
+   [super handleEvents];
    
    if(eventType == None_ET)
    {
@@ -106,8 +106,7 @@
       [CATransaction begin];
       [CATransaction setAnimationDuration_c:0.5];
       
-      [backButton handleRender];
-      [btn handleRender];
+      [super handleRender];
       
       bgLayer.opacity = 1;
       
@@ -132,8 +131,7 @@
    [CATransaction begin];
    [CATransaction setAnimationDuration_c:animationDuration];
    
-   [backButton handleOutro];
-   [btn handleOutro];
+   [super handleOutro];
    
    bgLayer.opacity = 0;
    

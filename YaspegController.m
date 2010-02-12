@@ -23,12 +23,7 @@
 #import "SynthesizeSingleton.h"
 
 #import "MainMenuState.h"
-#import "GameItselfState.h"
-#import "HelpState.h"
-#import "EditorState.h"
-#import "DownloadState.h"
-#import "AuthorsState.h"
-#import "SettingsState.h"
+#import "TestState.h"
 
 @implementation YaspegController
 
@@ -53,7 +48,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    
    // setting up main menu
    
-   currentState = [[MainMenuState alloc] init];
+   currentState = [[TestState alloc] init];
    currentState.yaspeg = self;
    
    [currentState stateInit];
@@ -100,6 +95,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    [currentState events];
    [currentState logic];
    [currentState render];
+   
+   for(id object in currentState.handledObjects)
+   {
+      if([object respondsToSelector:@selector(setEventsHandled:)])
+      {
+         [object setEventsHandled:NO];
+      }
+   }
 }
 
 /*

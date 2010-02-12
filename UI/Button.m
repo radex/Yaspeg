@@ -24,7 +24,7 @@
 
 @implementation Button
 
-@synthesize state;
+@synthesize state, eventsHandled;
 
 - (id) initWithLabel:(NSString*)label position:(NSPoint)position width:(int)width
 {
@@ -32,6 +32,8 @@
    {
       yaspeg    = [YaspegController sharedYaspegController];
       gameState = yaspeg.currentState;
+      
+      [gameState.handledObjects addObject:self];
       
       self.frame = CGRectMake(position.x, position.y, width, 53);
       
@@ -119,6 +121,15 @@
 
 - (int) handleEvents
 {
+   if(eventsHandled)
+   {
+      return 0;
+   }
+   else
+   {
+      eventsHandled = YES;
+   }
+   
    if(gameState.eventType == MouseMove_ET || gameState.eventType == MouseDrag_ET)
    {
       if([self isInBounds:gameState.eventMousePoint])

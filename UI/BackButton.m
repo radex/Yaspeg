@@ -31,6 +31,8 @@
       yaspeg = [YaspegController sharedYaspegController];
       state = yaspeg.currentState;
       
+      [state.handledObjects addObject:self];
+      
       targetState = stateType;
       
       buttonLayer         = [ImageLayer layerWithImageNamed:@"back-button-unselected" frame:NSMakeRect(-50, 540, 50, 50)];

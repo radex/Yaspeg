@@ -37,9 +37,11 @@
    CATextLayer *labelLayer;
    
    bool clicked;
+   bool eventsHandled;
 }
 
 @property (readwrite) bool state;
+@property (readwrite) bool eventsHandled;
 
 - (id)   initWithLabel:(NSString*)label position:(NSPoint)position;
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position;
