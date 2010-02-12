@@ -22,7 +22,7 @@
 #import "ModalAlert.h"
 #import "YaspegController.h"
 
-static bool ModalAlert_isAlert = NO;
+static ModalAlert *ModalAlert_instance;
 
 @implementation ModalAlert
 
@@ -32,8 +32,6 @@ static bool ModalAlert_isAlert = NO;
    {
       yaspeg    = [YaspegController sharedYaspegController];
       gameState = yaspeg.currentState;
-      
-      ModalAlert_isAlert = YES;
       
       [self setNeedsDisplay];
       
@@ -84,40 +82,38 @@ static bool ModalAlert_isAlert = NO;
       
       okButton = [Button buttonWithLabel:@"OK" position:NSMakePoint(362, 210) width:75];
       [okButton handleRender];
+      [gameState.handledObjects removeObject:okButton];
    }
    
    return self;
 }
 
-+ (id) alertWithHeader:(NSString*)header description:(NSString*)description
++ (void) displayAlertWithHeader:(NSString*)header description:(NSString*)description
 {
-   return [[self alloc] initWithHeader:header description:description];
+   ModalAlert_instance = [[self alloc] initWithHeader:header description:description];
 }
 
-- (int) handleEvents
++ (bool) handleEvents
+{
+   if(ModalAlert_instance == nil) return NO;
+   
+   return [ModalAlert_instance intHandleEvents];
+}
+
+- (bool) intHandleEvents
 {
    if([okButton handleEvents] == 1)
    {
-      [self handleOutro];
+      [okButton removeFromSuperlayer];
+      
+      ModalAlert_instance = nil;
+      
+      [self removeFromSuperlayer];
    }
-}
-
-- (void) handleRender
-{
    
-}
-
-- (void) handleOutro
-{
-   [okButton removeFromSuperlayer];
+   okButton.eventsHandled = NO;
    
-   ModalAlert_isAlert = NO;
-   [self removeFromSuperlayer];
-}
-
-+ (bool) isAlert
-{
-   return ModalAlert_isAlert;
+   return YES;
 }
 
 @end

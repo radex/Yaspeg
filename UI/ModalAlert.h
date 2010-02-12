@@ -37,13 +37,10 @@
    Button *okButton;
 }
 
-- (id)  initWithHeader:(NSString*)header description:(NSString*)description;
-+ (id) alertWithHeader:(NSString*)header description:(NSString*)description;
+- (id)           initWithHeader:(NSString*)header description:(NSString*)description;
++ (void) displayAlertWithHeader:(NSString*)header description:(NSString*)description;
 
-- (int)  handleEvents;
-- (void) handleRender;
-- (void) handleOutro;
-
-+ (bool) isAlert;
++ (bool) handleEvents;
+- (bool) intHandleEvents;
 
 @end

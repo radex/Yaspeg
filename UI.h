@@ -1,8 +1,8 @@
 //
-//  AuthorsState.h
+//  UI.h
 //  Yaspeg
 //
-//  Created by Radex on 10-01-12.
+//  Created by Radex on 10-02-12.
 //  Copyright 2010 Radex. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
@@ -19,16 +19,11 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "GameState.h"
-#import "YaspegController.h"
-#import "UI.h"
-
-@interface AuthorsState : GameState
-{
-   ImageLayer *scenarioLayer;
-   ImageLayer *radexLayer;
-   CATextLayer *thanksHeaderLayer;
-   CATextLayer *thanksLayer;
-   CATextLayer *footerLayer;
-}
-@end
+#import "BackButton.h"
+#import "Button.h"
+#import "CheckBox.h"
+#import "RadioButton.h"
+#import "RadioButtonGroup.h"
+#import "ModalAlert.h"
+#import "Background.h"
+#import "Header.h"

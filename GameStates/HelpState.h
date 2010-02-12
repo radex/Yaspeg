@@ -21,10 +21,7 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
-
-#import "BackButton.h"
-#import "Background.h"
-#import "Header.h"
+#import "UI.h"
 
 @interface HelpState : GameState
 {

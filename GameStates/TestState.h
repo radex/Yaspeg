@@ -21,18 +21,13 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
-
-#import "BackButton.h"
-#import "Background.h"
-#import "Button.h"
-#import "ModalAlert.h"
+#import "UI.h"
 
 #import "GameBoard.h"
 
 @interface TestState : GameState
 {
    Button *btn;
-   ModalAlert *alert;
 }
 
 @end

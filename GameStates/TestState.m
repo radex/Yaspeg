@@ -47,17 +47,11 @@
 
 - (void) events
 {
-   if([ModalAlert isAlert])
-   {
-      [alert handleEvents];
-      
-      eventType = None_ET;
-      return;
-   }
+   if([ModalAlert handleEvents]) return;
    
    if([btn handleEvents] == 1)
    {
-      alert = [ModalAlert alertWithHeader:@"hejder" description:@"deskrypcja"];
+      [ModalAlert displayAlertWithHeader:@"hejder" description:@"deskrypcja"];
    }
    
    [super handleEvents];

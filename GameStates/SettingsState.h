@@ -21,14 +21,7 @@
 
 #import "GameState.h"
 #import "YaspegController.h"
-
-#import "BackButton.h"
-#import "Background.h"
-#import "Header.h"
-#import "CheckBox.h"
-#import "RadioButton.h"
-#import "RadioButtonGroup.h"
-#import "Button.h"
+#import "UI.h"
 
 @interface SettingsState : GameState
 {

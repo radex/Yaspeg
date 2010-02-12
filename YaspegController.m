@@ -92,6 +92,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
    if(!shouldUpdate) return;
    
    [currentState events];
+   
+   currentState.eventType = None_ET;
+   
    [currentState logic];
    [currentState render];
    
