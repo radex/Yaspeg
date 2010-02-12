@@ -176,26 +176,13 @@
  *
  */
 
-- (NSTimeInterval) outro
+- (void) outro
 {
-   NSTimeInterval animationDuration = 0.5;
-   
-   [CATransaction begin];
-   [CATransaction setAnimationDuration_c:animationDuration];
-   
-   [super handleOutro];
-   
    scenarioLayer.opacity = 0;
    radexLayer.opacity = 0;
    thanksHeaderLayer.opacity = 0;
    thanksLayer.opacity = 0;
    footerLayer.opacity = 0;
-   
-   [CATransaction commit];
-   
-   [super scheduleCleanUp:animationDuration];
-   
-   return animationDuration;
 }
 
 @end

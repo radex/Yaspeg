@@ -20,6 +20,7 @@
 //
 
 #import "KeyHandlingView.h"
+#import "YaspegController.h"
 
 @implementation KeyHandlingView
 
@@ -30,6 +31,10 @@
 
 - (void)keyDown:(NSEvent *)event
 {
+   if([event.characters characterAtIndex:0] == 'r')
+   {
+      NSLog(@"%@", [YaspegController sharedYaspegController].rootLayer.sublayers);
+   }
    yaspeg.currentState.eventType = KeyDown_ET;
    yaspeg.currentState.eventCharachters = event.characters;
    yaspeg.currentState.eventIsRepeat = event.isARepeat;

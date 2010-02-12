@@ -34,5 +34,4 @@
    CATextLayer *thanksLayer;
    CATextLayer *footerLayer;
 }
-
 @end

@@ -275,23 +275,9 @@
  *
  */
 
-- (NSTimeInterval) outro
+- (void) outro
 {
-   NSTimeInterval animationDuration = 0.5;
-   
-   [CATransaction begin];
-   [CATransaction setAnimationDuration_c:animationDuration];
-   
-   [super handleOutro];
    footerLayer.y = -30;
-   
-   [CATransaction commit];
-   
-   [super scheduleCleanUp:animationDuration];
-   
-   [self itemSelected:currentMenuItem];
-   
-   return animationDuration;
 }
 
 #pragma mark -

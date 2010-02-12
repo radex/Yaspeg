@@ -267,22 +267,11 @@
  *
  */
 
-- (NSTimeInterval) outro
+- (void) outro
 {
-   NSTimeInterval animationDuration = 0.5;
-   
-   [CATransaction begin];
-   [CATransaction setAnimationDuration_c:animationDuration];
-   
    bg.opacity = 0;
    dude.opacity = 0;
    info.opacity = 0;
-   
-   [CATransaction commit];
-   
-   [super scheduleCleanUp:animationDuration];
-   
-   return animationDuration;
 }
 
 @end

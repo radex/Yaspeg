@@ -79,7 +79,7 @@ typedef enum
 - (void) handleRender;
 - (void) handleOutro;
 
-- (NSTimeInterval) outro;
+- (void) outro;
 - (void) scheduleCleanUp: (NSTimeInterval) outroDuration;
 - (void) cleanUp;
 

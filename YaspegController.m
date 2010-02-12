@@ -69,9 +69,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 - (void)windowWillClose:(NSNotification *)aNotification
 {
    shouldUpdate = NO;
-   NSTimeInterval outroTime = [currentState outro];
    
-   [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(terminate) userInfo:nil repeats:NO];
+   [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(terminate) userInfo:nil repeats:NO];
 }
 
 - (void)terminate
@@ -134,9 +133,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 {
    shouldUpdate = NO;
    
-   NSTimeInterval outroTime = 0.3 * [currentState outro];
+   [CATransaction begin];
+   [CATransaction setAnimationDuration_c:0.5];
    
-   [NSTimer scheduledTimerWithTimeInterval:outroTime target:self selector:@selector(setNextState:) userInfo:state repeats:NO];
+   [currentState handleOutro];
+   [currentState outro];
+   
+   [CATransaction commit];
+   
+   [currentState scheduleCleanUp:0.5];
+   
+   [NSTimer scheduledTimerWithTimeInterval:0.5 * 0.3 target:self selector:@selector(setNextState:) userInfo:state repeats:NO];
 }
 
 /*

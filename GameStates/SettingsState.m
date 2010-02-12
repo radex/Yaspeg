@@ -136,22 +136,9 @@
  *
  */
 
-- (NSTimeInterval) outro
+- (void) outro
 {
-   NSTimeInterval animationDuration = 0.5;
-   
-   [CATransaction begin];
-   [CATransaction setAnimationDuration_c:animationDuration];
-   
-   [super handleOutro];
-   
    textLayer.opacity = 0;
-   
-   [CATransaction commit];
-   
-   [super scheduleCleanUp:animationDuration];
-   
-   return animationDuration;
 }
 
 @end

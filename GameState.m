@@ -67,16 +67,12 @@
    }
 }
 
-- (NSTimeInterval) outro
-{
-   [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
-   
-   return 0;
-}
+- (void) outro{}
 
 - (void) scheduleCleanUp:(NSTimeInterval)outroDuration
 {
    removedObjects = [[YaspegController sharedYaspegController].rootLayer.sublayers copy];
+   
    [NSTimer scheduledTimerWithTimeInterval:outroDuration target:self selector:@selector(cleanUp) userInfo:nil repeats:NO];
 }
 

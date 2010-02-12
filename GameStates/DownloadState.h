@@ -28,7 +28,7 @@
 
 @interface DownloadState : GameState
 {
-   CATextLayer*textLayer;
+   CATextLayer *textLayer;
 }
 
 @end
