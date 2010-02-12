@@ -1,8 +1,8 @@
 //
-//  HelpState.h
+//  Header.h
 //  Yaspeg
 //
-//  Created by Radex on 10-01-14.
+//  Created by Radex on 10-02-12.
 //  Copyright 2010 Radex. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
@@ -19,16 +19,24 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import "ImageLayer.h"
 #import "GameState.h"
-#import "YaspegController.h"
 
-#import "BackButton.h"
-#import "Background.h"
-#import "Header.h"
+@class YaspegController;
 
-@interface HelpState : GameState
+@interface Header : CALayer
 {
-   CATextLayer*textLayer;
+   GameState        *gameState;
+   YaspegController *yaspeg;
+   
+   ImageLayer       *image;
 }
+
+- (id)   initWithFilename:(NSString*)name;
++ (id) headerWithFilename:(NSString*)name;
+
+- (int)  handleEvents;
+- (void) handleRender;
+- (void) handleOutro;
 
 @end

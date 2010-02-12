@@ -24,6 +24,7 @@
 
 #import "BackButton.h"
 #import "Background.h"
+#import "Header.h"
 #import "CheckBox.h"
 #import "RadioButton.h"
 #import "RadioButtonGroup.h"
@@ -31,7 +32,6 @@
 
 @interface SettingsState : GameState
 {
-   ImageLayer *headerLayer;
    CATextLayer*textLayer;
    
    CheckBox   *testCheckBox;

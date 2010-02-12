@@ -33,14 +33,7 @@
 {
    [Background genericBackground];
    [BackButton button];
-   
-   // header
-   
-   headerLayer = [ImageLayer layerWithImageNamed:@"header-jak-grac"];
-   headerLayer.x = (800 - headerLayer.w) / 2;
-   headerLayer.y = 600;
-   
-   [yaspeg.rootLayer addSublayer:headerLayer];
+   [Header     headerWithFilename:@"header-jak-grac"];
    
    // some text
    
@@ -103,8 +96,6 @@
       
       textLayer.opacity = 1;
       
-      headerLayer.y = 600 - 10 - headerLayer.h;
-      
       [CATransaction commit];
       
       inited = YES;
@@ -127,8 +118,6 @@
    [super handleOutro];
    
    textLayer.opacity = 0;
-   
-   headerLayer.y = 600;
    
    [CATransaction commit];
    

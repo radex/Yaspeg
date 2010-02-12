@@ -32,12 +32,7 @@
 - (void) stateInit
 {
    [Background genericBackground];
-   
-   // header
-   
-   headerLayer = [ImageLayer layerWithImageNamed:@"header-yaspeg-small" frame:NSMakeRect(250, 600, 300, 95)];
-   
-   [yaspeg.rootLayer addSublayer:headerLayer];
+   [Header     headerWithFilename:@"header-yaspeg-small"];
    
    // footer
    
@@ -243,7 +238,6 @@
       
       [super handleRender];
       
-      headerLayer.y = 590 - headerLayer.h;
       footerLayer.y = 0;
       
       [CATransaction commit];
@@ -289,7 +283,6 @@
    [CATransaction setAnimationDuration_c:animationDuration];
    
    [super handleOutro];
-   headerLayer.y = 600;
    footerLayer.y = -30;
    
    [CATransaction commit];

@@ -22,6 +22,7 @@
 		6E203D0A11242D2500AFE166 /* TestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203D0911242D2500AFE166 /* TestState.m */; };
 		6E203D131124301F00AFE166 /* ModalAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203D121124301F00AFE166 /* ModalAlert.m */; };
 		6E203E961125811000AFE166 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203E951125811000AFE166 /* Background.m */; };
+		6E203EDD112586A000AFE166 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203EDC112586A000AFE166 /* Header.m */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E40CED81106763100466539 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 6E40CED71106763100466539 /* COPYING */; };
@@ -90,6 +91,8 @@
 		6E203D121124301F00AFE166 /* ModalAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalAlert.m; sourceTree = "<group>"; };
 		6E203E941125811000AFE166 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
 		6E203E951125811000AFE166 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
+		6E203EDB112586A000AFE166 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		6E203EDC112586A000AFE166 /* Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E40CED71106763100466539 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
@@ -378,6 +381,8 @@
 				6E203D121124301F00AFE166 /* ModalAlert.m */,
 				6E203E941125811000AFE166 /* Background.h */,
 				6E203E951125811000AFE166 /* Background.m */,
+				6E203EDB112586A000AFE166 /* Header.h */,
+				6E203EDC112586A000AFE166 /* Header.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 				6E203D0A11242D2500AFE166 /* TestState.m in Sources */,
 				6E203D131124301F00AFE166 /* ModalAlert.m in Sources */,
 				6E203E961125811000AFE166 /* Background.m in Sources */,
+				6E203EDD112586A000AFE166 /* Header.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

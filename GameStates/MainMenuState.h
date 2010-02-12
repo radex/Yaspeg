@@ -23,10 +23,10 @@
 #import "YaspegController.h"
 
 #import "Background.h"
+#import "Header.h"
 
 @interface MainMenuState : GameState
 {
-   ImageLayer *headerLayer;
    ImageLayer *footerLayer;
    
    NSArray *menuItems;   // CALayer[]

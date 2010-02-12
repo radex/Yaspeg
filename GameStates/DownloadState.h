@@ -24,10 +24,10 @@
 
 #import "BackButton.h"
 #import "Background.h"
+#import "Header.h"
 
 @interface DownloadState : GameState
 {
-   ImageLayer *headerLayer;
    CATextLayer*textLayer;
 }
 

@@ -33,14 +33,7 @@
 {
    [Background genericBackground];
    [BackButton button];
-   
-   // header
-   
-   headerLayer = [ImageLayer layerWithImageNamed:@"header-autorzy"];
-   headerLayer.x = (800 - headerLayer.w) / 2;
-   headerLayer.y = 600;
-   
-   [yaspeg.rootLayer addSublayer:headerLayer];
+   [Header     headerWithFilename:@"header-autorzy"];
    
    // scenario, direction, graphics
    
@@ -53,7 +46,7 @@
    
    // radex, radex glow
    
-   radexLayer     = [ImageLayer layerWithImageNamed:@"radex-medium"];
+   radexLayer   = [ImageLayer layerWithImageNamed:@"radex-medium"];
    
    radexLayer.x = 250;
    radexLayer.y = 400;
@@ -94,7 +87,7 @@
    
    footerLayer = [CATextLayer layer];
    footerLayer.opacity  = 0;
-   footerLayer.string   = @"Wyprodukowano na Maku przy użyciu XCode, Cocoa i Core Animation.\nStatystyki: 38 plików źródłowych, 3604 linijek kodu, 979 średników.";
+   footerLayer.string   = @"Wyprodukowano na Maku przy użyciu XCode, Cocoa i Core Animation.\nStatystyki: 50 plików źródłowych, 4508 linijek kodu, 1175 średników.";
    footerLayer.font     = @"palatino";
    footerLayer.fontSize = 12;
    footerLayer.alignmentMode   = @"center";
@@ -171,8 +164,6 @@
       thanksHeaderLayer.opacity = 1;
       footerLayer.opacity = 1;
       
-      headerLayer.y = 600 - 10 - headerLayer.h;
-      
       [CATransaction commit];
       
       inited = YES;
@@ -199,8 +190,6 @@
    thanksHeaderLayer.opacity = 0;
    thanksLayer.opacity = 0;
    footerLayer.opacity = 0;
-   
-   headerLayer.y = 600;
    
    [CATransaction commit];
    

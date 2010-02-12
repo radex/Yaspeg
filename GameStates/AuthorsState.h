@@ -24,10 +24,10 @@
 
 #import "BackButton.h"
 #import "Background.h"
+#import "Header.h"
 
 @interface AuthorsState : GameState
 {
-   ImageLayer *headerLayer;
    ImageLayer *scenarioLayer;
    ImageLayer *radexLayer;
    CATextLayer *thanksHeaderLayer;
