@@ -20,21 +20,13 @@
 //
 
 #import "Button.h"
-#import "YaspegController.h"
 
 @implementation Button
-
-@synthesize state, eventsHandled;
 
 - (id) initWithLabel:(NSString*)label position:(NSPoint)position width:(int)width
 {
    if(self = [super init])
    {
-      yaspeg    = [YaspegController sharedYaspegController];
-      gameState = yaspeg.currentState;
-      
-      [gameState.handledObjects addObject:self];
-      
       self.frame = CGRectMake(position.x, position.y, width, 53);
       
       // left side
@@ -109,12 +101,6 @@
       self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
       self.shadowOffset  = CGSizeMake(0, 0);
       self.shadowRadius  = 5;
-      
-      /***/
-      
-      [self setNeedsDisplay];
-      
-      [yaspeg.rootLayer addSublayer:self];
    }
    
    return self;

@@ -24,17 +24,12 @@
 
 @implementation RadioButton
 
-@synthesize state, eventsHandled, selectable;
+@synthesize state, selectable;
 
 - (id) initWithLabel:(NSString*)label position:(NSPoint)position
 {
    if(self = [super init])
    {
-      yaspeg    = [YaspegController sharedYaspegController];
-      gameState = yaspeg.currentState;
-      
-      [gameState.handledObjects addObject:self];
-      
       self.frame = CGRectMake(position.x, position.y, 800, 50);
       
       selectable = YES;
@@ -72,12 +67,6 @@
       labelLayer.opacity  = 0;
       
       [self addSublayer:labelLayer];
-      
-      /***/
-      
-      [self setNeedsDisplay];
-      
-      [yaspeg.rootLayer addSublayer:self];
    }
    
    return self;

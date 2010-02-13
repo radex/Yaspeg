@@ -19,29 +19,18 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "ImageLayer.h"
-#import "GameState.h"
+#import "SomeButton.h"
 
-@class YaspegController;
-
-@interface BackButton : CALayer
+@interface BackButton : SomeButton
 {
-   GameState        *state;
-   YaspegController *yaspeg;
-   NSString         *targetState;
+   NSString   *targetState;
    
    ImageLayer *buttonLayer;
    ImageLayer *selectedButtonLayer;
-   
-   bool clicked;
 }
 
 - (id) initWithTargetState:(NSString*)stateType;
 + (id) buttonWithTargetState:(NSString*)stateType;
 + (id) button;
-
-- (void) handleEvents;
-- (void) handleIntro;
-- (void) handleOutro;
 
 @end

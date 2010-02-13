@@ -28,11 +28,6 @@
 {
    if(self = [super init])
    {
-      yaspeg = [YaspegController sharedYaspegController];
-      state = yaspeg.currentState;
-      
-      [state.handledObjects addObject:self];
-      
       targetState = stateType;
       
       buttonLayer         = [ImageLayer layerWithImageNamed:@"back-button-unselected" frame:NSMakeRect(-50, 540, 50, 50)];
@@ -43,9 +38,6 @@
       
       [self addSublayer:buttonLayer];
       [self addSublayer:selectedButtonLayer];
-      [self setNeedsDisplay];
-      
-      [yaspeg.rootLayer addSublayer:self];
    }
    
    return self;
@@ -61,20 +53,20 @@
    return [[self alloc] initWithTargetState:MainMenu_GS];
 }
 
-- (void)handleEvents
+- (int)handleEvents
 {
-   if(state.eventType == KeyDown_ET)
+   if(gameState.eventType == KeyDown_ET)
    {
-      if([state.eventCharachters characterAtIndex:0] == YK_ESC)
+      if([gameState.eventCharachters characterAtIndex:0] == YK_ESC)
       {
          [yaspeg scheduleNextState:MainMenu_GS];
-         return;
+         return 0;
       }
    }
    
-   if(state.eventType == MouseMove_ET || state.eventType == MouseDrag_ET)
+   if(gameState.eventType == MouseMove_ET || gameState.eventType == MouseDrag_ET)
    {
-      if([buttonLayer isInBounds:state.eventMousePoint])
+      if([buttonLayer isInBounds:gameState.eventMousePoint])
       {
          selectedButtonLayer.opacity = 1;
       }
@@ -84,7 +76,7 @@
       }
    }
    
-   if(state.eventType == MouseDown_ET && [buttonLayer isInBounds:state.eventMousePoint])
+   if(gameState.eventType == MouseDown_ET && [buttonLayer isInBounds:gameState.eventMousePoint])
    {
       clicked = YES;
       buttonLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
@@ -93,11 +85,11 @@
       buttonLayer.shadowOpacity = 1;
    }
    
-   if(state.eventType == MouseUp_ET)
+   if(gameState.eventType == MouseUp_ET)
    {
       buttonLayer.shadowOpacity = 0;
       
-      if([buttonLayer isInBounds:state.eventMousePoint] && clicked)
+      if([buttonLayer isInBounds:gameState.eventMousePoint] && clicked)
       {
          [yaspeg scheduleNextState:targetState];
       }
@@ -105,6 +97,7 @@
       clicked = NO;
    }
    
+   return 0;
 }
 
 - (void)handleIntro

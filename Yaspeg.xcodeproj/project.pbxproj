@@ -24,6 +24,7 @@
 		6E203E961125811000AFE166 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203E951125811000AFE166 /* Background.m */; };
 		6E203EDD112586A000AFE166 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203EDC112586A000AFE166 /* Header.m */; };
 		6E2042081126C57200AFE166 /* testLevel1.yaspeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E94334D110C7B7300685348 /* testLevel1.yaspeg */; };
+		6E2042521126FDCA00AFE166 /* SomeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2042511126FDCA00AFE166 /* SomeButton.m */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E40CED81106763100466539 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 6E40CED71106763100466539 /* COPYING */; };
@@ -94,6 +95,8 @@
 		6E203EDB112586A000AFE166 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		6E203EDC112586A000AFE166 /* Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
 		6E203FE41125E2D800AFE166 /* UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
+		6E2042501126FDCA00AFE166 /* SomeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeButton.h; sourceTree = "<group>"; };
+		6E2042511126FDCA00AFE166 /* SomeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeButton.m; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E40CED71106763100466539 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
@@ -294,6 +297,23 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		6E20429E11270D5F00AFE166 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6E9432D2110C70B600685348 /* BackButton.h */,
+				6E9432D3110C70B600685348 /* BackButton.m */,
+				6E9432D4110C70B600685348 /* Button.h */,
+				6E9432D5110C70B600685348 /* Button.m */,
+				6E9432D6110C70B600685348 /* CheckBox.h */,
+				6E9432D7110C70B600685348 /* CheckBox.m */,
+				6E9432D8110C70B600685348 /* RadioButton.h */,
+				6E9432D9110C70B600685348 /* RadioButton.m */,
+				6E2042501126FDCA00AFE166 /* SomeButton.h */,
+				6E2042511126FDCA00AFE166 /* SomeButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		6E40CED91106768700466539 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,14 +389,7 @@
 		6E9432D1110C70B600685348 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6E9432D2110C70B600685348 /* BackButton.h */,
-				6E9432D3110C70B600685348 /* BackButton.m */,
-				6E9432D4110C70B600685348 /* Button.h */,
-				6E9432D5110C70B600685348 /* Button.m */,
-				6E9432D6110C70B600685348 /* CheckBox.h */,
-				6E9432D7110C70B600685348 /* CheckBox.m */,
-				6E9432D8110C70B600685348 /* RadioButton.h */,
-				6E9432D9110C70B600685348 /* RadioButton.m */,
+				6E20429E11270D5F00AFE166 /* Buttons */,
 				6E9432DA110C70B600685348 /* RadioButtonGroup.h */,
 				6E9432DB110C70B600685348 /* RadioButtonGroup.m */,
 				6E203D111124301F00AFE166 /* ModalAlert.h */,
@@ -556,6 +569,7 @@
 				6E203D131124301F00AFE166 /* ModalAlert.m in Sources */,
 				6E203E961125811000AFE166 /* Background.m in Sources */,
 				6E203EDD112586A000AFE166 /* Header.m in Sources */,
+				6E2042521126FDCA00AFE166 /* SomeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

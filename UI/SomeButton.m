@@ -1,8 +1,8 @@
 //
-//  RadioButton.h
+//  SomeButton.m
 //  Yaspeg
 //
-//  Created by Radex on 10-01-17.
+//  Created by Radex on 10-02-13.
 //  Copyright 2010 Radex. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
@@ -20,22 +20,35 @@
 //
 
 #import "SomeButton.h"
+#import "YaspegController.h"
 
-@interface RadioButton : SomeButton
+@implementation SomeButton
+@synthesize eventsHandled;
+
+- (id) init
 {
-   ImageLayer  *circleLayer;
-   ImageLayer  *circleFlippedLayer;
-   ImageLayer  *dotLayer;
-   CATextLayer *labelLayer;
+   if(self = [super init])
+   {
+      yaspeg    = [YaspegController sharedYaspegController];
+      gameState = yaspeg.currentState;
+      
+      [gameState.handledObjects addObject:self];
+      
+      [self setNeedsDisplay];
+      
+      [yaspeg.rootLayer addSublayer:self];
+   }
    
-   bool state;
-   bool selectable;
+   return self;
 }
 
-@property (readwrite) bool state;
-@property (readwrite) bool selectable;
+- (int) handleEvents
+{
+   return 0;
+}
 
-- (id)   initWithLabel:(NSString*)label position:(NSPoint)position;
-+ (id) buttonWithLabel:(NSString*)label position:(NSPoint)position;
+- (void) handleIntro{}
+
+- (void) handleOutro{}
 
 @end

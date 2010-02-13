@@ -19,16 +19,10 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "ImageLayer.h"
-#import "GameState.h"
+#import "SomeButton.h"
 
-@class YaspegController;
-
-@interface Button : CALayer
+@interface Button : SomeButton
 {
-   GameState        *gameState;
-   YaspegController *yaspeg;
-   
    ImageLayer  *leftLayer;
    ImageLayer  *rightLayer;
    ImageLayer  *bgLayer;
@@ -38,19 +32,9 @@
    ImageLayer  *bgFlippedLayer;
    
    CATextLayer *labelLayer;
-   
-   bool clicked;
-   bool eventsHandled;
 }
-
-@property (readwrite) bool state;
-@property (readwrite) bool eventsHandled;
 
 - (id)   initWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
 + (id) buttonWithLabel:(NSString*)label position:(NSPoint)position width:(int)width;
-
-- (int)  handleEvents;
-- (void) handleIntro;
-- (void) handleOutro;
 
 @end
