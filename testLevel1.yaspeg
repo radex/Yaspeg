@@ -4,7 +4,9 @@
 <dict>
 	<key>doc_version</key>
 	<integer>1</integer>
-	<key>test</key>
-	<string>foo bar</string>
+	<key>width</key>
+	<string>1</string>
+	<key>height</key>
+	<string>1</string>
 </dict>
 </plist>

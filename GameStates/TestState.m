@@ -36,7 +36,35 @@
    
    btn = [Button buttonWithLabel:@"Boom!" position:NSMakePoint(100, 100) width:150];
    
-   //[self testing];
+   id testResult = [self testing];
+   
+   if([testResult isKindOfClass:[NSString class]])
+   {
+      [ModalAlert displayAlertWithHeader:@"Błąd" description:testResult];
+      return;
+   }
+   
+   NSDictionary *yaspegLevel = testResult;
+   
+   // checking version
+   
+   int minVersion = 1;
+   int maxVersion = 1;
+   
+   NSNumber *docVersion_o = [yaspegLevel objectForKey:@"doc_version"];
+   int docVersion = [docVersion_o intValue];
+   
+   if(docVersion < minVersion || docVersion > maxVersion)
+   {
+      [ModalAlert displayAlertWithHeader:@"Błąd" description:@"Nieobsługiwana wersja poziomu"];
+      return;
+   }
+   
+   // making board object
+   
+   board = [[GameBoard alloc] initWithWidth:[[yaspegLevel objectForKey:@"width"] intValue]
+                                     height:[[yaspegLevel objectForKey:@"height"] intValue]];
+   
 }
 
 /*
@@ -116,7 +144,7 @@
  *
  */
 
--(void) testing
+-(id) testing
 {
    NSString *path = [[NSBundle mainBundle] pathForResource:@"testLevel1" ofType:@"yaspeg"];
    NSData *plistData = [NSData dataWithContentsOfFile:path];
@@ -130,11 +158,10 @@
                                             errorDescription:&error];
    if(!plist)
    {
-      NSLog(@"%@", error);
-      [error release];
+      return error;
    }
    
-   NSLog(@"%@", plist);
+   return plist;
 }
 
 @end

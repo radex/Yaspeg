@@ -23,6 +23,7 @@
 		6E203D131124301F00AFE166 /* ModalAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203D121124301F00AFE166 /* ModalAlert.m */; };
 		6E203E961125811000AFE166 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203E951125811000AFE166 /* Background.m */; };
 		6E203EDD112586A000AFE166 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E203EDC112586A000AFE166 /* Header.m */; };
+		6E2042081126C57200AFE166 /* testLevel1.yaspeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E94334D110C7B7300685348 /* testLevel1.yaspeg */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E40CED81106763100466539 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 6E40CED71106763100466539 /* COPYING */; };
@@ -61,7 +62,6 @@
 		6E9432FF110C70C400685348 /* MainMenuState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F7110C70C400685348 /* MainMenuState.m */; };
 		6E943300110C70C400685348 /* SettingsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9432F9110C70C400685348 /* SettingsState.m */; };
 		6E943303110C70E200685348 /* CALayer+radex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E943302110C70E200685348 /* CALayer+radex.m */; };
-		6E943382110DC57E00685348 /* testLevel1.yaspeg in Resources */ = {isa = PBXBuildFile; fileRef = 6E94334D110C7B7300685348 /* testLevel1.yaspeg */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -521,7 +521,7 @@
 				6E40CED81106763100466539 /* COPYING in Resources */,
 				6E942FB2110BA75D00685348 /* button-bg.png in Resources */,
 				6E942FB3110BA75D00685348 /* button-left.png in Resources */,
-				6E943382110DC57E00685348 /* testLevel1.yaspeg in Resources */,
+				6E2042081126C57200AFE166 /* testLevel1.yaspeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

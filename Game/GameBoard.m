@@ -21,7 +21,13 @@
 
 #import "GameBoard.h"
 
-
 @implementation GameBoard
+@synthesize width, height;
+
+- (id) initWithWidth:(int)w height:(int)h
+{
+   width  = w;
+   height = h;
+}
 
 @end

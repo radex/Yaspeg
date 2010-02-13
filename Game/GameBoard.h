@@ -21,10 +21,13 @@
 
 @interface GameBoard : NSObject
 {
-   int fields_x; // fields (32x32) horizontally - width  of board
-   int fields_y; // fields (32x32) vertically   - height of board
+   int width;  // fields (32x32) horizontally
+   int height; // fields (32x32) vertically
 }
 
+@property (readonly) int width;
+@property (readonly) int height;
 
+- (id) initWithWidth:(int)w height:(int)h;
 
 @end

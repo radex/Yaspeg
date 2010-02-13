@@ -28,6 +28,7 @@
 @interface TestState : GameState
 {
    Button *btn;
+   GameBoard *board;
 }
 
 @end
