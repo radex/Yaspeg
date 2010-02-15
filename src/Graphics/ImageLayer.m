@@ -18,7 +18,7 @@
 
 @implementation ImageLayer
 
-@synthesize imageName, x, y, w, h;
+@synthesize imageName;
 
 #pragma mark -
 #pragma mark initializers
@@ -76,58 +76,6 @@
 		imageName = newImageName;
 		[self setNeedsDisplay];
 	} 
-}
-
-- (int)x
-{
-   return NSRectFromCGRect(self.frame).origin.x;
-}
-
-- (int)y
-{
-   return NSRectFromCGRect(self.frame).origin.y;
-}
-
-- (int)w
-{
-   return NSRectFromCGRect(self.frame).size.width;
-}
-
-- (int)h
-{
-   return NSRectFromCGRect(self.frame).size.height;
-}
-
-- (void)setX:(int)newX
-{
-   NSRect frame = NSRectFromCGRect(self.frame);
-   
-   frame = NSMakeRect(newX, frame.origin.y, frame.size.width, frame.size.height);
-   self.frame = NSRectToCGRect(frame);
-}
-
-- (void)setY:(int)newY
-{
-   NSRect frame = NSRectFromCGRect(self.frame);
-   
-   frame = NSMakeRect(frame.origin.x, newY, frame.size.width, frame.size.height);
-   self.frame = NSRectToCGRect(frame);
-}
-
-- (void)setW:(int)newW
-{
-   NSRect frame = NSRectFromCGRect(self.frame);
-   
-   frame = NSMakeRect(frame.origin.x, frame.origin.y, newW, frame.size.height);
-   self.frame = NSRectToCGRect(frame);
-}
-
-- (void)setH:(int)newH
-{
-   NSRect frame = NSRectFromCGRect(self.frame);
-   
-   frame = NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, newH);
-   self.frame = NSRectToCGRect(frame);
 }
 
 #pragma mark -

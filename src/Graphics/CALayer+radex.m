@@ -38,4 +38,45 @@
    
    return NO;
 }
+
+- (int)x
+{
+   return NSRectFromCGRect(self.frame).origin.x;
+}
+
+- (int)y
+{
+   return NSRectFromCGRect(self.frame).origin.y;
+}
+
+- (int)w
+{
+   return NSRectFromCGRect(self.frame).size.width;
+}
+
+- (int)h
+{
+   return NSRectFromCGRect(self.frame).size.height;
+}
+
+- (void)setX:(int)newX
+{
+   self.frame = CGRectMake(newX, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+}
+
+- (void)setY:(int)newY
+{
+   self.frame = CGRectMake(self.frame.origin.x, newY, self.frame.size.width, self.frame.size.height);
+}
+
+- (void)setW:(int)newW
+{
+   self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, newW, self.frame.size.height);
+}
+
+- (void)setH:(int)newH
+{
+   self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, newH);
+}
+
 @end

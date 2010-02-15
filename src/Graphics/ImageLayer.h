@@ -13,24 +13,12 @@
 //  appreciated but not required.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @interface ImageLayer : CALayer
 {
 	NSString *imageName;
-   
-   int x; // in fact, these two variables are fake - they are empty
-   int y; // and only overwritten accessors points at self.frame.origin.x/y
-   
-   int w; // ... and these at self.frame.size.width/height
-   int h;
 }
 
 @property (assign, readwrite) NSString *imageName;
-@property (assign, readwrite) int x;
-@property (assign, readwrite) int y;
-@property (assign, readwrite) int w;
-@property (assign, readwrite) int h;
 
 + (id)layerWithImageNamed:(NSString *)newImageName frame:(NSRect)newFrame;
 + (id)layerWithImageNamed:(NSString *)newImageName;
