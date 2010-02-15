@@ -3,7 +3,7 @@
 //  Yaspeg
 //
 //  Created by Radex on 10-01-23.
-//  Copyright 2010 Radex. All rights reserved.
+//  Copyright 2010 Radosław Pietruszewski. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by

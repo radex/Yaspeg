@@ -134,6 +134,7 @@
 		6E2042F511270FC300AFE166 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
 		6E2042F611270FC300AFE166 /* YaspegController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YaspegController.m; path = src/YaspegController.m; sourceTree = "<group>"; };
 		6E2043021127102200AFE166 /* Yaspeg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaspeg_Prefix.pch; sourceTree = "<group>"; };
+		6E2045041129E29600AFE166 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E40CED71106763100466539 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
@@ -368,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				6E40CED71106763100466539 /* COPYING */,
+				6E2045041129E29600AFE166 /* README.markdown */,
 			);
 			name = Docs;
 			sourceTree = "<group>";
@@ -471,7 +473,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = Radex;
+				ORGANIZATIONNAME = "Radosław Pietruszewski";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Yaspeg" */;
 			compatibilityVersion = "Xcode 3.1";

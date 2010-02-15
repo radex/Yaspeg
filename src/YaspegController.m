@@ -3,7 +3,7 @@
 //  Yaspeg
 //
 //  Created by Radex on 10-01-01.
-//  Copyright 2010 Radex. All rights reserved.
+//  Copyright 2010 Radosław Pietruszewski. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -91,6 +91,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
 {
    if(!shouldUpdate) return;
    
+   shouldUpdate = NO;
+   
    [currentState events];
    
    currentState.eventType = None_ET;
@@ -105,6 +107,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(YaspegController);
          [object setEventsHandled:NO];
       }
    }
+   
+   shouldUpdate = YES;
 }
 
 /*
