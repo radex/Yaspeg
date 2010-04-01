@@ -44,6 +44,8 @@
 		6E2042F711270FC300AFE166 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2042F411270FC300AFE166 /* GameState.m */; };
 		6E2042F811270FC300AFE166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2042F511270FC300AFE166 /* main.m */; };
 		6E2042F911270FC300AFE166 /* YaspegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2042F611270FC300AFE166 /* YaspegController.m */; };
+		6E20457B112F278F00AFE166 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E20457A112F278F00AFE166 /* Player.m */; };
+		6E204580112F288F00AFE166 /* Brick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E20457F112F288F00AFE166 /* Brick.m */; };
 		6E2EDE6210FF577200EEECD7 /* back-button-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6010FF577200EEECD7 /* back-button-selected.png */; };
 		6E2EDE6310FF577200EEECD7 /* back-button-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */; };
 		6E40CED81106763100466539 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 6E40CED71106763100466539 /* COPYING */; };
@@ -64,6 +66,12 @@
 		6E91681210EE85A0002F70CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E91681110EE85A0002F70CC /* QuartzCore.framework */; };
 		6E942FB2110BA75D00685348 /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB0110BA75D00685348 /* button-bg.png */; };
 		6E942FB3110BA75D00685348 /* button-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E942FB1110BA75D00685348 /* button-left.png */; };
+		6ED5937111653134003E96B4 /* brick-full.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5936B11653134003E96B4 /* brick-full.png */; };
+		6ED5937211653134003E96B4 /* brick-ilslope.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5936C11653134003E96B4 /* brick-ilslope.png */; };
+		6ED5937311653134003E96B4 /* brick-iuslope.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5936D11653134003E96B4 /* brick-iuslope.png */; };
+		6ED5937411653134003E96B4 /* brick-lslope.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5936E11653134003E96B4 /* brick-lslope.png */; };
+		6ED5937511653134003E96B4 /* brick-uslope.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5936F11653134003E96B4 /* brick-uslope.png */; };
+		6ED5937611653134003E96B4 /* conreteTexture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5937011653134003E96B4 /* conreteTexture.jpg */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +143,10 @@
 		6E2042F611270FC300AFE166 /* YaspegController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YaspegController.m; path = src/YaspegController.m; sourceTree = "<group>"; };
 		6E2043021127102200AFE166 /* Yaspeg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaspeg_Prefix.pch; sourceTree = "<group>"; };
 		6E2045041129E29600AFE166 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		6E204579112F278F00AFE166 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = src/Game/Player.h; sourceTree = "<group>"; };
+		6E20457A112F278F00AFE166 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		6E20457E112F288F00AFE166 /* Brick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brick.h; path = src/Game/Brick.h; sourceTree = "<group>"; };
+		6E20457F112F288F00AFE166 /* Brick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brick.m; sourceTree = "<group>"; };
 		6E2EDE6010FF577200EEECD7 /* back-button-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-selected.png"; path = "gfx/back-button-selected.png"; sourceTree = "<group>"; };
 		6E2EDE6110FF577200EEECD7 /* back-button-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button-unselected.png"; path = "gfx/back-button-unselected.png"; sourceTree = "<group>"; };
 		6E40CED71106763100466539 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
@@ -175,6 +187,12 @@
 		6E942FB1110BA75D00685348 /* button-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-left.png"; path = "gfx/button-left.png"; sourceTree = "<group>"; };
 		6E943333110C73BC00685348 /* Yaspeg-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Yaspeg-Info.plist"; sourceTree = "<group>"; };
 		6E94334D110C7B7300685348 /* testLevel1.yaspeg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = testLevel1.yaspeg; sourceTree = "<group>"; };
+		6ED5936B11653134003E96B4 /* brick-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brick-full.png"; path = "gfx/brick-full.png"; sourceTree = "<group>"; };
+		6ED5936C11653134003E96B4 /* brick-ilslope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brick-ilslope.png"; path = "gfx/brick-ilslope.png"; sourceTree = "<group>"; };
+		6ED5936D11653134003E96B4 /* brick-iuslope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brick-iuslope.png"; path = "gfx/brick-iuslope.png"; sourceTree = "<group>"; };
+		6ED5936E11653134003E96B4 /* brick-lslope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brick-lslope.png"; path = "gfx/brick-lslope.png"; sourceTree = "<group>"; };
+		6ED5936F11653134003E96B4 /* brick-uslope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "brick-uslope.png"; path = "gfx/brick-uslope.png"; sourceTree = "<group>"; };
+		6ED5937011653134003E96B4 /* conreteTexture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = conreteTexture.jpg; path = gfx/conreteTexture.jpg; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Yaspeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yaspeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -281,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				6E2042AB11270F9100AFE166 /* GameBoard.m */,
+				6E20457A112F278F00AFE166 /* Player.m */,
+				6E20457F112F288F00AFE166 /* Brick.m */,
 			);
 			name = Game;
 			path = src/Game;
@@ -318,14 +338,14 @@
 			isa = PBXGroup;
 			children = (
 				6E2042C811270F9100AFE166 /* BackButton.m */,
-				6E2042CA11270F9100AFE166 /* Background.m */,
 				6E2042CC11270F9100AFE166 /* Button.m */,
 				6E2042CE11270F9100AFE166 /* CheckBox.m */,
-				6E2042D011270F9100AFE166 /* Header.m */,
-				6E2042D211270F9100AFE166 /* ModalAlert.m */,
 				6E2042D411270F9100AFE166 /* RadioButton.m */,
-				6E2042D611270F9100AFE166 /* RadioButtonGroup.m */,
 				6E2042D811270F9100AFE166 /* SomeButton.m */,
+				6E2042D611270F9100AFE166 /* RadioButtonGroup.m */,
+				6E2042D211270F9100AFE166 /* ModalAlert.m */,
+				6E2042D011270F9100AFE166 /* Header.m */,
+				6E2042CA11270F9100AFE166 /* Background.m */,
 			);
 			name = UI;
 			path = src/UI;
@@ -334,6 +354,8 @@
 		6E2043051127103900AFE166 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				6E20457E112F288F00AFE166 /* Brick.h */,
+				6E204579112F278F00AFE166 /* Player.h */,
 				6E2042EF11270FC300AFE166 /* GameState.h */,
 				6E2042F011270FC300AFE166 /* SynthesizeSingleton.h */,
 				6E2042F111270FC300AFE166 /* UI.h */,
@@ -412,6 +434,12 @@
 		6E61CC2E10F0ABDA0027DACF /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				6ED5936B11653134003E96B4 /* brick-full.png */,
+				6ED5936C11653134003E96B4 /* brick-ilslope.png */,
+				6ED5936D11653134003E96B4 /* brick-iuslope.png */,
+				6ED5936E11653134003E96B4 /* brick-lslope.png */,
+				6ED5936F11653134003E96B4 /* brick-uslope.png */,
+				6ED5937011653134003E96B4 /* conreteTexture.jpg */,
 				6E942FB0110BA75D00685348 /* button-bg.png */,
 				6E942FB1110BA75D00685348 /* button-left.png */,
 				6E1DDE1611011C8D00993443 /* checkbox-tick.png */,
@@ -531,6 +559,12 @@
 				6E942FB2110BA75D00685348 /* button-bg.png in Resources */,
 				6E942FB3110BA75D00685348 /* button-left.png in Resources */,
 				6E2042081126C57200AFE166 /* testLevel1.yaspeg in Resources */,
+				6ED5937111653134003E96B4 /* brick-full.png in Resources */,
+				6ED5937211653134003E96B4 /* brick-ilslope.png in Resources */,
+				6ED5937311653134003E96B4 /* brick-iuslope.png in Resources */,
+				6ED5937411653134003E96B4 /* brick-lslope.png in Resources */,
+				6ED5937511653134003E96B4 /* brick-uslope.png in Resources */,
+				6ED5937611653134003E96B4 /* conreteTexture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +600,8 @@
 				6E2042F711270FC300AFE166 /* GameState.m in Sources */,
 				6E2042F811270FC300AFE166 /* main.m in Sources */,
 				6E2042F911270FC300AFE166 /* YaspegController.m in Sources */,
+				6E20457B112F278F00AFE166 /* Player.m in Sources */,
+				6E204580112F288F00AFE166 /* Brick.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

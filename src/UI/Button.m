@@ -95,12 +95,6 @@
       labelLayer.opacity  = 0;
       
       [self addSublayer:labelLayer];
-      
-      // shadow
-      
-      self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
-      self.shadowOffset  = CGSizeMake(0, 0);
-      self.shadowRadius  = 5;
    }
    
    return self;

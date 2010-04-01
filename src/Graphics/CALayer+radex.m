@@ -41,22 +41,22 @@
 
 - (int)x
 {
-   return NSRectFromCGRect(self.frame).origin.x;
+   return self.frame.origin.x;
 }
 
 - (int)y
 {
-   return NSRectFromCGRect(self.frame).origin.y;
+   return self.frame.origin.y;
 }
 
 - (int)w
 {
-   return NSRectFromCGRect(self.frame).size.width;
+   return self.frame.size.width;
 }
 
 - (int)h
 {
-   return NSRectFromCGRect(self.frame).size.height;
+   return self.frame.size.height;
 }
 
 - (void)setX:(int)newX

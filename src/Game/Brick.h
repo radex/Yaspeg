@@ -1,8 +1,8 @@
 //
-//  SomeButton.m
+//  Brick.h
 //  Yaspeg
 //
-//  Created by Radex on 10-02-13.
+//  Created by Radex on 10-02-19.
 //  Copyright 2010 Radosław Pietruszewski. All rights reserved.
 //  
 //  This program is free software: you can redistribute it and/or modify
@@ -19,42 +19,32 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "SomeButton.h"
-#import "YaspegController.h"
+/*
+ brick:
+ 
+ A-----B
+ |     |
+ |     |
+ C-----D
+ */
 
-@implementation SomeButton
-@synthesize eventsHandled;
-
-- (id) init
+typedef enum
 {
-   if(self = [super init])
-   {
-      yaspeg    = [YaspegController sharedYaspegController];
-      gameState = yaspeg.currentState;
-      
-      [gameState.handledObjects addObject:self];
-      
-      [self setNeedsDisplay];
-      
-      [yaspeg.rootLayer addSublayer:self];
-      
-      // onclick shadow
-      
-      self.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
-      self.shadowOffset  = CGSizeMake(0, 0);
-      self.shadowRadius  = 5;
-   }
-   
-   return self;
+   Full_BT,    // ABCD (full brick)
+   LSlope_BT,  // ADC triangle
+   ILSlope_BT, // ADB -||-
+   USlope_BT,  // CBD
+   IUSlope_BT, // CBA
+}
+BrickType;
+
+/*********/
+
+@interface Brick : NSObject
+{
+   BrickType type;
 }
 
-- (int) handleEvents
-{
-   return 0;
-}
-
-- (void) handleIntro{}
-
-- (void) handleOutro{}
+@property BrickType type;
 
 @end

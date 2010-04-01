@@ -71,7 +71,7 @@
 
 - (void)setImageName:(NSString *)newImageName
 {
-	if (newImageName != imageName)
+	if(newImageName != imageName)
 	{
 		imageName = newImageName;
 		[self setNeedsDisplay];

@@ -30,14 +30,18 @@
    {
       targetState = stateType;
       
-      buttonLayer         = [ImageLayer layerWithImageNamed:@"back-button-unselected" frame:NSMakeRect(-50, 540, 50, 50)];
-      selectedButtonLayer = [ImageLayer layerWithImageNamed:@"back-button-selected"   frame:NSMakeRect(-50, 540, 50, 50)];
+      self.frame = NSMakeRect(-50, 540, 50, 50);
+      
+      buttonLayer         = [ImageLayer layerWithImageNamed:@"back-button-unselected"];
+      selectedButtonLayer = [ImageLayer layerWithImageNamed:@"back-button-selected"];
       
       buttonLayer.opacity = -2;
       selectedButtonLayer.opacity = -2;
       
       [self addSublayer:buttonLayer];
       [self addSublayer:selectedButtonLayer];
+      
+      self.shadowRadius = 10;
    }
    
    return self;
@@ -79,15 +83,12 @@
    if(gameState.eventType == MouseDown_ET && [buttonLayer isInBounds:gameState.eventMousePoint])
    {
       clicked = YES;
-      buttonLayer.shadowColor   = CGColorCreateGenericRGB(80.0/256, 100.0/256, 50.0/256, 1);
-      buttonLayer.shadowOffset  = CGSizeMake(0, 0);
-      buttonLayer.shadowRadius  = 10;
-      buttonLayer.shadowOpacity = 1;
+      self.shadowOpacity = 1;
    }
    
    if(gameState.eventType == MouseUp_ET)
    {
-      buttonLayer.shadowOpacity = 0;
+      self.shadowOpacity = 0;
       
       if([buttonLayer isInBounds:gameState.eventMousePoint] && clicked)
       {
@@ -102,16 +103,14 @@
 
 - (void)handleIntro
 {
-   buttonLayer.x = 10;
-   selectedButtonLayer.x = 10;
+   self.x = 10;
    
    buttonLayer.opacity = 1;
 }
 
 - (void)handleOutro
 {
-   buttonLayer.x = -50;
-   selectedButtonLayer.x = -50;
+   self.x = -50;
    
    buttonLayer.opacity = -2;
    selectedButtonLayer.opacity = -2;
